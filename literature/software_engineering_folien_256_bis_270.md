@@ -1,0 +1,22 @@
+# Lektürenotiz: SWE Vorlesung Folien 256 bis 270
+- **QUELLE:** `subjects/software_engineering/slides/SWE.txt` (Slide 256-270)
+- **AUTOR/AUTOREN:** Prof. Dr. Thomas Fuchß
+- **KEY_INSIGHTS:**
+  - Systemoperationen wie „manageMembers“ erfordern eine strikte Validierung des Authentisierungstokens, bevor Mitgliederdaten geladen oder bearbeitet werden dürfen, um Sicherheitsrisiken zu vermeiden.
+  - Vor- und Nachbedingungen definieren die zulässigen Systemzustände vor und nach der Ausführung einer Operation und sind essenziell für die Überschaubarkeit und Korrektheit des Systemverhaltens.
+  - Das Model-View-Controller (MVC)-Muster nutzt den Observer-Pattern, um Änderungen im Modell automatisch an die Views zu propagieren und so eine konsistente Darstellung zu gewährleisten.
+  - Protokollautomaten (Zustandsübergangsdiagramme) helfen dabei, komplexe Systemzustände und deren Übergänge explizit zu modellieren, was die Nachvollziehbarkeit und Wartbarkeit verbessert.
+  - Zustandsdiagramme ermöglichen die Darstellung von Zuständen und Ereignissen auf verschiedenen Granularitätsebenen, einschließlich zusammengesetzter Zustände und History-Zustände für komplexe Abläufe.
+
+---
+- **Zugehörige Zettel:**
+  - [[Systemoperation]]
+  - [[Vorbedingung]]
+  - [[Nachbedingung]]
+  - [[Observer_Pattern]]
+  - [[MVC_Architektur]]
+  - [[Protokoll-Automat]]
+  - [[Zustandsdiagramm]]
+  - [[Zusammengesetzter_Zustand]]
+  - [[History-Zustand]]
+  - [[Trennung_von_Belangen]]

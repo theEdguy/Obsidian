@@ -1,0 +1,21 @@
+# Lektürenotiz: SWE Vorlesung Folien 166 bis 180
+- **QUELLE:** `subjects/software_engineering/slides/SWE.txt` (Slide 166-180)
+- **AUTOR/AUTOREN:** Prof. Dr. Thomas Fuchß
+- **KEY_INSIGHTS:**
+  - Use-Case-Beziehungen wie Generalisierung, Include und Extend dienen unterschiedlichen Zwecken: Generalisierung modelliert Spezialfälle, Include vermeidet redundante Abläufe, und Extend fügt optionale Variationen hinzu.
+  - Weder Include- noch Extend-Beziehungen implizieren eine zeitliche Abfolge oder Vererbung von Akteursassoziationen, und sie dürfen nicht zur Darstellung von Workflows verwendet werden.
+  - Szenarien beschreiben konkrete Interaktionen zwischen Akteuren und dem System und helfen, komplexe Use Cases durch Diagramme (z. B. Aktivitätsdiagramme) oder Text zu detaillieren.
+  - Aktivitätsdiagramme eignen sich zur Darstellung von Abläufen, Workflows oder Algorithmen und nutzen Bausteine wie Entscheidungen, Splits/Joins, Signale und Objektknoten für Datenflüsse.
+  - Typische Fehler bei Use-Case-Diagrammen sind die falsche Annahme zeitlicher Abfolgen oder vererbter Akteursbeziehungen sowie das Weglassen notwendiger Assoziationen.
+
+---
+- **Zugehörige Zettel:**
+  - [[Use_Case_Generalisierung]]
+  - [[Include_Beziehung]]
+  - [[Extend_Beziehung]]
+  - [[Szenario]]
+  - [[Aktivitätsdiagramm]]
+  - [[Extension_Point]]
+  - [[Objektknoten]]
+  - [[Split_und_Join]]
+  - [[Signal_in_Aktivitätsdiagramm]]

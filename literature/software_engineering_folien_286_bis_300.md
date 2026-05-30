@@ -1,0 +1,23 @@
+# Lektürenotiz: SWE Vorlesung Folien 286 bis 300
+- **QUELLE:** `subjects/software_engineering/slides/SWE.txt` (Slide 286-300)
+- **AUTOR/AUTOREN:** Prof. Dr. Thomas Fuchß
+- **KEY_INSIGHTS:**
+  - Fassaden (Facades) kapseln Subsysteme und bieten eine vereinfachte Schnittstelle, um die Komplexität der darunterliegenden Komponenten zu verbergen und deren Nutzung zu erleichtern.
+  - Komponenten in Softwaresystemen können unterschiedliche Lebenszyklen haben: Sie existieren entweder über die gesamte Anwendungsdauer, sind an eine Session gebunden oder werden für jede Anfrage neu erzeugt.
+  - Verantwortlichkeiten in der objektorientierten Programmierung werden nach Prinzipien wie dem Expertenprinzip, loser Kopplung und hoher Kohäsion zugewiesen, um ein wartbares und modulares Design zu gewährleisten.
+  - Interaktionsdiagramme (z. B. Sequenz- oder Kommunikationsdiagramme) visualisieren die dynamische Zusammenarbeit von Objekten und helfen, das Verhalten eines Systems für bestimmte Anwendungsfälle zu modellieren.
+  - Fassaden können entweder manuell als statische Variablen in Interfaces oder automatisiert mithilfe von Frameworks (z. B. Dependency Injection) erzeugt und verwaltet werden.
+
+---
+- **Zugehörige Zettel:**
+  - [[Fassade_(Entwurfsmuster)]]
+  - [[Singleton_(Entwurfsmuster)]]
+  - [[Komponenten_Lebenszyklus]]
+  - [[Dependency_Injection]]
+  - [[Verantwortlichkeiten_zuweisen]]
+  - [[Expertenprinzip]]
+  - [[Erzeugerprinzip]]
+  - [[Lose_Kopplung]]
+  - [[Kohäsion]]
+  - [[System-Sequenzdiagramm]]
+  - [[Interaktionsdiagramm]]

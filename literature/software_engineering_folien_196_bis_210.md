@@ -1,0 +1,28 @@
+# Lektürenotiz: SWE Vorlesung Folien 196 bis 210
+- **QUELLE:** `subjects/software_engineering/slides/SWE.txt` (Slide 196-210)
+- **AUTOR/AUTOREN:** Prof. Dr. Thomas Fuchß
+- **KEY_INSIGHTS:**
+  - In den frühen Iterationen des Software-Engineering-Prozesses werden nach der Erfassung der Requirements die Systemgrenzen, Akteure und zentralen Use Cases identifiziert, priorisiert und modelliert, wobei die kritischsten Use Cases zuerst ausgearbeitet werden.
+  - Die Analysephase beantwortet zentrale Fragen zu Abläufen, Konzepten, Objekten, Ereignissen und Operationen, um die notwendigen Komponenten, Schnittstellen und deren Zusammenhänge zu definieren.
+  - Der Übergang von der Analyse zum Design umfasst die Festlegung der zu realisierenden Use Cases, die Erstellung von Bedienkonzepten und Mockups sowie den Entwurf der Systemarchitektur mit Komponenten, Konnektoren und Modulen.
+  - Die Umsetzung erfolgt in iterativen Sprints, wobei in den ersten Iterationen die Infrastruktur und Kernfunktionalität aufgebaut sowie die Systemarchitektur konsolidiert und verfeinert wird.
+  - Komponenten und Packages strukturieren die Implementierung, wobei klare Schnittstellen, Baumstrukturen ohne zyklische Abhängigkeiten und eine Trennung von Schnittstelle und Implementierung essenziell sind.
+
+---
+- **Zugehörige Zettel:**
+  - [[Use_Case_Analyse]]
+  - [[Anwendungsfall]]
+  - [[Systemgrenze]]
+  - [[Akteur]]
+  - [[Priorisierung]]
+  - [[Iterative_Entwicklung]]
+  - [[Systemarchitektur]]
+  - [[Komponente]]
+  - [[Schnittstelle]]
+  - [[Konnektor]]
+  - [[Modularität]]
+  - [[Datenhaltung]]
+  - [[Architekturzentrierung]]
+  - [[Ablauflogik]]
+  - [[Parallelität]]
+  - [[Package]]

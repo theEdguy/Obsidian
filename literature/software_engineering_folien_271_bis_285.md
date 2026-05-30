@@ -1,0 +1,21 @@
+# Lektürenotiz: SWE Vorlesung Folien 271 bis 285
+- **QUELLE:** `subjects/software_engineering/slides/SWE.txt` (Slide 271-285)
+- **AUTOR/AUTOREN:** Prof. Dr. Thomas Fuchß
+- **KEY_INSIGHTS:**
+  - Komplexe Zustände in Zustandsautomaten können Parallelität abbilden, wobei unabhängige Teilzustände (z. B. Labor und Vorlesung) gleichzeitig aktiv sein dürfen, aber alle Endzustände erreicht werden müssen, um einen übergeordneten Zustand abzuschließen.
+  - Synchronisierung in Zustandsautomaten erzwingt Abhängigkeiten zwischen Zuständen, indem bestimmte Übergänge (z. B. Prüfungsablegung) erst nach Abschluss anderer Zustände (z. B. Labor) erlaubt sind.
+  - Interne Übergänge in Zuständen ermöglichen vordefinierte Aktionen wie *Entry*, *Do* oder *Exit*, die beim Betreten, Verweilen oder Verlassen eines Zustands ausgeführt werden, ohne den Zustand selbst zu verlassen.
+  - Fassaden in der Softwarearchitektur kapseln Subsysteme, indem sie externe Schnittstellen bereitstellen, interne Details abschotten und Zugriffe auf Komponenten überwachen, um Komplexität zu reduzieren und Kommunikation zu kanalisieren.
+  - Zustandsmaschinen können als zentrale Steuerungselemente in MVC-Architekturen fungieren, indem sie den Zustand des Systems verwalten und als Subjekt für Observer (Views/Controller) agieren, um Zustandsänderungen zu propagieren.
+
+---
+- **Zugehörige Zettel:**
+  - [[Zustandsmaschine]]
+  - [[Parallelität_in_Zustandsmaschinen]]
+  - [[Synchronisierung_in_Zustandsmaschinen]]
+  - [[Interne_Transitionen]]
+  - [[Transition]]
+  - [[Guard-Condition]]
+  - [[Protokoll-Automat]]
+  - [[Fassade_Pattern]]
+  - [[Observer_Pattern]]

@@ -1,0 +1,114 @@
+---
+id: 7b8be9bb-84d8-4c98-959d-63288b820133
+title: "Klausur_SoSe2023_Aufgabe2_Use_Case_Diagramm"
+date: 2026-05-30
+tags:
+  - software_engineering
+  - sose2023
+  - klausur_sose_2023
+  - use_case_diagramm
+  - anforderungsanalyse
+  - akteure
+  - include_extend_beziehungen
+  - gastronomie_software
+  - client_server_architektur
+  - exercise
+  - draft
+source: "SWE 2023 mit Loesung.pdf"
+---
+
+# [[Klausur_SoSe2023_Aufgabe2_Use_Case_Diagramm]]
+
+- **Aufgabenstellung:** 
+  - **einleitung:** Im Rahmen der Entwicklung einer neuen Software für Gastronomiebetriebe (myGaststätte) soll ein Use-Case-Diagramm erstellt werden, das die folgenden Anforderungen abbildet:
+  - **teilaufgaben:**
+  - - **a:** Identifizieren Sie alle relevanten Akteure (Actors) aus der gegebenen Gesprächsnotiz des Produktmanagers.
+    - - **b:** Extrahieren Sie die zentralen Use Cases (Anwendungsfälle) aus dem Text. Achten Sie darauf, dass diese präzise und atomar formuliert sind (z. B. 'Bestellung aufnehmen' statt 'Bestellprozess durchführen').
+    - - **c:** Skizzieren Sie ein Use-Case-Diagramm, das die Beziehungen zwischen Akteuren und Use Cases darstellt. Berücksichtigen Sie dabei folgende Aspekte:
+      - **unterpunkte:**
+  - i. Include- und Extend-Beziehungen (z. B. wenn ein Use Case einen anderen zwingend voraussetzt).
+        - ii. Generalisierungen zwischen Akteuren oder Use Cases (falls zutreffend).
+        - iii. Die Interaktion zwischen Servicekraft, Gast, Küche, Lagerverwaltung und Bezahl-Server.
+    - - **d:** Erläutern Sie kurz, wie Sie die im Text erwähnte Herausforderung der Benachrichtigung der Servicekraft bei autonomer Bezahlung durch den Gast im Use-Case-Diagramm abbilden würden.
+- **Lösungsweg / Musterlösung:** 
+  - **a:**
+  - **akteure:**
+  - Servicekraft
+      - Gast
+      - Küchenmitarbeiter
+      - Lagerverwaltungssystem (automatisiert)
+      - Bezahl-Server (externes System)
+      - Lieferant (externer Akteur, optional)
+    - **begründung:** Die Akteure ergeben sich direkt aus den im Text beschriebenen Rollen und Systemen. Die Lagerverwaltung wird als automatisierter Akteur modelliert, da sie ohne manuelle Interaktion Bestände aktualisiert. Der Lieferant ist optional, da er nur bei knappen Lagerbeständen involviert ist.
+  - **b:**
+  - **use_cases:**
+  - - **name:** Bestellung aufnehmen
+        - **beschreibung:** Die Servicekraft erfasst die Bestellung des Gastes im System.
+      - - **name:** Lagerbestände aktualisieren
+        - **beschreibung:** Automatische Anpassung der Lagerbestände basierend auf den Zutaten der bestellten Speisen/Getränke.
+      - - **name:** Bestellung an Küche weiterleiten
+        - **beschreibung:** Die erfasste Bestellung wird an die Küche übermittelt.
+      - - **name:** Bestellstatus aktualisieren
+        - **beschreibung:** Die Küche bestätigt die Fertigstellung der Bestellung.
+      - - **name:** Klassische Bezahlung durchführen
+        - **beschreibung:** Die Servicekraft wickelt die Bezahlung für den Gast ab.
+      - - **name:** QR-Code scannen
+        - **beschreibung:** Der Gast scannt den QR-Code am Tisch, um die autonome Bezahlung zu initiieren.
+      - - **name:** Autonome Bezahlung durchführen
+        - **beschreibung:** Der Gast bezahlt selbstständig über eine Web-Seite mit vordefiniertem Warenkorb.
+      - - **name:** Servicekraft über Bezahlung informieren
+        - **beschreibung:** Das System benachrichtigt die zuständige Servicekraft nach erfolgreicher autonomer Bezahlung.
+      - - **name:** Lieferauftrag bei knappen Beständen erteilen
+        - **beschreibung:** Automatische Erteilung eines Lieferauftrags an den Lieferanten bei Unterschreitung von Lagerbeständen.
+  - **c:**
+  - **use_case_diagramm:**
+  - **beschreibung:** Das Use-Case-Diagramm sollte folgende Struktur aufweisen:
+      - **akteure_und_ihre_use_cases:**
+  - **Servicekraft:**
+  - Bestellung aufnehmen
+          - Klassische Bezahlung durchführen
+          - Bestellstatus aktualisieren (optional)
+        - **Gast:**
+  - QR-Code scannen
+          - Autonome Bezahlung durchführen
+        - **Küchenmitarbeiter:**
+  - Bestellung an Küche weiterleiten
+          - Bestellstatus aktualisieren
+        - **Lagerverwaltungssystem:**
+  - Lagerbestände aktualisieren
+          - Lieferauftrag bei knappen Beständen erteilen
+        - **Bezahl-Server:**
+  - Klassische Bezahlung durchführen
+          - Autonome Bezahlung durchführen
+      - **beziehungen:**
+  - **include:**
+  - - **von:** Bestellung aufnehmen
+            - **zu:** Lagerbestände aktualisieren
+          - - **von:** Bestellung aufnehmen
+            - **zu:** Bestellung an Küche weiterleiten
+          - - **von:** Autonome Bezahlung durchführen
+            - **zu:** Servicekraft über Bezahlung informieren
+        - **extend:**
+  - - **von:** Lieferauftrag bei knappen Beständen erteilen
+            - **zu:** Lagerbestände aktualisieren
+            - **bedingung:** Nur wenn Lagerbestände unter einen Schwellwert fallen.
+        - **generalisierung:**
+  - **akteure:** Keine Generalisierung zwischen Akteuren notwendig.
+          - **use_cases:** Keine Generalisierung zwischen Use Cases notwendig.
+      - **hinweis:** Der Bezahl-Server ist ein sekundärer Akteur, der sowohl für die klassische als auch für die autonome Bezahlung genutzt wird. Die Benachrichtigung der Servicekraft ist ein separater Use Case, der von der autonomen Bezahlung abhängt.
+  - **d:** - **erläuterung:** Die Benachrichtigung der Servicekraft bei autonomer Bezahlung wird als separater Use Case 'Servicekraft über Bezahlung informieren' modelliert, der über eine <<include>>-Beziehung mit dem Use Case 'Autonome Bezahlung durchführen' verbunden ist. Dies stellt sicher, dass die Benachrichtigung zwingend nach erfolgreicher Bezahlung erfolgt. Alternativ könnte man auch eine <<extend>>-Beziehung mit einer Bedingung (z. B. 'wenn Bezahlung erfolgreich') verwenden, falls die Benachrichtigung optional oder abhängig von weiteren Faktoren sein soll.
+- **Theoretischer Bezug:** 
+  - [[Use_Case_Diagramm|Use-Case-Diagramme]] zur Modellierung von Anforderungen und Akteuren.
+  - [[Akteur|Akteure]] als externe Entitäten, die mit dem System interagieren.
+  - [[Include_Beziehung|Include-Beziehungen]] zur Darstellung zwingender Abhängigkeiten zwischen Use Cases.
+  - [[Extend_Beziehung|Extend-Beziehungen]] für optionale oder bedingte Erweiterungen von Use Cases.
+  - [[Generalisierung_(UML)|Generalisierung]] zur Abbildung von Vererbungsbeziehungen zwischen Akteuren oder Use Cases (hier nicht zwingend erforderlich).
+  - [[Anforderungsanalyse|Anforderungsanalyse]] als Grundlage für die Erstellung von Use-Case-Diagrammen.
+- **Stolpersteine / Fehlerquellen:** 
+  - Vermischung von Akteuren und Systemkomponenten: Die Lagerverwaltung ist ein automatisierter Akteur, kein interner Systemprozess.
+  - Unklare Abgrenzung von Use Cases: Zu grobe Use Cases (z. B. 'Bestellprozess abwickeln') sollten vermieden werden. Stattdessen atomare Use Cases wie 'Bestellung aufnehmen' und 'Lagerbestände aktualisieren' verwenden.
+  - Falsche Verwendung von Include/Extend: Include-Beziehungen sind zwingend, Extend-Beziehungen sind optional oder bedingt. Nicht verwechseln!
+  - Vergessen von sekundären Akteuren: Der Bezahl-Server ist ein externes System und muss als Akteur modelliert werden.
+  - Überladung des Diagramms: Zu viele Use Cases oder Beziehungen können das Diagramm unübersichtlich machen. Fokus auf die zentralen Abläufe legen.
+  - Fehlende Berücksichtigung der autonomen Bezahlung: Die Interaktion zwischen Gast, QR-Code und Bezahl-Server muss klar abgebildet werden, inklusive der Benachrichtigung der Servicekraft.
+  - Unklare Verantwortlichkeiten: Die Küche sollte nicht für die Lagerverwaltung zuständig sein. Diese ist ein separater Akteur.

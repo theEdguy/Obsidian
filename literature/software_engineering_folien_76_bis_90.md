@@ -1,0 +1,23 @@
+# Lektürenotiz: SWE Vorlesung Folien 76 bis 90
+- **QUELLE:** `subjects/software_engineering/slides/SWE.txt` (Slide 76-90)
+- **AUTOR/AUTOREN:** Prof. Dr. Thomas Fuchß
+- **KEY_INSIGHTS:**
+  - Vererbung in der Objektorientierung ermöglicht die hierarchische Spezialisierung von Klassen, wobei Unterklassen Eigenschaften und Beziehungen ihrer Oberklassen erben, diese erweitern oder überschreiben, aber nicht entfernen können.
+  - Das Substitutionsprinzip besagt, dass Instanzen von Unterklassen immer auch als Instanzen ihrer Oberklassen behandelt werden können, was Polymorphie und flexible Nutzung von Objekten ermöglicht.
+  - Vererbung sollte semantisch sinnvoll eingesetzt werden, da unsachgemäße Vererbungsbeziehungen (z. B. Quadrat als Unterklasse von Rechteck) zu logischen Widersprüchen oder unerwartetem Verhalten führen können.
+  - Die Unified Modeling Language (UML) basiert auf einem Meta-Modell, das die Bedeutung aller Beschreibungselemente definiert und durch Erweiterungen anpassbar ist, um methodische Durchgängigkeit zu gewährleisten.
+  - Attribute und Operationen in UML-Klassen werden mit Sichtbarkeiten, Typen, Multiplizitäten und Eigenschaften spezifiziert, um Struktur und Verhalten präzise zu modellieren.
+
+---
+- **Zugehörige Zettel:**
+  - [[Vererbung_(OOP)]]
+  - [[Substitutionsprinzip]]
+  - [[Ist-eine-Beziehung]]
+  - [[Quadrat-Rechteck-Problem]]
+  - [[Komposition_über_Vererbung]]
+  - [[Meta-Modell]]
+  - [[UML_Klassendiagramm]]
+  - [[UML_Instanzdiagramm]]
+  - [[MOF_(Meta-Object_Facility)]]
+  - [[Stereotyp_(UML)]]
+  - [[Abgeleitetes_Attribut]]

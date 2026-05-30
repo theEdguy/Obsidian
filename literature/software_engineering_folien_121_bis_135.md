@@ -1,0 +1,23 @@
+# Lektürenotiz: SWE Vorlesung Folien 121 bis 135
+- **QUELLE:** `subjects/software_engineering/slides/SWE.txt` (Slide 121-135)
+- **AUTOR/AUTOREN:** Prof. Dr. Thomas Fuchß
+- **KEY_INSIGHTS:**
+  - Abhängigkeiten (Dependencies) im UML-Modell zeigen dynamische oder temporäre Beziehungen zwischen Klassen oder Interfaces, die keine dauerhaften Assoziationen darstellen, und werden oft bei der Nutzung von Methoden oder Übergabe von Objekten verwendet.
+  - Die Evaluierungsphase (Phase I) eines Softwareprojekts dient dem Verständnis der Aufgabe, der Erfassung zentraler Anforderungen und der Erstellung einer Vorversion, um Planungssicherheit und ein klares Problemverständnis zu gewinnen.
+  - Use Cases und Analysemodelle helfen, die Problemdomäne zu strukturieren und die Anforderungen des Auftraggebers greifbar zu machen, während die erste Systemarchitektur aus diesen Modellen abgeleitet wird.
+  - Iterationen oder Sprints sind zentrale Elemente agiler Methoden wie Scrum und sollten eine Dauer von 2 Wochen bis 2 Monaten haben, um eine sinnvolle Umsetzung von Funktionalität bei gleichzeitiger Risikominimierung zu ermöglichen.
+  - Testen ist ein essenzieller Bestandteil jeder Iteration und wird oft vernachlässigt, obwohl es entscheidend für die Qualitätssicherung und den Projekterfolg ist.
+
+---
+- **Zugehörige Zettel:**
+  - [[Dependency_Beziehung]]
+  - [[Lose_Kopplung]]
+  - [[Evaluierungsphase]]
+  - [[Vorversion]]
+  - [[Use_Case]]
+  - [[Analysemodell]]
+  - [[Iterative_Entwicklung]]
+  - [[Sprint]]
+  - [[Product_Backlog]]
+  - [[Backlog_Grooming]]
+  - [[Prototyping]]

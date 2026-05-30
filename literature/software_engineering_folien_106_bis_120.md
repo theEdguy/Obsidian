@@ -1,0 +1,24 @@
+# Lektürenotiz: SWE Vorlesung Folien 106 bis 120
+- **QUELLE:** `subjects/software_engineering/slides/SWE.txt` (Slide 106-120)
+- **AUTOR/AUTOREN:** Prof. Dr. Thomas Fuchß
+- **KEY_INSIGHTS:**
+  - Binäre Assoziationen beschreiben Beziehungen zwischen Objekten zweier Klassen und können durch Eigenschaften wie Stelligkeit, Rollenbezeichner und Navigierbarkeit näher spezifiziert werden.
+  - Assoziationsklassen ermöglichen es, Eigenschaften direkt einer Beziehung zwischen Klassen zuzuordnen, wenn diese nicht eindeutig einer der beteiligten Klassen zugeordnet werden können.
+  - Komposition und Aggregation sind spezielle Formen von Assoziationen, wobei Komposition eine starke Existenzabhängigkeit der Teile vom Ganzen beschreibt, während Aggregation eine schwächere Teile-Ganzes-Beziehung darstellt.
+  - Mehrstellige Assoziationen erlauben Beziehungen zwischen mehr als zwei Klassen und können durch Constraints (z. B. XOR oder gerichtete Bedingungen) eingeschränkt werden.
+  - Assoziationen und ihre Eigenschaften (z. B. Navigierbarkeit, Vererbung) werden in Klassenmodellen vererbt und können durch Qualifier oder Interface-Specifier präzisiert werden.
+
+---
+- **Zugehörige Zettel:**
+  - [[Binäre_Assoziation]]
+  - [[Navigierbarkeit]]
+  - [[Assoziationsklasse]]
+  - [[Mehrstellige_Assoziation]]
+  - [[Constraint]]
+  - [[Constraint]]
+  - [[Subset_Constraint]]
+  - [[Qualifier]]
+  - [[Komposition]]
+  - [[Aggregation]]
+  - [[Assoziation_und_Attribut]]
+  - [[Vererbung_von_Assoziationen]]

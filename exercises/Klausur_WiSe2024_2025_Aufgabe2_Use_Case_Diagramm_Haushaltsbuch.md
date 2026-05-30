@@ -1,0 +1,119 @@
+---
+id: 9d6ce53e-6cbd-4395-906c-46ffa27acd0e
+title: "Klausur_WiSe2024_2025_Aufgabe2_Use_Case_Diagramm_Haushaltsbuch"
+date: 2026-05-30
+tags:
+  - software_engineering
+  - ws_2024_2025
+  - klausur_ws_2024_2025
+  - use_case_diagramm
+  - anforderungsanalyse
+  - haushaltsbuch
+  - online_banking
+  - uml
+  - exercise
+  - draft
+source: "SWE-WS-2024-2025 - Loesung.pdf"
+---
+
+# [[Klausur_WiSe2024_2025_Aufgabe2_Use_Case_Diagramm_Haushaltsbuch]]
+
+- **Aufgabenstellung:** 
+  - **a:** Analysieren Sie die gegebene Aufgabenstellung aus dem Kickoff-Meeting von Frau Müller (Product Owner) für das Haushaltsbuch 'myHaushalt'. Identifizieren Sie alle relevanten Akteure und Use-Cases.
+  - **b:** Erstellen Sie ein [[Use_Case_Diagramm|Use-Case-Diagramm]], das die folgenden Anforderungen abbildet:
+  - **b1:** Nutzer greift auf das Haushaltsbuch aus dem Online-Banking heraus zu (und umgekehrt), ohne erneute Authentisierung.
+  - **b2:** Manuelle und automatische Erfassung von Einnahmen und Ausgaben (inkl. Synchronisation mit Bankkonten).
+  - **b3:** Daten werden in einer separaten Datenbank gespeichert (Sicherheitsanforderung).
+  - **b4:** Automatische Kategorisierung von Einnahmen/Ausgaben (ggf. mit KI-Unterstützung).
+  - **b5:** Verwaltung und Bearbeitung von Kategorien (z. B. im Kontext von Berichten).
+  - **b6:** Generierung von Diagrammen und Berichten zur finanziellen Übersicht.
+- **Lösungsweg / Musterlösung:** 
+  - **a:**
+  - **akteure:**
+  - Nutzer (primärer Akteur, greift auf das Haushaltsbuch zu)
+      - Online-Banking-System (sekundärer Akteur, stellt Kontoinformationen bereit)
+      - Bankkonto (externes System, liefert Transaktionsdaten)
+      - KI-System (optionaler Akteur für automatische Kategorisierung)
+    - **use_cases:**
+  - Einnahmen/Ausgaben manuell erfassen
+      - Einnahmen/Ausgaben automatisch synchronisieren (mit Bankkonten)
+      - Kategorien verwalten (anlegen, bearbeiten, löschen)
+      - Einnahmen/Ausgaben kategorisieren (manuell oder automatisch)
+      - Berichte generieren (z. B. Ausgaben nach Kategorien)
+      - Diagramme erstellen (z. B. Tortendiagramm für Ausgabenverteilung)
+      - Auf Haushaltsbuch aus Online-Banking zugreifen
+      - Auf Online-Banking aus Haushaltsbuch zugreifen (ohne erneute Authentisierung)
+  - **b:**
+  - **beschreibung:** Das Use-Case-Diagramm sollte folgende Struktur aufweisen:
+    - **diagramm_elemente:**
+  - **akteure:**
+  - - **name:** Nutzer
+          - **beschreibung:** Interagiert direkt mit dem System (z. B. manuelle Erfassung, Kategorienverwaltung).
+        - - **name:** Online-Banking-System
+          - **beschreibung:** Stellt Kontoinformationen bereit und ermöglicht nahtlosen Zugriff ohne erneute Authentisierung.
+        - - **name:** Bankkonto
+          - **beschreibung:** Externes System, das Transaktionsdaten für die automatische Synchronisation liefert.
+        - - **name:** KI-System (optional)
+          - **beschreibung:** Unterstützt die automatische Kategorisierung von Einnahmen/Ausgaben.
+      - **use_cases:**
+  - - **name:** Einnahmen/Ausgaben manuell erfassen
+          - **beschreibung:** Nutzer gibt Transaktionen manuell ein (z. B. Bargeldausgaben).
+          - **akteure:** - Nutzer
+        - - **name:** Einnahmen/Ausgaben automatisch synchronisieren
+          - **beschreibung:** System holt Transaktionsdaten von Bankkonten und speichert sie in separater Datenbank.
+          - **akteure:**
+  - Nutzer
+            - Online-Banking-System
+            - Bankkonto
+        - - **name:** Kategorien verwalten
+          - **beschreibung:** Nutzer kann Kategorien anlegen, bearbeiten oder löschen (z. B. 'Lebensmittel', 'Urlaub').
+          - **akteure:** - Nutzer
+        - - **name:** Einnahmen/Ausgaben kategorisieren
+          - **beschreibung:** Manuelle oder automatische Zuordnung von Transaktionen zu Kategorien (ggf. mit KI).
+          - **akteure:**
+  - Nutzer
+            - KI-System (optional)
+        - - **name:** Berichte generieren
+          - **beschreibung:** System erstellt textuelle Berichte (z. B. monatliche Ausgabenübersicht).
+          - **akteure:** - Nutzer
+        - - **name:** Diagramme erstellen
+          - **beschreibung:** System visualisiert Daten (z. B. Tortendiagramm für Ausgabenverteilung).
+          - **akteure:** - Nutzer
+        - - **name:** Auf Haushaltsbuch zugreifen
+          - **beschreibung:** Nutzer greift aus dem Online-Banking heraus auf das Haushaltsbuch zu (ohne erneute Authentisierung).
+          - **akteure:**
+  - Nutzer
+            - Online-Banking-System
+        - - **name:** Auf Online-Banking zugreifen
+          - **beschreibung:** Nutzer greift aus dem Haushaltsbuch heraus auf das Online-Banking zu (ohne erneute Authentisierung).
+          - **akteure:**
+  - Nutzer
+            - Online-Banking-System
+      - **beziehungen:**
+  - - **typ:** Include
+          - **von:** Einnahmen/Ausgaben automatisch synchronisieren
+          - **zu:** Einnahmen/Ausgaben kategorisieren
+        - - **typ:** Extend
+          - **von:** Einnahmen/Ausgaben kategorisieren
+          - **zu:** KI-System (optional)
+          - **bedingung:** Automatische Kategorisierung ist aktiviert
+    - **hinweise:**
+  - Verwenden Sie für das Diagramm die Standard-Notation nach UML 2.5.
+      - Achten Sie auf klare Trennung zwischen manuellen und automatischen Prozessen.
+      - Die separate Datenbank muss nicht im Diagramm dargestellt werden, da es sich um eine technische Implementierungsdetails handelt.
+      - Der nahtlose Zugriff zwischen Online-Banking und Haushaltsbuch sollte durch eine <<include>>-Beziehung oder eine direkte Assoziation zwischen den Use-Cases dargestellt werden.
+- **Theoretischer Bezug:** 
+  - [[Use_Case_Diagramm|Use-Case-Diagramme]] zur Darstellung von Anforderungen aus Nutzersicht.
+  - [[Akteur|Akteure]] als externe Entitäten, die mit dem System interagieren.
+  - [[Include_Beziehung|Include-Beziehungen]] für zwingend erforderliche Use-Cases.
+  - [[Extend_Beziehung|Extend-Beziehungen]] für optionale oder bedingte Use-Cases.
+  - [[Anforderungsanalyse|Anforderungsanalyse]] als Grundlage für die Erstellung von Use-Case-Diagrammen.
+  - [[Single_Sign_On|Single Sign-On (SSO)]] für den nahtlosen Zugriff zwischen Systemen ohne erneute Authentisierung.
+- **Stolpersteine / Fehlerquellen:** 
+  - Vermischung von Akteuren und Systemkomponenten (z. B. Bankkonto als Akteur vs. Datenquelle).
+  - Unklare Abgrenzung zwischen manuellen und automatischen Prozessen (z. B. manuelle vs. automatische Kategorisierung).
+  - Fehlende Berücksichtigung der Sicherheitsanforderung (separate Datenbank) im Use-Case-Diagramm (dies ist jedoch ein Implementierungsdetail und gehört nicht ins Diagramm).
+  - Überladung des Diagramms mit technischen Details (z. B. Datenbanken, KI-Algorithmen).
+  - Falsche Verwendung von <<include>> und <<extend>> (z. B. <<include>> für optionale Use-Cases).
+  - Vernachlässigung der bidirektionalen Zugriffsmöglichkeit zwischen Online-Banking und Haushaltsbuch.
+  - Unklare Darstellung der KI-Unterstützung (z. B. als separater Akteur vs. Teil des Systems).

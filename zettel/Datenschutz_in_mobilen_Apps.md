@@ -1,0 +1,22 @@
+---
+id: f7cc439f-7eff-4404-acc4-14e71f0c963a
+title: "Datenschutz_in_mobilen_Apps"
+date: 2026-05-30
+tags:
+  - software_engineering
+  - datenbanken
+  - mobile_entwicklung
+  - rechtliche_compliance
+  - sicherheit
+  - android
+  - ios
+  - draft
+source: "Klausur_Referenz"
+---
+
+# [[Datenschutz_in_mobilen_Apps]]
+
+- **Kernkonzept:** Datenschutz_in_mobilen_Apps bezeichnet die Umsetzung von Maßnahmen und Prinzipien zum Schutz personenbezogener Daten innerhalb mobiler Anwendungen. Dies umfasst die Einhaltung rechtlicher Vorgaben (z. B. [[DSGVO]]), die Minimierung der Datenerhebung, die sichere Speicherung und Verarbeitung lokal auf dem Endgerät sowie die transparente Kommunikation gegenüber Nutzern über Datenverarbeitungsprozesse. Ein zentraler Aspekt ist die lokale Datenhaltung, um den Transfer sensibler Informationen an externe Server zu vermeiden und die [[Datenhoheit]] beim Nutzer zu belassen.
+- **Nutzen & Zweck:** Der Datenschutz_in_mobilen_Apps dient primär dem Schutz der Privatsphäre von Nutzern und der Vermeidung von Missbrauch personenbezogener Daten. Durch lokale Speicherung (z. B. via [[SQLite]] oder [[Realm]]) und Verschlüsselungstechniken (z. B. [[AES_Verschlüsselung]]) wird die Compliance mit Datenschutzgesetzen sichergestellt. Zudem stärkt dies das Vertrauen der Nutzer in die App, was sich positiv auf die Nutzerakzeptanz und Markenreputation auswirkt. Im Kontext individualisierter Touren (z. B. in Navigations-Apps) ermöglicht lokale Datenhaltung die Personalisierung ohne externe Abhängigkeiten.
+- **Abgrenzung & Grenzen:** Datenschutz_in_mobilen_Apps grenzt sich von serverbasierten Lösungen ab, bei denen Daten zentral gespeichert und verarbeitet werden. Typische Stolpersteine sind: (1) **Performance-Einschränkungen** durch lokale Datenbanken (z. B. bei großen Datensätzen), (2) **Synchronisationskonflikte** bei Offline-Nutzung, (3) **Sicherheitsrisiken** durch unsachgemäße Verschlüsselung oder Zugriffsrechte (z. B. bei [[Android_Datenbanken]]), und (4) **rechtliche Grauzonen** bei grenzüberschreitenden Datenflüssen. Zudem ist die lokale Speicherung nicht immer praktikabel, z. B. bei Echtzeit-Kollaborationsfunktionen, die [[Client-Server-Architektur]] erfordern.
+- **Beispiel / Code:** {'beschreibung': 'Beispiel für eine lokale SQLite-Datenbank in Android (Kotlin) zur Speicherung individualisierter Touren unter Einhaltung von Datenschutzprinzipien:', 'code': {'kotlin': 'class TourDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {\n    companion object {\n        private const val DATABASE_NAME = "private_tours.db"\n        private const val DATABASE_VERSION = 1\n        private const val TABLE_TOURS = "tours"\n        private const val COLUMN_ID = "id"\n        private const val COLUMN_NAME = "name"\n        private const val COLUMN_DATA = "data" // JSON-String der Tour-Daten\n    }\n\n    override fun onCreate(db: SQLiteDatabase) {\n        db.execSQL("""\n            CREATE TABLE $TABLE_TOURS (\n                $COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT,\n                $COLUMN_NAME TEXT NOT NULL,\n                $COLUMN_DATA TEXT NOT NULL\n            )\n        """.trimIndent())\n    }\n\n    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {\n        db.execSQL("DROP TABLE IF EXISTS $TABLE_TOURS")\n        onCreate(db)\n    }\n\n    fun insertTour(name: String, data: String): Boolean {\n        val db = writableDatabase\n        val values = ContentValues().apply {\n            put(COLUMN_NAME, name)\n            put(COLUMN_DATA, data)\n        }\n        return db.insert(TABLE_TOURS, null, values) != -1L\n    }\n}', 'erlaeuterung': 'Die Datenbank speichert Touren lokal auf dem Gerät. Sensible Daten (z. B. Standortverläufe) könnten zusätzlich mit [[Android_Keystore]] verschlüsselt werden. Für komplexere Anforderungen (z. B. relationale Daten) wäre [[Room_Persistence_Library]] eine Alternative.'}, 'uml': {'diagramm': 'classDiagram\n    class TourDatabaseHelper {\n        +onCreate(db: SQLiteDatabase)\n        +onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int)\n        +insertTour(name: String, data: String): Boolean\n    }\n    class SQLiteOpenHelper {\n        <<abstract>>\n    }\n    TourDatabaseHelper --|> SQLiteOpenHelper\n    TourDatabaseHelper --> SQLiteDatabase : uses\n    note for TourDatabaseHelper "Lokale Speicherung von Touren\\nunter Einhaltung von [[DSGVO]]"'}}
