@@ -1,17 +1,19 @@
 ---
-id: 40710d59-cceb-45e0-8a1a-3e32ef8e4f14
-title: "Wiederverwendung_in_der_Softwareentwicklung"
+aliases:
+- Wiederverwendung
 date: 2026-05-30
+id: 40710d59-cceb-45e0-8a1a-3e32ef8e4f14
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - entwurfsmuster
-  - softwarearchitektur
-  - modularisierung
-  - designprinzipien
-  - observer_pattern
-  - komponentenbasierte_entwicklung
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- entwurfsmuster
+- softwarearchitektur
+- modularisierung
+- designprinzipien
+- observer_pattern
+- komponentenbasierte_entwicklung
+- draft
+title: Wiederverwendung_in_der_Softwareentwicklung
 ---
 
 # [[Wiederverwendung_in_der_Softwareentwicklung]]

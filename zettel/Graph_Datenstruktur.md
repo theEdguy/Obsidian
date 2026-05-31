@@ -1,16 +1,18 @@
 ---
-id: f54128db-2ca8-41bf-b7af-10e22a9b87b7
-title: "Graph_Datenstruktur"
+aliases:
+- Graph
 date: 2026-05-30
+id: f54128db-2ca8-41bf-b7af-10e22a9b87b7
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - datenstrukturen
-  - algorithmen
-  - entwurfsmuster
-  - uml
-  - graphentheorie
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- datenstrukturen
+- algorithmen
+- entwurfsmuster
+- uml
+- graphentheorie
+- draft
+title: Graph_Datenstruktur
 ---
 
 # [[Graph_Datenstruktur]]

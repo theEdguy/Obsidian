@@ -1,16 +1,18 @@
 ---
-id: 83d00746-d9bf-45c7-a3e0-519023cc8df6
-title: "Region_in_UML_Interaktionsdiagrammen"
+aliases:
+- Region_(UML)
 date: 2026-05-30
+id: 83d00746-d9bf-45c7-a3e0-519023cc8df6
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - interaktionsmodellierung
-  - nebenläufigkeit
-  - entwurfsmuster
-  - systemanalyse
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- interaktionsmodellierung
+- nebenläufigkeit
+- entwurfsmuster
+- systemanalyse
+- draft
+title: Region_in_UML_Interaktionsdiagrammen
 ---
 
 # [[Region_in_UML_Interaktionsdiagrammen]]

@@ -1,16 +1,18 @@
 ---
-id: 69f9cc11-d99c-4870-8aa5-45d7c4e2ef5b
-title: "Komposition_UML"
+aliases:
+- Komposition_(UML)
 date: 2026-05-30
+id: 69f9cc11-d99c-4870-8aa5-45d7c4e2ef5b
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - entwurfsmuster
-  - objektorientierung
-  - klassendiagramm
-  - softwaremodellierung
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- entwurfsmuster
+- objektorientierung
+- klassendiagramm
+- softwaremodellierung
+- draft
+title: Komposition_UML
 ---
 
 # [[Komposition_UML]]

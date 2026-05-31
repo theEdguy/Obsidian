@@ -1,16 +1,18 @@
 ---
-id: e979d0fd-5e49-4df5-93db-1b73cc7092cf
-title: "Include_und_Extend_in_Use_Cases"
+aliases:
+- Include_und_Extend
 date: 2026-05-30
+id: e979d0fd-5e49-4df5-93db-1b73cc7092cf
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - use_case_modellierung
-  - anforderungsanalyse
-  - entwurfsmuster
-  - softwarearchitektur
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- use_case_modellierung
+- anforderungsanalyse
+- entwurfsmuster
+- softwarearchitektur
+- draft
+title: Include_und_Extend_in_Use_Cases
 ---
 
 # [[Include_und_Extend_in_Use_Cases]]

@@ -1,16 +1,18 @@
 ---
-id: 474ec929-19c5-47d1-851f-36044efacf3e
-title: "Qualifier_in_UML"
+aliases:
+- Qualifier_(UML)
 date: 2026-05-30
+id: 474ec929-19c5-47d1-851f-36044efacf3e
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - klassendiagramm
-  - modellierung
-  - assoziation
-  - entwurfsmuster
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- klassendiagramm
+- modellierung
+- assoziation
+- entwurfsmuster
+- draft
+title: Qualifier_in_UML
 ---
 
 # [[Qualifier_in_UML]]

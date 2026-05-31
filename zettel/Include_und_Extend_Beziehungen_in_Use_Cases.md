@@ -1,16 +1,18 @@
 ---
-id: 8717be93-95ba-497e-ae2a-ce842361b4b3
-title: "Include_und_Extend_Beziehungen_in_Use_Cases"
+aliases:
+- Include_und_Extend_Beziehungen
 date: 2026-05-30
+id: 8717be93-95ba-497e-ae2a-ce842361b4b3
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - anforderungsanalyse
-  - use_case_modellierung
-  - softwareentwurf
-  - modularisierung
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- anforderungsanalyse
+- use_case_modellierung
+- softwareentwurf
+- modularisierung
+- draft
+title: Include_und_Extend_Beziehungen_in_Use_Cases
 ---
 
 # [[Include_und_Extend_Beziehungen_in_Use_Cases]]

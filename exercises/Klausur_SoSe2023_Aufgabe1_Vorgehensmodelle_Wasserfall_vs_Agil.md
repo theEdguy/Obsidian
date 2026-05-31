@@ -34,6 +34,22 @@ source: "SWE 2023 mit Loesung.pdf"
   - **3_Kundenorientierung_und_iterative_Entwicklung:**
   - **Wasserfallmodell:** Die Kundenorientierung ist im [[Wasserfallmodell]] eingeschränkt, da der Kunde erst am Ende des Projekts ein fertiges Produkt erhält. Feedback wird meist erst in der späten [[Testen|Testphase]] oder nach der Auslieferung eingeholt, was zu hohen Kosten bei nachträglichen Änderungen führen kann.
     - **Agiles_Vorgehensmodell:** Agile [[Vorgehensmodell|Vorgehensmodelle]] legen großen Wert auf Kundenorientierung. Der Kunde wird regelmäßig in den Entwicklungsprozess einbezogen (z. B. durch [[Sprint_Review|Sprint-Reviews]] oder [[Backlog_Refinement]]). Durch iterative Entwicklung und frühes Feedback können Anpassungen schnell vorgenommen werden, um die Kundenzufriedenheit zu erhöhen.
+- **Deine Bearbeitung (Notizen):**
+  - *Wasserfall:* Definiert dadurch, dass es starr ist und klar definierte Phasen hat (Analyse, Design, Arbeit, Evaluieren, Testen). Das Produkt funktioniert erst am Ende wirklich und der Kunde sieht es erst dann.
+  - *Agil:* Aufgeteilt in Sprints, in denen alle Phasen wiederholt werden, um Dinge kontinuierlich anzupassen und dem Kundenwunsch bestmöglich zu entsprechen.
+  - *Unterschied:* Wasserfall = starr, Phasen werden einmalig durchlaufen. Scrum/Agil = Phasen fangen nach jeder Iteration neu an.
+- **Feedback & Optimierung für die Klausur:**
+  > [!TIP]
+  > Deine Antwort erfasst die Kernpunkte (Starrheit vs. Sprints, spätes Kundenfeedback vs. Anpassung) bereits hervorragend!
+  > Um in der Klausur die **volle Punktzahl** abzuräumen, solltest du folgende Formulierungen schärfen:
+  > 
+  > 1. **Phasen-Begriffe:** Verwende die Standardbegriffe der Vorlesung: *Anforderungsanalyse, Systemdesign, Implementierung* (statt "Arbeit") und *Testen/Validierung*.
+  > 2. **Workload:** Du schriebst *"dafür ist der Workload geringer"*. Achtung: Der Gesamt-Workload ist bei agilen Projekten nicht zwingend geringer (oft sogar höher durch Meetings). Der Unterschied ist, dass der Workload in **kleine, überschaubare Sprints/Inkremente** unterteilt wird, was das Risiko minimiert.
+  > 3. **Schlüsselbegriffe:** Baue die Begriffe **iterativ** (wiederholend) und **inkrementell** (schrittweise funktionale Erweiterungen ausliefern) ein.
+  > 
+  > **Mustergültige Klausur-Formulierung basierend auf deiner Lösung:**
+  > * "Das **Wasserfallmodell** ist ein *sequenzielles* Vorgehensmodell, bei dem die Phasen (Analyse, Design, Implementierung, Test) einmalig nacheinander durchlaufen werden. Der Kunde sieht erst am Projektende ein funktionierendes System, was das Risiko von Fehlentwicklungen erhöht.
+  > * Ein **agiles Modell** (wie Scrum) arbeitet *iterativ-inkrementell* in Sprints. Alle Phasen werden in jedem Sprint wiederholt. Dies ermöglicht kontinuierliches Kunden-Feedback nach jedem Sprint und eine hohe Flexibilität für Anforderungsänderungen, während das Risiko durch die Aufteilung des Workloads in kleine, nutzbare Inkremente minimiert wird."
 - **Theoretischer Bezug:** 
   - [[Vorgehensmodell]]
   - [[Wasserfallmodell]]

@@ -1,19 +1,21 @@
 ---
-id: a8dec339-e5ea-43ae-a180-e9ddbfa3538f
-title: "Lokale_Datenbank_fuer_Mobile_Anwendungen"
+aliases:
+- Datenbank
 date: 2026-05-30
+id: a8dec339-e5ea-43ae-a180-e9ddbfa3538f
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - datenbanken
-  - mobile_entwicklung
-  - datenschutz
-  - lokalisierung
-  - nosql
-  - sql
-  - persistenz
-  - datenmodellierung
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- datenbanken
+- mobile_entwicklung
+- datenschutz
+- lokalisierung
+- nosql
+- sql
+- persistenz
+- datenmodellierung
+- draft
+title: Lokale_Datenbank_fuer_Mobile_Anwendungen
 ---
 
 # [[Lokale_Datenbank_fuer_Mobile_Anwendungen]]

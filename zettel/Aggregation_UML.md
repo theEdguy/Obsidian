@@ -1,16 +1,18 @@
 ---
-id: 5ab09695-72e6-43ee-9555-d90c8cb69c74
-title: "Aggregation_UML"
+aliases:
+- Aggregation_(UML)
 date: 2026-05-30
+id: 5ab09695-72e6-43ee-9555-d90c8cb69c74
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - entwurfsmuster
-  - objektorientierung
-  - klassendiagramm
-  - softwaremodellierung
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- entwurfsmuster
+- objektorientierung
+- klassendiagramm
+- softwaremodellierung
+- draft
+title: Aggregation_UML
 ---
 
 # [[Aggregation_UML]]

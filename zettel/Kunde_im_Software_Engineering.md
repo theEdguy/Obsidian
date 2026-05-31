@@ -1,17 +1,19 @@
 ---
-id: d8fd0f9e-c92c-4fee-b273-f073bccf41e7
-title: "Kunde_im_Software_Engineering"
+aliases:
+- Kunde
 date: 2026-05-30
+id: d8fd0f9e-c92c-4fee-b273-f073bccf41e7
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - agile_entwicklung
-  - use_case
-  - stakeholder_management
-  - anforderungsanalyse
-  - uml
-  - kundenzentrierung
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- agile_entwicklung
+- use_case
+- stakeholder_management
+- anforderungsanalyse
+- uml
+- kundenzentrierung
+- draft
+title: Kunde_im_Software_Engineering
 ---
 
 # [[Kunde_im_Software_Engineering]]

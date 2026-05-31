@@ -1,17 +1,19 @@
 ---
-id: 15dc0283-b5c6-4991-bd55-92e19664e11c
-title: "Aufgabenverteilung_in_Softwarearchitektur"
+aliases:
+- Aufgabenverteilung
 date: 2026-05-30
+id: 15dc0283-b5c6-4991-bd55-92e19664e11c
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - softwarearchitektur
-  - schichtenmodell
-  - verantwortlichkeiten
-  - uml
-  - mvc_pattern
-  - separation_of_concerns
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- softwarearchitektur
+- schichtenmodell
+- verantwortlichkeiten
+- uml
+- mvc_pattern
+- separation_of_concerns
+- draft
+title: Aufgabenverteilung_in_Softwarearchitektur
 ---
 
 # [[Aufgabenverteilung_in_Softwarearchitektur]]

@@ -1,16 +1,18 @@
 ---
-id: df3e5f27-82cf-49b1-a8db-55091d9cc3bf
-title: "Region_in_Software_Engineering"
+aliases:
+- Region
 date: 2026-05-30
+id: df3e5f27-82cf-49b1-a8db-55091d9cc3bf
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - modularisierung
-  - softwarearchitektur
-  - uml
-  - code_organisation
-  - csharp
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- modularisierung
+- softwarearchitektur
+- uml
+- code_organisation
+- csharp
+- draft
+title: Region_in_Software_Engineering
 ---
 
 # [[Region_in_Software_Engineering]]

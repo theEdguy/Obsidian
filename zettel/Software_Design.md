@@ -1,19 +1,21 @@
 ---
-id: 4d7fab59-d45a-4d27-865f-124b911be660
-title: "Software_Design"
+aliases:
+- Design
 date: 2026-05-30
+id: 4d7fab59-d45a-4d27-865f-124b911be660
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - softwarearchitektur
-  - uml
-  - entwurfsmuster
-  - objektorientierung
-  - systementwurf
-  - use_case
-  - klassendiagramm
-  - zustandsdiagramm
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- softwarearchitektur
+- uml
+- entwurfsmuster
+- objektorientierung
+- systementwurf
+- use_case
+- klassendiagramm
+- zustandsdiagramm
+- draft
+title: Software_Design
 ---
 
 # [[Software_Design]]

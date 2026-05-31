@@ -1,13 +1,15 @@
 ---
-id: 8fd98765-6ee8-4230-a616-c547d76c486b
-title: "MVC_Pattern"
+aliases:
+- MVC
 date: 2026-05-30
+id: 8fd98765-6ee8-4230-a616-c547d76c486b
+source: SWE Slides (Folien 1-15)
 tags:
-  - software_engineering
-  - architekturmuster
-  - design_pattern
-  - draft
-source: "SWE Slides (Folien 1-15)"
+- software_engineering
+- architekturmuster
+- design_pattern
+- draft
+title: MVC_Pattern
 ---
 
 # [[MVC_Pattern]]

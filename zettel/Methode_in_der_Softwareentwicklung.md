@@ -1,18 +1,20 @@
 ---
-id: dde53423-38f4-4af8-8c95-534b8f56df5e
-title: "Methode_in_der_Softwareentwicklung"
+aliases:
+- Methode
 date: 2026-05-30
+id: dde53423-38f4-4af8-8c95-534b8f56df5e
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - objektorientierte_programmierung
-  - kapselung
-  - polymorphismus
-  - entwurfsmuster
-  - uml
-  - java
-  - software_design
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- objektorientierte_programmierung
+- kapselung
+- polymorphismus
+- entwurfsmuster
+- uml
+- java
+- software_design
+- draft
+title: Methode_in_der_Softwareentwicklung
 ---
 
 # [[Methode_in_der_Softwareentwicklung]]

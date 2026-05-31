@@ -1,16 +1,18 @@
 ---
-id: fcb6e664-862e-4fbd-87d8-925d610a438c
-title: "Akteur_UML"
+aliases:
+- Akteur_(UML)
 date: 2026-05-30
+id: fcb6e664-862e-4fbd-87d8-925d610a438c
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - anforderungsanalyse
-  - use_case
-  - softwaremodellierung
-  - systemdesign
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- anforderungsanalyse
+- use_case
+- softwaremodellierung
+- systemdesign
+- draft
+title: Akteur_UML
 ---
 
 # [[Akteur_UML]]

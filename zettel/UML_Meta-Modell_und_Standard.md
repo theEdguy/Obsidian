@@ -1,16 +1,18 @@
 ---
-id: 5cfcbf3d-ee70-478b-960f-3a2796264bc3
-title: "UML_Meta-Modell_und_Standard"
+aliases:
+- UML
 date: 2026-05-30
+id: 5cfcbf3d-ee70-478b-960f-3a2796264bc3
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - meta-modellierung
-  - softwarearchitektur
-  - modellierung
-  - omg_standard
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- meta-modellierung
+- softwarearchitektur
+- modellierung
+- omg_standard
+- draft
+title: UML_Meta-Modell_und_Standard
 ---
 
 # [[UML_Meta-Modell_und_Standard]]

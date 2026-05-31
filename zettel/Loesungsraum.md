@@ -1,13 +1,14 @@
 ---
-id: 6af30635-0ffc-4770-a39e-5c421d86ca62
+id: f2e58798-82ca-44e6-a193-acf208cb7884
 title: "Loesungsraum"
-date: 2026-05-30
+date: 2026-05-31
 tags:
   - software_engineering
   - softwareentwurf
   - entwurfsmuster
-  - grasp
-  - architekturprinzipien
+  - architekturmuster
+  - systemdesign
+  - trade-offs
   - uml
   - draft
 source: "Klausur_Referenz"
@@ -15,50 +16,51 @@ source: "Klausur_Referenz"
 
 # [[Loesungsraum]]
 
-- **Kernkonzept:** Der **Lösungsraum** bezeichnet im Kontext des [[Softwareentwurfs]] die Menge aller möglichen Design- und Implementierungsalternativen, die zur Erfüllung der Anforderungen eines Systems zur Verfügung stehen. Er umfasst strukturelle und verhaltensbezogene Entscheidungen, wie die Zuweisung von [[Verantwortlichkeiten]] zu [[Klassen]] und [[Komponenten]], die Wahl von [[Entwurfsmustern]] oder die Festlegung von [[Schnittstellen]]. Der Lösungsraum ist eng mit Prinzipien wie [[Lose_Kopplung]] und [[Hohe_Kohäsion]] verknüpft, die als Leitplanken für die Exploration und Eingrenzung der Optionen dienen.
-- **Nutzen & Zweck:** Der Lösungsraum dient als gedankliches Framework, um systematisch Design-Entscheidungen zu evaluieren und zu optimieren. Sein Nutzen liegt in:
-- **Strukturierter Entscheidungsfindung**: Durch die explizite Betrachtung aller Alternativen werden suboptimale Lösungen (z. B. [[God_Object]]) vermieden.
-- **Flexibilität und Wartbarkeit**: Eine bewusste Exploration des Lösungsraums fördert [[Modularität]] und [[Erweiterbarkeit]], da Abhängigkeiten und Verantwortlichkeiten klar abgegrenzt werden.
-- **Risikominimierung**: Durch die Abwägung von Trade-offs (z. B. zwischen [[Performance]] und [[Lesbarkeit]]) werden spätere Refactoring-Kosten reduziert.
-- **Kommunikation im Team**: Der Lösungsraum bietet eine gemeinsame Sprache, um Design-Optionen zu diskutieren (z. B. im Rahmen von [[Architektur-Reviews]]).
-- **Abgrenzung & Grenzen:** Der Lösungsraum ist abzugrenzen von:
-- **Problemraum**: Beschreibt die Anforderungen und Rahmenbedingungen (z. B. Use Cases, [[User_Stories]]), ohne Lösungsvorschläge zu machen. Der Lösungsraum beginnt dort, wo der Problemraum endet.
-- **Einzelnen Entwurfsmustern**: Während [[Entwurfsmuster]] wie [[Facade]] oder [[Strategy]] konkrete Lösungen innerhalb des Lösungsraums darstellen, ist der Lösungsraum selbst die übergeordnete Menge aller möglichen Muster und Nicht-Muster.
+- **Kernkonzept:** Der **Lösungsraum** bezeichnet im Kontext des [[Softwareentwurfs]] die Menge aller möglichen Design- und Implementierungsvarianten, die ein gegebenes Problem oder eine Anforderung erfüllen können. Er umfasst strukturelle und verhaltensbezogene Alternativen, die durch [[Entwurfsmuster]], [[Architekturmuster]] oder [[Modularisierung]] realisiert werden können. Der Lösungsraum ist dynamisch und wird durch Rahmenbedingungen wie [[Kopplung]], [[Kohäsion]], Performance-Anforderungen oder technologische Einschränkungen eingegrenzt.
+- **Nutzen & Zweck:** Der Lösungsraum dient als analytisches Werkzeug, um:
+- **Design-Entscheidungen systematisch zu explorieren** (z. B. Abwägung zwischen [[Fassade_Pattern]] und [[Mediator_Pattern]] für die Systemorganisation).
+- **Trade-offs zu visualisieren** (z. B. Flexibilität vs. Komplexität bei der Wahl zwischen [[Plugin-Architektur]] und monolithischer Struktur).
+- **Kreativität im Entwurf zu fördern**, indem bewusst mehrere Lösungswege verglichen werden (z. B. [[Event-Driven_Architecture]] vs. [[Request-Response]]).
+- **Risiken zu minimieren**, indem frühzeitig alternative Pfade identifiziert werden, falls primäre Lösungen scheitern (z. B. Ersatz eines [[Singleton]] durch [[Dependency_Injection]] bei Testbarkeit).
+- **Abgrenzung & Grenzen:** - **Kein Problemraum**: Der Lösungsraum setzt voraus, dass das Problem bereits durch [[Anforderungsanalyse]] oder [[Use_Cases]] definiert ist. Eine Vermischung führt zu unklaren Design-Entscheidungen.
+- **Keine Implementierung**: Der Lösungsraum beschreibt *mögliche* Lösungen, nicht deren konkrete Umsetzung (z. B. Code oder [[Klassendiagramm]]).
+- **Eingeschränkte Allgemeingültigkeit**: Lösungsräume sind kontextabhängig (z. B. ist [[Microservices]] im Embedded-Bereich oft ungeeignet).
 - **Stolpersteine**: 
-  - **Über-Exploration**: Zu viele Alternativen können zu [[Analysis_Paralysis]] führen. Der Lösungsraum sollte durch [[Architekturprinzipien]] (z. B. [[KISS]]) eingegrenzt werden.
-  - **Implizite Annahmen**: Unbewusste Einschränkungen (z. B. „Wir nutzen immer [[MVC]]“) können den Lösungsraum unnötig verkleinern.
-  - **Technische Schulden**: Kurzfristige Entscheidungen (z. B. [[Quick_and_Dirty]]) verengen den Lösungsraum für zukünftige Iterationen.
+  - *Über-Exploration*: Zu viele Alternativen können zu [[Analysis_Paralysis]] führen.
+  - *Voreingenommenheit*: Präferenzen für bestimmte [[Entwurfsmuster]] (z. B. [[Factory_Method]]) können den Lösungsraum unbewusst verengen.
+  - *Fehlende Metriken*: Ohne klare Kriterien (z. B. [[Zyklomatische_Komplexität]], [[Kopplungsmetriken]]) ist die Bewertung von Alternativen subjektiv.
 - **Beispiel / Code:** ```mermaid
 classDiagram
-    class StilberaterSystem {
-        +organisiereOutfit()
-        +verwalteBenutzerdaten()
+    %% Beispiel: Lösungsraum für die Organisation eines mobilen Stilberaters (MyStilberater)
+    %% Alternative 1: Zentrale Steuerung (Fassade)
+    class StilberaterFassade {
+        +empfehleOutfit()
+        +speichereBenutzerdaten()
     }
-    
-    class OutfitGenerator {
-        +generiereVorschlaege()
-    }
-    
-    class Benutzerprofil {
-        +speichereVorlieben()
-        +ladeVorlieben()
-    }
-    
-    class WetterAPI {
-        +holeWetterdaten()
-    }
-    
-    StilberaterSystem --> OutfitGenerator : verwaltet
-    StilberaterSystem --> Benutzerprofil : verwaltet
-    OutfitGenerator --> WetterAPI : nutzt
-    OutfitGenerator --> Benutzerprofil : nutzt
+    StilberaterFassade --> OutfitGenerator
+    StilberaterFassade --> Benutzerverwaltung
 
-    note for StilberaterSystem "Zentrale Klasse nach [[GRASP#Controller]]-Prinzip"
-    note for OutfitGenerator "Hohe Kohäsion: Nur Outfit-Logik"
-    note for WetterAPI "Lose Kopplung: Austauschbar via [[Schnittstelle]]"
+    %% Alternative 2: Dezentrale Verantwortung (Mediator)
+    class StilberaterMediator {
+        +koordiniereEmpfehlung()
+    }
+    StilberaterMediator --> OutfitGenerator
+    StilberaterMediator --> Benutzerverwaltung
+    OutfitGenerator --> StilberaterMediator : Benachrichtigung
+    Benutzerverwaltung --> StilberaterMediator : Benachrichtigung
+
+    %% Gemeinsame Komponenten
+    class OutfitGenerator {
+        +generiereOutfit()
+    }
+    class Benutzerverwaltung {
+        +speichereDaten()
+        +lieferePräferenzen()
+    }
 ```
 
-**Alternativen im Lösungsraum für `MyStilberater`:**
-1. **Zentrale Steuerung**: `StilberaterSystem` als [[Facade]] für alle Subsysteme (wie oben).
-2. **Dezentrale Steuerung**: Jede Komponente (`OutfitGenerator`, `Benutzerprofil`) kommuniziert direkt via [[Observer_Pattern]].
-3. **Event-Driven**: Nutzung eines [[Message_Broker]] (z. B. [[Event_Sourcing]]) zur Entkopplung.
+**Erläuterung**:
+- Die beiden Alternativen zeigen unterschiedliche Lösungen für die Systemorganisation:
+  1. **Fassade**: Eine zentrale Klasse (`StilberaterFassade`) kapselt die Interaktion mit Subsystemen ([[Fassade_Pattern]]).
+  2. **Mediator**: Eine vermittelnde Klasse (`StilberaterMediator`) reduziert direkte Abhängigkeiten zwischen Komponenten ([[Mediator_Pattern]]).
+- Der Lösungsraum umfasst hier auch hybride Ansätze (z. B. Kombination beider Muster) oder weitere Varianten wie [[Event_Sourcing]].

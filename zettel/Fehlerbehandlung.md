@@ -1,0 +1,22 @@
+---
+id: b0cb92a0-57cb-4aad-aee8-9f2b89b6dde7
+title: "Fehlerbehandlung"
+date: 2026-05-31
+tags:
+  - software_engineering
+  - ausnahmebehandlung
+  - robustheit
+  - softwarequalitaet
+  - design_patterns
+  - uml
+  - resilienz
+  - draft
+source: "Klausur_Referenz"
+---
+
+# [[Fehlerbehandlung]]
+
+- **Kernkonzept:** Die [[Fehlerbehandlung]] bezeichnet in der Softwareentwicklung den systematischen Umgang mit Fehlern, Ausnahmen oder unerwarteten Zuständen während der Programmausführung. Sie umfasst Mechanismen zur Erkennung, Meldung und Behandlung von Fehlern, um die [[Robustheit]] und [[Fehlertoleranz]] eines Systems zu gewährleisten. Zentrale Konzepte sind dabei [[Ausnahmebehandlung]] (z. B. `try-catch`-Blöcke), Fehlercodes, Logging und die Trennung von Fehlererkennung und -behandlung (z. B. durch [[Design_by_Contract]] oder [[Separation_of_Concerns]]).
+- **Nutzen & Zweck:** Die [[Fehlerbehandlung]] dient dazu, (1) die Stabilität von Anwendungen zu erhöhen, indem sie Abstürze oder undefiniertes Verhalten verhindert, (2) die [[Benutzerfreundlichkeit]] zu verbessern, indem klare Fehlermeldungen oder Recovery-Mechanismen bereitgestellt werden, und (3) die [[Wartbarkeit]] zu erleichtern, indem Fehlerquellen lokalisierbar und reproduzierbar gemacht werden. In verteilten Systemen (z. B. [[Microservices]]) ist sie essenziell für die [[Resilienz]], etwa durch [[Circuit_Breaker]] oder [[Retry_Patterns]].
+- **Abgrenzung & Grenzen:** Fehlerbehandlung grenzt sich ab von (1) **Fehlervermeidung** (z. B. durch statische Codeanalyse oder [[Test_Driven_Development]]), die Fehler bereits im Vorfeld verhindern soll, und (2) **Debugging**, das sich auf die nachträgliche Fehlerursachenanalyse konzentriert. Typische Stolpersteine sind: (a) **Übermäßige Fehlerunterdrückung** (z. B. leere `catch`-Blöcke), die zu undefiniertem Verhalten führt, (b) **Vermischung von Fehler- und Geschäftslogik**, die die [[Kohäsion]] verringert, und (c) **Unklare Fehlerhierarchien** (z. B. zu generische Ausnahmen wie `Exception`), die die gezielte Behandlung erschweren. In [[Echtzeitsystemen]] oder [[Embedded_Systems]] sind zudem Performance-Overheads durch Ausnahmebehandlung kritisch.
+- **Beispiel / Code:** {'beschreibung': 'Beispiel einer strukturierten Fehlerbehandlung in Java mit benutzerdefinierten Ausnahmen und Logging (vereinfacht):', 'code': {'sprache': 'java', 'inhalt': 'public class BestellService {\n    private static final Logger logger = Logger.getLogger(BestellService.class.getName());\n\n    public void bestellen(Produkt produkt, int menge) throws BestellFehler {\n        if (menge <= 0) {\n            throw new UngueltigeMengeException("Menge muss positiv sein.");\n        }\n        if (!produkt.istVerfuegbar()) {\n            throw new ProduktNichtVerfuegbarException("Produkt " + produkt.getName() + " nicht auf Lager.");\n        }\n        try {\n            // Geschäftslogik: Bestellung verarbeiten\n            logger.info("Bestellung erfolgreich: " + produkt.getName());\n        } catch (DatenbankFehler e) {\n            logger.severe("Datenbankfehler bei Bestellung: " + e.getMessage());\n            throw new BestellFehler("Bestellung fehlgeschlagen", e);\n        }\n    }\n}\n\n// Benutzerdefinierte Ausnahmen\nclass BestellFehler extends Exception {\n    public BestellFehler(String message) { super(message); }\n    public BestellFehler(String message, Throwable cause) { super(message, cause); }\n}\n\nclass UngueltigeMengeException extends BestellFehler {\n    public UngueltigeMengeException(String message) { super(message); }\n}\n\nclass ProduktNichtVerfuegbarException extends BestellFehler {\n    public ProduktNichtVerfuegbarException(String message) { super(message); }\n}'}, 'uml_diagramm': {'beschreibung': 'UML-Sequenzdiagramm (Mermaid-Syntax) zur Interaktion zwischen Web-Shop und Empfehlungssystem mit Fehlerbehandlung:', 'inhalt': 'sequenceDiagram\n    participant WebShop\n    participant Empfehlungssystem\n    participant Datenbank\n\n    WebShop->>Empfehlungssystem: getEmpfehlungen(userId)\n    alt Erfolg\n        Empfehlungssystem->>Datenbank: queryBenutzerHistorie(userId)\n        Datenbank-->>Empfehlungssystem: Historie\n        Empfehlungssystem->>Datenbank: queryProduktKatalog()\n        Datenbank-->>Empfehlungssystem: Katalog\n        Empfehlungssystem-->>WebShop: Empfehlungen\n    else Benutzer nicht gefunden\n        Empfehlungssystem-->>WebShop: BenutzerNichtGefundenException\n    else Datenbankfehler\n        Empfehlungssystem-->>WebShop: DatenbankFehlerException\n    end'}}

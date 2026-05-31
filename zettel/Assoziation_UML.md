@@ -1,16 +1,18 @@
 ---
-id: ed5743a6-a916-4ab7-9d06-6bf82389054a
-title: "Assoziation_UML"
+aliases:
+- Assoziation_(UML)
 date: 2026-05-30
+id: ed5743a6-a916-4ab7-9d06-6bf82389054a
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - uml
-  - objektorientierter_entwurf
-  - modellierung
-  - klassendiagramm
-  - softwarearchitektur
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- uml
+- objektorientierter_entwurf
+- modellierung
+- klassendiagramm
+- softwarearchitektur
+- draft
+title: Assoziation_UML
 ---
 
 # [[Assoziation_UML]]

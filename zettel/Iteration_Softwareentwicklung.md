@@ -1,17 +1,19 @@
 ---
-id: 5763b02a-946d-4e54-b542-633849e1824e
-title: "Iteration_Softwareentwicklung"
+aliases:
+- Iteration
 date: 2026-05-30
+id: 5763b02a-946d-4e54-b542-633849e1824e
+source: Klausur_Referenz
 tags:
-  - software_engineering
-  - agile_entwicklung
-  - software_prozessmodell
-  - scrum
-  - inkrementelle_entwicklung
-  - testgetriebene_entwicklung
-  - uml_aktivitaetsdiagramm
-  - draft
-source: "Klausur_Referenz"
+- software_engineering
+- agile_entwicklung
+- software_prozessmodell
+- scrum
+- inkrementelle_entwicklung
+- testgetriebene_entwicklung
+- uml_aktivitaetsdiagramm
+- draft
+title: Iteration_Softwareentwicklung
 ---
 
 # [[Iteration_Softwareentwicklung]]
