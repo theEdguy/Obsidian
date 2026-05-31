@@ -88,6 +88,59 @@ source: "SWE 2022 mit Loesung.pdf"
   - `Fliege` hat zusätzlich ein [[Attribut]] `schwingkölbchen` für verkümmerte Flügel.
   - Die [[Klasse]] `Flügel` enthält [[Attribut|Attribute]] wie `tracheen` und `verkümmert`.
   - Die Beziehung zwischen `Pterygota` und `Flügel` ist eine [[Komposition]] (ausgefüllte Raute).
+- **Deine Bearbeitung (Notizen & Skizze):**
+  - **(a) Schichten-Verbindung:** A > B. B kann Teil von A sein, nicht umgekehrt. B hat alle Abhängigkeiten von A, aber nicht umgekehrt. B gibt Infos an A weiter, A nicht an B.
+  - **(b) Assoziationsklasse:** Wenn eine Schnittstelle/Sprachrohr benötigt wird, weil beide Klassen hierarchisch gleich sind und Informationen weitergeben wollen.
+  - **(c) Insekten-Klassendiagramm:**
+    * Insekten -> Apterygota / Pterygota {disjoint} (Generalisierung).
+    * Pterygota -> Fliegen / Bienen {disjoint} (Generalisierung).
+    * Pterygota "besitzt" Flügelpaar.
+    * Flügelpaar -> Verkümmerte Flügelpaare (hat schwingkölbchen) / Unverkümmerte Flügelpaare (hat 1..* Tracheen) {disjoint} (Generalisierung).
+- **Feedback & Optimierung für die Klausur:**
+  > [!IMPORTANT]
+  > **(a) Schichten-Verbindung (Korrektur):**
+  > * In einer Schichtenarchitektur hängt die **höhere Schicht (A) von der tieferen Schicht (B) ab** (`A -> B`).
+  > * Das bedeutet: A ruft B auf (A gibt Daten/Parameter nach unten). B darf A nicht kennen (lose Kopplung).
+  > * B liefert Daten nur über **Rückgabewerte** nach oben oder benachrichtigt A passiv via **Observer-Pattern / Callbacks** (Events).
+  > 
+  > **(b) Assoziationsklasse (Korrektur):**
+  > * Eine Assoziationsklasse wird bei einer **n-zu-m (Many-to-Many) Beziehung** verwendet, wenn die Beziehung selbst **eigene Attribute** hat (z. B. Klasse `Mitgliedschaft` mit `eintrittsdatum` zwischen `Person` und `Verein`).
+  > 
+  > **(c) Insekten-Klassendiagramm (Feedback):**
+  > * Deine Vererbungshierarchien mit `{disjoint}` sind **absolut genial und fehlerfrei** gezeichnet!
+  > * Die Spezialisierung des Flügelpaars in `Verkümmert` und `Unverkümmert` ist ein exzellenter objektorientierter Entwurf (besser als die Musterlösung, die nur ein Boolean-Flag nutzt!).
+  > * *Klausur-Tipp:* Trage an der Beziehung von `Pterygota` zu `Flügelpaar` die Multiplizität **2** ein (da sie 2 Flügelpaare besitzen).
+  > * *Klausur-Tipp:* Da Flügel existenzabhängig vom Insekt sind (Teil-Ganzes), verwende eine **Komposition** (schwarze Raute bei `Pterygota`).
+  > 
+  > **Mermaid-Code deiner bereinigten Skizze:**
+  > ```mermaid
+  > classDiagram
+  >   class Insekt { <<abstract>> }
+  >   class Apterygota
+  >   class Pterygota { <<abstract>> }
+  >   class Biene
+  >   class Fliege
+  >   
+  >   class Fluegelpaar { <<abstract>> }
+  >   class VerkuemmertesFluegelpaar {
+  >       +istSchwingkoelbchen: boolean
+  >   }
+  >   class UnverkuemmertesFluegelpaar
+  >   class Trachee
+  > 
+  >   Insekt <|-- Apterygota
+  >   Insekt <|-- Pterygota
+  >   Pterygota <|-- Biene
+  >   Pterygota <|-- Fliege
+  > 
+  >   %% Komposition: Pterygota besitzt genau 2 Flügelpaare
+  >   Pterygota "1" *-- "2" Fluegelpaar
+  > 
+  >   Fluegelpaar <|-- VerkuemmertesFluegelpaar
+  >   Fluegelpaar <|-- UnverkuemmertesFluegelpaar
+  > 
+  >   UnverkuemmertesFluegelpaar "1" *-- "1..*" Trachee
+  > ```
 - **Theoretischer Bezug:** 
   - [[Schichtenarchitektur]]
   - [[Schnittstelle]]
