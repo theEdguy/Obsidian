@@ -18,7 +18,8 @@ title: Use-Case-Diagramm
 - **Kernkonzept:** Ein [[Use-Case-Diagramm]] ist eine grafische [[Darstellung]] der [[Use_Case|Use-Cases]] eines [[Softwaresystem|Systems]], ihrer [[Akteur|Akteure]] und der [[Beziehung|Beziehungen]] zwischen ihnen (z. B. <<include>>, <<extend>>). Es gehört zur [[UML]].
 - **Nutzen & Zweck:** Es schafft eine [[Übersicht]] über die [[Funktionalität]] des Systems und die [[Interaktion]] mit [[Akteur|Akteuren]], was die [[Kommunikation]] mit [[Stakeholder]]n und die [[Priorisierung]] von [[Entwicklungsaufgabe|Entwicklungsaufgaben]] erleichtert.
 - **Abgrenzung & Grenzen:** Es ist kein [[Ablaufdiagramm]] – es zeigt *was* das System leistet, nicht *wie*. Im Gegensatz zu [[Klassendiagramm|Klassendiagrammen]] oder [[Sequenzdiagramm|Sequenzdiagrammen]] beschreibt es keine [[technische_Implementierung|technischen Implementierungen]].
-- **Beispiel / Code:** ```plaintext
+- **Beispiel / Code:** 
+- ```plaintext
 @startuml
 left to right direction
 actor [[Vereinsmanager]]

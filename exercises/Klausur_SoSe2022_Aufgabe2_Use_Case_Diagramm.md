@@ -124,6 +124,57 @@ source: "SWE 2022 mit Loesung.pdf"
   Sichtungsdatenbank --> (Sichtung anonym speichern)
   Location Service --> (Ortsdaten abfragen)
   ```
+- **Deine Bearbeitung (Skizzen-Notizen):**
+  - *Identifizierte Akteure:* Nutzer (Bienenkundler), Location Service, Server (KI) & Sichtungsdatenbank, Auftraggeber.
+  - *Identifizierte Use Cases:* Biene Identifizieren, Beobachtung Melden, Location erlauben?, Daten Hochladen.
+  - *Beziehungen & Bedingungen:* Bedingung "gefährdet?" steuert den Übergang von Identifizieren zu Melden.
+- **Feedback & Optimierung für die Klausur:**
+  > [!TIP]
+  > Deine Skizze hat das Szenario und die logischen Zusammenhänge bereits sehr gut erfasst! Du hast alle wichtigen Spieler (Akteure) und die Bedingung ("gefährdet?") erkannt.
+  > 
+  > Für eine **klausursichere 1,0-Modellierung** solltest du folgende Details anpassen:
+  > 
+  > 1. **Keine technischen Use Cases:** Use Cases müssen immer einen fachlichen Mehrwert für den Akteur bieten. 
+  >    * `Daten Hochladen` ist ein rein technischer Implementierungsschritt und kein fachlicher Use Case. Er wird weggelassen oder geht als "Bilder auswählen" in die Identifizierung ein.
+  >    * `Location erlauben?` ist eine Systemabfrage/Entscheidung. Der eigentliche Anwendungsfall heißt **Ortsdaten abfragen** (unter Einbindung des Location-Service-Akteurs).
+  > 2. **Auftraggeber weglassen:** Der Auftraggeber interagiert nicht direkt aktiv mit der App (er will nur die Webseite am Ende). Er gehört daher nicht als Akteur in das Anwendungsfalldiagramm der Smartphone-App.
+  > 3. **Umlaufrichtung von `<<extend>>`:** 
+  >    * Die Beziehungslinie zeigt immer **vom erweiternden** zum **erweiterten** Use Case (Pfeil zeigt auf den Basis-Use-Case!).
+  >    * `Sichtung melden` erweitert `Biene identifizieren` bedingt -> Pfeil von `Sichtung melden` zeigt auf `Biene identifizieren`.
+  >    * Bedingung an der Linie vermerken: `Condition: {Bienenart gefährdet und Bestimmung eindeutig}`.
+  > 
+  > **Optimiertes PlantUML / Mermaid-Diagramm deiner Skizze:**
+  > ```mermaid
+  > graph TD
+  >   Nutzer((Hobby-Bienenkundler))
+  >   Server((Server KI-Analyse))
+  >   DB((Sichtungsdatenbank))
+  >   GPS((Location Service))
+  > 
+  >   subgraph App [Smartphone-App 'mayBee']
+  >     UC1(Bienenart bestimmen)
+  >     UC2(Bilder auswählen)
+  >     UC3(Hintergrundinfos abrufen)
+  >     UC4(Sichtung melden)
+  >     UC5(Ortsdaten abfragen)
+  >     UC6(Sichtung anonym speichern)
+  >   end
+  > 
+  >   Nutzer --> UC1
+  >   Nutzer --> UC3
+  >   Nutzer --> UC4
+  > 
+  >   UC1 -.->|&lt;&lt;include&gt;&gt;| UC2
+  >   UC3 -.->|&lt;&lt;extend&gt;&gt;| UC1
+  >   UC4 -.->|&lt;&lt;extend&gt;&gt; Gefährdet?| UC1
+  >   UC4 -.->|&lt;&lt;include&gt;&gt;| UC5
+  >   UC6 -.->|&lt;&lt;extend&gt;&gt; Keine Zustimmung| UC4
+  > 
+  >   UC1 --- Server
+  >   UC4 --- DB
+  >   UC6 --- DB
+  >   UC5 --- GPS
+  > ```
 - **Theoretischer Bezug:** 
   - [[Use_Case_Diagramm]]
   - [[Akteur]]
