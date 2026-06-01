@@ -1,5 +1,5 @@
 ---
-id: ebe5f368-87d1-409a-a6a3-bb1c9fb3acc2
+id: 433619b8-3287-4926-86c1-706404d0ecb3
 title: "Remote Procedure Call (RPC)"
 date: 2026-06-01
 tags:
@@ -12,57 +12,19 @@ tags:
   - synchronisation
   - client-server
   - abstraktion
+  - netzwerkprotokolle
+  - prozeduraufruf
+  - transparenz
+  - idl
+  - stubs
+  - copy-in_copy-out-semantik
   - draft
-source: "VS2 Handout Chapter 03 (Prozesse)"
+source: "VS2 Handout Chapter 04 (Kommunikation)"
 ---
 
 # [[Remote Procedure Call (RPC)]]
 
-- **Kernkonzept:** Remote Procedure Call (RPC) ermöglicht den Aufruf von [[Prozedur|Prozeduren]] oder [[Funktion|Funktionen]] auf entfernten [[System|Systemen]], als wären sie lokal verfügbar. Es abstrahiert die [[Netzwerkkommunikation]] in [[Verteilte Systeme|verteilten Systemen]] und verbirgt die Komplexität der [[Interaktion|Interaktionen]] zwischen verteilten [[Komponente|Komponenten]], indem es eine synchrone, prozedurale [[Schnittstelle]] bereitstellt.
-- **Nutzen & Zweck:** RPC löst das [[Problem]] der manuellen Implementierung von [[Netzwerkprogrammierung|Netzwerkkommunikation]] zwischen [[Prozess|Prozessen]] auf verschiedenen [[Rechner|Rechnern]] und reduziert die [[Komplexität]] bei der Entwicklung verteilter Anwendungen. Es ermöglicht [[Verteilungstransparenz]] (z. B. [[Ortstransparenz]], [[Zugriffstransparenz]] und [[Fehlertransparenz]]) und erleichtert die [[Entwicklung]] von [[Client-Server-Architektur|Client-Server-Architekturen]], indem es lokale und entfernte [[Aufruf|Aufrufe]] vereinheitlicht. Durch die Kapselung von [[Latenz]] und [[Fehlerbehandlung]] im Netzwerk wird die [[Nebenläufigkeit]] und [[Synchronisation]] in verteilten [[System|Systemen]] handhabbarer.
-- **Abgrenzung & Grenzen:** RPC sollte nicht genutzt werden, wenn [[Latenz]] kritisch ist (z. B. in [[Echtzeitsystem|Echtzeitsystemen]]) oder wenn asynchrone [[Kommunikation]] oder [[Lose_Kopplung|lose Kopplung]] erforderlich ist, wie in [[Event-driven Architecture|ereignisgesteuerten Architekturen]]. Alternativen wie [[Message-Passing]], [[REST]] oder [[GraphQL]] sind besser geeignet für [[Skalierbarkeit|skalierbare]], zustandslose oder [[Webservice|Web-basierte]] [[Systeme]]. RPC kann bei hoher [[Netzwerklatenz]] oder instabilen Verbindungen zu [[Performance|Performance-Problemen]] führen und ist weniger flexibel als [[REST]] oder [[GraphQL]] bei der [[Datenübertragung]] in modernen [[Webservice|Webservices]]. Zudem erfordert RPC oft spezifische [[Middleware]] wie [[Stub (RPC)|Stubs]] oder [[Proxy (Entwurfsmuster)|Proxies]], was die [[Integration]] in heterogene [[Systeme]] erschweren kann.
-- **Beispiel / Code:** RPC kann in verschiedenen Sprachen und Frameworks implementiert werden. Hier zwei Beispiele:
-
-**1. Einfacher RPC-Aufruf in Go (gRPC):**
-```go
-// Server-Seite (Definition der Prozedur)
-package main
-
-type CalculatorServer struct {
-    pb.UnimplementedCalculatorServer
-}
-
-func (s *CalculatorServer) Add(ctx context.Context, req *pb.AddRequest) (*pb.AddResponse, error) {
-    return &pb.AddResponse{Result: req.A + req.B}, nil
-}
-
-// Client-Seite (Aufruf der entfernten Prozedur)
-func main() {
-    conn, _ := grpc.Dial("localhost:50051", grpc.WithInsecure())
-    client := pb.NewCalculatorClient(conn)
-    response, _ := client.Add(context.Background(), &pb.AddRequest{A: 3, B: 4})
-    fmt.Println(response.Result) // Ausgabe: 7
-}
-```
-
-**2. Einfaches RPC-Beispiel in Python mit `xmlrpc`:**
-```python
-# Server-Code
-from xmlrpc.server import SimpleXMLRPCServer
-
-def add(a, b):
-    return a + b
-
-server = SimpleXMLRPCServer(('localhost', 8000))
-server.register_function(add, 'add')
-server.serve_forever()
-
-# Client-Code
-import xmlrpc.client
-
-proxy = xmlrpc.client.ServerProxy('http://localhost:8000/')
-result = proxy.add(5, 3)
-print(result)  # Ausgabe: 8
-```
-
-Beide Beispiele zeigen, wie der [[Client]] eine entfernte [[Funktion]] aufruft, als wäre sie lokal definiert. gRPC nutzt dabei [[HTTP/2]] für effiziente [[Datenübertragung]], während `xmlrpc` auf [[HTTP]] und [[XML]] basiert.
+- **Kernkonzept:** Der [[Remote Procedure Call]] ([[RPC]]) ermöglicht den [[Aufruf|Aufrufen]] von [[Prozedur|Prozeduren]] oder [[Funktion|Funktionen]] auf entfernten [[System|Systemen]], als wären sie lokal verfügbar. Er abstrahiert die [[Netzwerkkommunikation]] in [[Verteilte Systeme|verteilten Systemen]] und verbirgt die Komplexität der [[Interaktion|Interaktionen]] zwischen verteilten [[Komponente|Komponenten]], indem er eine synchrone, prozedurale [[Schnittstelle]] bereitstellt und [[Zugriffstransparenz]] sowie [[Ortstransparenz]] gewährleistet.
+- **Nutzen & Zweck:** RPC löst das [[Problem]] der manuellen Implementierung von [[Netzwerkprogrammierung|Netzwerkkommunikation]] zwischen [[Prozess|Prozessen]] auf verschiedenen [[Rechner|Rechnern]] und reduziert die [[Komplexität]] bei der Entwicklung verteilter [[Anwendung|Anwendungen]]. Es ermöglicht [[Verteilungstransparenz]] (z. B. [[Ortstransparenz]], [[Zugriffstransparenz]] und [[Fehlertransparenz]]) und erleichtert die [[Entwicklung]] von [[Client-Server-Architektur|Client-Server-Architekturen]], indem es lokale und entfernte [[Aufruf|Aufrufe]] vereinheitlicht. Durch die Kapselung von [[Latenz]] und [[Fehlerbehandlung]] im Netzwerk wird die [[Nebenläufigkeit]] und [[Synchronisation]] in verteilten [[System|Systemen]] handhabbarer. Zudem vereinfacht RPC die [[Integration]] von [[Middleware]]-Lösungen, unterstützt die [[Abstraktion]] von [[Netzwerkprotokoll|Netzwerkprotokollen]] wie [[HTTP]] oder [[HTTP/2]] und schafft eine einheitliche [[Schnittstelle]] für [[Verteilte Systeme|verteilte Systeme]]. RPC unterscheidet sich von lokalen [[Prozedur|Prozeduraufrufen]] durch die Verwendung von [[Copy-in/Copy-out-Semantik|Copy-in/Copy-out-Semantik]], die bei [[Referenz|Referenzen]] und [[globale Daten|globalen Daten]] zu abweichendem Verhalten führen kann.
+- **Abgrenzung & Grenzen:** RPC sollte nicht genutzt werden, wenn [[Latenz]] kritisch ist (z. B. in [[Echtzeitsystem|Echtzeitsystemen]]) oder wenn asynchrone [[Kommunikation]] oder [[Lose_Kopplung|lose Kopplung]] erforderlich ist, wie in [[Event-driven Architecture|ereignisgesteuerten Architekturen]]. Alternativen wie [[Message-Passing]], [[Message-oriented Middleware (MOM)]], [[REST]] oder [[GraphQL]] sind besser geeignet für [[Skalierbarkeit|skalierbare]], zustandslose oder [[Webservice|Web-basierte]] [[Systeme]]. RPC arbeitet synchron und erfordert, dass [[Client]] und [[Server]] gleichzeitig aktiv sind, was bei [[Netzwerkausfall|Netzwerkausfällen]] oder hoher [[Netzwerklatenz]] zu Blockaden führen kann. Zudem ist RPC weniger flexibel als [[REST]] oder [[GraphQL]] bei der [[Datenübertragung]] in modernen [[Webservice|Webservices]], da es oft spezifische [[Middleware]] wie [[Stub (RPC)|Stubs]] oder [[Proxy (Entwurfsmuster)|Proxies]] benötigt, was die [[Integration]] in heterogene [[Systeme]] erschweren kann. Im Vergleich zu [[Transiente vs. persistente Kommunikation|transienter Kommunikation]] fehlt RPC die Persistenz von Nachrichten, was in fehlertoleranten Szenarien nachteilig sein kann. Bei [[Netzwerkpartitionierung|Partitionierungen]] oder häufigen [[Netzwerkfehler|Netzwerkfehlern]] sind asynchrone [[Kommunikationsmodell|Kommunikationsmodelle]] wie [[Message-Passing]] oder [[Event-driven Architecture|ereignisgesteuerte Architekturen]] vorzuziehen. RPC bietet keine [[Zugriffstransparenz]] für [[Referenz|Referenzen]] oder [[globale Daten|globale Daten]], da Parameter per [[Copy-in/Copy-out-Semantik]] übertragen werden, was zu unerwartetem Verhalten führen kann.
+- **Beispiel / Code:** {'beschreibung': 'Beispiele für RPC-Implementierungen in verschiedenen Sprachen und Szenarien:', 'go_grpc': {'beschreibung': 'Einfacher RPC-Aufruf in Go mit gRPC (nutzt [[HTTP/2]] für effiziente [[Datenübertragung]]):', 'code': '```go\n// Server-Seite (Definition der Prozedur)\npackage main\n\nimport (\n    "context"\n    pb "path/to/protobuf"\n)\n\ntype CalculatorServer struct {\n    pb.UnimplementedCalculatorServer\n}\n\nfunc (s *CalculatorServer) Add(ctx context.Context, req *pb.AddRequest) (*pb.AddResponse, error) {\n    return &pb.AddResponse{Result: req.A + req.B}, nil\n}\n\n// Client-Seite (Aufruf der entfernten Prozedur)\nfunc main() {\n    conn, _ := grpc.Dial("localhost:50051", grpc.WithInsecure())\n    defer conn.Close()\n    client := pb.NewCalculatorClient(conn)\n    response, _ := client.Add(context.Background(), &pb.AddRequest{A: 3, B: 4})\n    fmt.Println(response.Result) // Ausgabe: 7\n}\n```'}, 'python_xmlrpc': {'beschreibung': 'Einfacher RPC-Aufruf in Python mit `xmlrpc` (basiert auf [[HTTP]] und [[XML]]):', 'code': "```python\n# Server-Code\nfrom xmlrpc.server import SimpleXMLRPCServer\n\ndef add(a, b):\n    return a + b\n\nserver = SimpleXMLRPCServer(('localhost', 8000))\nserver.register_function(add, 'add')\nserver.serve_forever()\n\n# Client-Code\nimport xmlrpc.client\n\nproxy = xmlrpc.client.ServerProxy('http://localhost:8000/')\nresult = proxy.add(5, 3)\nprint(result)  # Ausgabe: 8\n```"}, 'copy_in_copy_out_semantik': {'beschreibung': 'Beispiel für [[Copy-in/Copy-out-Semantik]] im Vergleich zu lokalen [[Prozedur|Prozeduraufrufen]]:', 'lokaler_aufruf': {'code': '```c\nvoid incr(int &a, int &b) { a++; b++; }\nint i = 0;\nincr(i, i);\n// Ergebnis: i = 2 (Referenzsemantik)\n```', 'ergebnis': 'i hat den Wert 2, da beide Parameter auf dieselbe Variable verweisen.'}, 'rpc_aufruf': {'code': '```c\nvoid incr(int a, int b) { a++; b++; return (a, b); }\nint i = 0;\n(i, i) = rpc_call(incr, i, i);\n// Ergebnis: i = 1 (Copy-in/Copy-out-Semantik)\n```', 'ergebnis': 'i hat den Wert 1, da die Parameter kopiert und unabhängig voneinander inkrementiert werden.'}}, 'dce_rpc': {'beschreibung': 'Struktur eines DCE-RPC-Workflows (vereinfacht, nutzt [[Interface Definition Language|IDL]] und [[Stub (RPC)|Stubs]]):', 'schritte': ['1. [[Server]] registriert sich beim DCE-Daemon mit einem Port.', '2. [[Client]] fragt den [[Directory Service]] nach dem [[Server]]-Port.', '3. [[Client]] bindet sich an den [[Server]] und führt den RPC aus.'], 'code_ausschnitt': {'idl': '```idl\ninterface Beispiel {\n    void incr([in, out] int *a, [in, out] int *b);\n}\n```', 'client_stub': '```c\n#include "beispiel.h"\nint i = 0;\nincr(&i, &i); // Aufruf über [[Stub (RPC)|Stub]]\n```'}}}
