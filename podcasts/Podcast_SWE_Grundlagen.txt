@@ -1,0 +1,89 @@
+**Zettelkasten Podcast – Folge: Software-Engineering – Warum wir Prozesse brauchen und wie KI alles verändert**
+
+*Hallo und herzlich willkommen zum Zettelkasten Podcast! Heute tauchen wir ein in die Welt des Software-Engineerings – ein Thema, das auf den ersten Blick vielleicht trocken wirkt, aber im Grunde die DNA jeder Software ist, die wir täglich nutzen. Ob Banking-App, Social Media oder selbstfahrende Autos: Hinter all dem steckt mehr als nur Code. Es steckt ein ganzes System aus Methoden, Prozessen und Entscheidungen, die sicherstellen, dass Software nicht nur funktioniert, sondern auch wartbar, erweiterbar und vor allem *nützlich* ist. Und genau darum geht’s heute: Warum brauchen wir überhaupt einen strukturierten Entwicklungsprozess? Was bedeutet Objektorientierung wirklich? Und wie verändert KI gerade alles, was wir über Software-Entwicklung zu wissen glaubten?*
+
+*Ich bin Thomas Fuchß, Professor für Informatik an der Hochschule Karlsruhe, und heute nehme ich euch mit auf eine Reise durch die Grundlagen des Software-Engineerings – von den klassischen Konzepten bis zu den brennenden Fragen der Zukunft. Los geht’s!*
+
+---
+
+**Was ist Software-Engineering eigentlich?**
+Stell dir vor, du baust ein Haus. Du würdest ja nicht einfach loslegen, Steine aufeinanderstapeln und hoffen, dass am Ende etwas Stabiles dabei herauskommt, oder? Genauso wenig funktioniert Software-Entwicklung ohne Plan. Software-Engineering ist der Teil der Informatik, der sich genau damit beschäftigt: Wie entwickeln wir große, komplexe Software-Systeme *systematisch*? Wie sorgen wir dafür, dass sie nicht nur heute funktionieren, sondern auch in fünf Jahren noch anpassbar sind? Und wie vermeiden wir das berühmte „Spaghetti-Code“-Chaos, in dem sich niemand mehr zurechtfindet?
+
+Die Definition, die ich besonders mag, stammt von Manfred Broy und Dieter Rombach: *„Software-Engineering zielt auf die ingenieurmäßige Entwicklung, Wartung, Anpassung und Weiterentwicklung großer Software-Systeme unter Verwendung bewährter, systematischer Vorgehensweisen, Prinzipien, Methoden und Werkzeuge hin.“* Das Schlüsselwort hier ist *„ingenieurmäßig“*. Es geht nicht um Kunst oder Zufall, sondern um wissenschaftlich fundierte Methoden – so wie ein Brückenbauer auch nicht einfach drauflos baut, sondern Statik, Materialkunde und Erfahrung einsetzt.
+
+---
+
+**Warum brauchen wir überhaupt einen Prozess?**
+Früher, in den Anfängen der Software-Entwicklung, war alles einfacher. Programme waren klein, die Anforderungen überschaubar. Heute? Heute bauen wir Systeme, die Millionen von Nutzern gleichzeitig bedienen, die mit anderen Systemen interagieren, die sich ständig weiterentwickeln müssen. Und genau hier wird es knifflig. Denn Software ist unsichtbar – man kann sie nicht anfassen, nicht wie ein Auto auf Herz und Nieren prüfen. Die Herausforderungen sind deshalb oft abstrakt, aber extrem real:
+
+1. **Dekomposition und Abhängigkeiten**: Stell dir vor, du zerlegst ein großes Problem in kleinere Teile – wie bei einem Puzzle. Aber was, wenn die Teile nicht zusammenpassen? Wenn eine Änderung an einer Stelle plötzlich fünf andere Teile kaputt macht? Das ist das Problem der *impliziten Abhängigkeiten*: Dinge, die auf den ersten Blick nichts miteinander zu tun haben, hängen plötzlich doch zusammen. Und das merkt man oft erst, wenn es zu spät ist.
+
+2. **Wiederverwendung vs. Redundanz**: Soll ich Code kopieren und anpassen? Oder lieber eine allgemeine Lösung bauen, die alle nutzen können? Das ist die Frage nach *vertikaler* und *horizontaler Wiederverwendung*. Vertikal bedeutet: Ich baue eine Komponente, die nur für mein aktuelles Projekt passt. Horizontal heißt: Ich baue etwas, das auch in anderen Projekten funktioniert – aber das ist oft aufwendiger. Hier den richtigen Kompromiss zu finden, ist eine Kunst.
+
+3. **Abstraktion und Formalisierung**: Software lebt von Modellen. Aber wie beschreibe ich ein System so, dass alle Beteiligten – vom Entwickler bis zum Kunden – es verstehen? Und wie formal muss diese Beschreibung sein? Zu viel Formalismus erstickt die Kreativität, zu wenig führt zu Missverständnissen. Ein Balanceakt!
+
+4. **Kontext ist alles**: Software entsteht nie im luftleeren Raum. Sie muss in ein Unternehmen passen, mit vorhandenen Systemen interagieren, rechtliche Vorgaben erfüllen, Budgetgrenzen einhalten. Ein Entwickler, der nur Code schreibt, ohne den Kontext zu verstehen, ist wie ein Koch, der ein Menü plant, ohne zu wissen, ob die Gäste Allergien haben.
+
+---
+
+**Die Herausforderungen von morgen: KI verändert alles**
+Und dann ist da noch die KI. 2025 wird die Software-Entwicklung nicht mehr dieselbe sein wie heute. Anne Koziolek, eine der führenden Köpfe in diesem Bereich, sagt: *„KI wird für die Generierung von Software mehr und mehr eingesetzt werden. Als Software-Techniker müssen wir dazu beitragen, dass die generierten Lösungen das tun, was wir von ihnen erwarten.“* Was bedeutet das konkret?
+
+- **Automatisierung von Routineaufgaben**: KI kann heute schon Code generieren, Tests schreiben oder sogar Dokumentation erstellen. Das spart Zeit – aber es wirft auch Fragen auf: Wer ist verantwortlich, wenn die KI einen Fehler macht? Wie stelle ich sicher, dass der generierte Code wirklich das tut, was ich will?
+
+- **Transformation von Wissen**: KI kann informelles Wissen – zum Beispiel aus Meetings oder E-Mails – in formale Artefakte übersetzen. Stell dir vor, du erklärst einer KI in natürlicher Sprache, was dein System können soll, und sie generiert daraus Use Cases, Klassenmodelle oder sogar fertigen Code. Das klingt wie Science-Fiction, aber es passiert schon heute.
+
+- **Vollautomatisierte Entwicklung**: Die große Vision ist, dass KI irgendwann *alle* technischen Entscheidungen trifft – von der Architektur bis zur Qualitätssicherung. Aber ist das überhaupt wünschenswert? Wer garantiert, dass die KI die richtigen Prioritäten setzt? Und was passiert, wenn die KI sich irrt? Hier stehen wir vor ethischen und praktischen Fragen, die wir heute noch nicht beantworten können.
+
+---
+
+**Objektorientierung: Eine durchgängige Sichtweise**
+Aber kommen wir zurück zu den Grundlagen. Ein zentrales Konzept im Software-Engineering ist die *Objektorientierung*. Warum? Weil sie uns hilft, die reale Welt in Software abzubilden – und zwar so, dass der Code verständlich, wartbar und erweiterbar bleibt.
+
+Stell dir vor, du entwickelst ein System für eine Bibliothek. In der realen Welt gibt es Bücher, Leser, Ausleihen, Rückgaben. In der objektorientierten Welt übersetzen wir das in *Klassen* und *Objekte*:
+- Eine Klasse „Buch“ hat Eigenschaften wie Titel, Autor, ISBN.
+- Ein Objekt dieser Klasse ist dann ein konkretes Buch, zum Beispiel „Der kleine Prinz“ von Antoine de Saint-Exupéry.
+- Methoden wie „ausleihen()“ oder „zurückgeben()“ beschreiben, was mit dem Buch passieren kann.
+
+Das Schöne an der Objektorientierung ist, dass sie uns drei mächtige Werkzeuge an die Hand gibt:
+1. **Vererbung**: Wenn ich eine Klasse „Medien“ habe, kann ich davon „Buch“ und „DVD“ ableiten. Beide erben die Eigenschaften von „Medien“, haben aber zusätzliche spezifische Merkmale.
+2. **Komposition und Aggregation**: Ein „Bibliothekskatalog“ besteht aus vielen „Büchern“ – das ist eine Aggregation. Ein „Buch“ wiederum besteht aus „Kapiteln“ – das ist eine Komposition. Der Unterschied? Bei der Aggregation können die Teile auch ohne das Ganze existieren (ein Buch kann auch außerhalb des Katalogs existieren), bei der Komposition nicht (ein Kapitel ohne Buch ergibt keinen Sinn).
+3. **Assoziation**: Das ist die einfachste Beziehung – zum Beispiel zwischen „Leser“ und „Buch“. Ein Leser kann ein Buch ausleihen, aber das Buch gehört nicht zum Leser.
+
+---
+
+**Von der Analyse zum Design: Wie entsteht eine Software-Architektur?**
+Jetzt wird’s praktisch. Wie kommen wir von der Idee zur fertigen Software? Der Prozess lässt sich grob in drei Phasen unterteilen: Analyse, Design und Implementierung.
+
+1. **Analyse**: Hier geht es darum, *was* das System können soll. Wir sammeln Anforderungen – zum Beispiel durch Interviews mit Nutzern oder Kunden. Ein mächtiges Werkzeug dafür sind *Use Cases*. Stell dir vor, du entwickelst eine Online-Banking-App. Ein Use Case könnte lauten: *„Als Kunde möchte ich Geld überweisen, damit ich meine Rechnungen bezahlen kann.“* Der Use Case beschreibt dann Schritt für Schritt, was passiert: Der Kunde loggt sich ein, wählt den Empfänger aus, gibt den Betrag ein, bestätigt die Überweisung. Use Cases helfen uns, die Perspektive der Nutzer einzunehmen – und genau das ist entscheidend, denn am Ende soll die Software ja nicht für uns Entwickler funktionieren, sondern für die Menschen, die sie nutzen.
+
+2. **Design**: Jetzt geht’s ans *Wie*. Wie setzen wir die Anforderungen um? Hier kommen *Muster* ins Spiel – also bewährte Lösungen für wiederkehrende Probleme. Ein Klassiker ist das *MVC-Muster* (Model-View-Controller):
+   - Das *Model* verwaltet die Daten (z. B. Kontostände).
+   - Die *View* ist die Benutzeroberfläche (z. B. das Formular für die Überweisung).
+   - Der *Controller* vermittelt zwischen beiden (z. B. prüft er, ob genug Geld auf dem Konto ist, bevor die Überweisung ausgeführt wird).
+   Ein anderes wichtiges Muster ist das *Observer-Pattern*: Stell dir vor, du hast ein Dashboard, das den Kontostand anzeigt. Immer wenn sich der Kontostand ändert, soll das Dashboard aktualisiert werden. Das Observer-Pattern sorgt dafür, dass das automatisch passiert – ohne dass das Dashboard ständig nachfragen muss.
+
+3. **Implementierung**: Jetzt wird’s konkret. Aber selbst hier helfen uns Muster weiter. Zum Beispiel das *Bridge-Pattern*, das uns erlaubt, Abstraktion und Implementierung zu trennen. Oder das *Adapter-Pattern*, das zwei inkompatible Schnittstellen zusammenbringt – wie ein Steckeradapter, der einen europäischen Stecker an eine amerikanische Steckdose anpasst.
+
+---
+
+**Warum das alles wichtig ist: Die Ziele des Software-Engineerings**
+Am Ende geht es um vier große Ziele:
+1. **Produktivität erhöhen**: Software soll schneller entwickelt werden – ohne dass die Qualität leidet.
+2. **Qualität verbessern**: Weniger Fehler, mehr Zuverlässigkeit, bessere Wartbarkeit.
+3. **Kosten reduzieren**: Gute Software spart Geld – nicht nur in der Entwicklung, sondern auch im Betrieb.
+4. **Automatisierung vorantreiben**: Je mehr wir standardisieren, desto mehr können wir automatisieren – und desto mehr Zeit bleibt für die wirklich kreativen Aufgaben.
+
+Und das bringt uns zurück zur KI. Denn wenn wir diese Ziele erreichen wollen, müssen wir uns fragen: Wie verändert KI unsere Arbeit? Wird sie uns ersetzen? Oder wird sie uns zu besseren Entwicklern machen? Die Antwort ist wahrscheinlich: beides. KI wird Routineaufgaben übernehmen – aber sie wird auch neue Fragen aufwerfen. Fragen nach Verantwortung, nach Ethik, nach dem, was Software-Engineering in Zukunft überhaupt bedeutet.
+
+---
+
+**Zum Schluss: Was nehmt ihr mit?**
+Wenn ihr heute nur eine Sache mitnehmt, dann diese: Software-Engineering ist kein Hexenwerk. Es ist ein Handwerk – mit Regeln, Werkzeugen und bewährten Methoden. Aber es ist auch eine Kunst, denn am Ende geht es darum, komplexe Probleme so zu lösen, dass Menschen damit arbeiten können. Ob mit oder ohne KI.
+
+Und falls ihr euch fragt, wo ihr anfangen sollt: Lest die Bücher von Craig Larman. Probiert Use Cases aus. Experimentiert mit Design Patterns. Und vor allem: Denkt immer daran, *warum* ihr etwas tut – nicht nur *wie*.
+
+*Das war’s für heute vom Zettelkasten Podcast. Wenn euch die Folge gefallen hat, teilt sie gerne mit euren Kommilitonen – und schreibt mir, welche Themen ihr als nächstes hören wollt. Bis zum nächsten Mal!*
+
+---
+*[Outro-Musik]*
