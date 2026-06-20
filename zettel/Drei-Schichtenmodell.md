@@ -1,44 +1,17 @@
 ---
-id: c5755790-ffbb-481e-a182-ff8382a99b01
+id: b588365e-5420-58a7-a989-1f0c78f505fb
 title: "Drei-Schichtenmodell"
-date: 2026-05-30
+date: 2026-06-20
 tags:
   - software_engineering
-  - architekturmuster
-  - softwarearchitektur
-  - schichtenmodell
+  - kapitel_10
   - draft
-source: "SWE Slides (Folien 211-225)"
+source: "Kapitel 10: Von der Analyse zur Systemarchitektur"
 ---
 
 # [[Drei-Schichtenmodell]]
 
-- **Kernkonzept:** Das [[Drei-Schichtenmodell]] ist ein [[Architekturmuster]], das eine [[Anwendung]] in drei logische [[Schicht|Schichten]] unterteilt: [[Präsentationsschicht]], [[Logikschicht]] (Business-Logik) und [[Datenzugriffsschicht]] (Persistenz).
-- **Nutzen & Zweck:** Es fördert die [[Trennung_von_Zuständigkeiten|Trennung von Zuständigkeiten]], verbessert die [[Wartbarkeit]] und ermöglicht die unabhängige [[Skalierung]] einzelner [[Schicht|Schichten]].
-- **Abgrenzung & Grenzen:** Nicht geeignet für einfache [[Anwendung|Anwendungen]] mit geringer Komplexität, da der Overhead der [[Schicht|Schichten]]-Trennung unnötig ist. Bei [[Echtzeitsystem|Echtzeitsystemen]] kann die zusätzliche [[Latenz]] durch die [[Schicht|Schichten]]-Kommunikation problematisch sein.
-- **Beispiel / Code:** ```java
-// Präsentationsschicht (GUI)
-public class MemberManagementGUI {
-    private MemberManagementLogic logic;
-    
-    public void updateMember() {
-        logic.updateMemberData();
-    }
-}
-
-// Logikschicht (Business-Logik)
-public class MemberManagementLogic {
-    private DatabaseConnector dbConnector;
-    
-    public void updateMemberData() {
-        dbConnector.saveToDatabase();
-    }
-}
-
-// Datenzugriffsschicht (Persistenz)
-public class DatabaseConnector {
-    public void saveToDatabase() {
-        // JDBC-Code zur Speicherung
-    }
-}
-```
+- **Kernkonzept:** Die Aufteilung einer Anwendung in Präsentationsschicht (Zugriff über Fenster/Webseiten), Logikschicht (Businesslogik) und Persistenzschicht (Datenbankanbindung, Drittsysteme).
+- **Nutzen & Zweck:** Die Aufteilung einer Anwendung in Präsentationsschicht (Zugriff über Fenster/Webseiten), Logikschicht (Businesslogik) und Persistenzschicht (Datenbankanbindung, Drittsysteme).
+- **Abgrenzung & Grenzen:** Siehe Definition.
+- **Beispiel / Code:** Kein Codebeispiel vorhanden.

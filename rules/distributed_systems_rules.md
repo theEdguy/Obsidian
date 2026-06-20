@@ -138,9 +138,9 @@ Wir betrachten ein Szenario mit drei Sensoren S_A, S_B, S_C. Deren Arbeitszyklus
 Vergessen, die Einheiten anzugeben. Bei (b) muss darauf geachtet werden, dass die Nachricht den Empfänger in dessen aktiver Phase (T_active) erreicht. Bei (c) müssen Regel und beide Aktivitäten (Weiterleiten an Nachbarn, Zeitanpassung) explizit genannt werden.
 
 
+
+
 ---
-
-
 
 # Kapitel 2: Architekturen
 
@@ -177,9 +177,8 @@ Klassifizierung der Interaktion in zwei Dimensionen: 1. Referenzielle Kopplung (
 **Definition**:
 Ressourcenbasierter Architekturstil auf Basis einheitlicher Schnittstellen und zustandsloser Kommunikation. Jede Ressource ist über eine eindeutige URI adressierbar. Operationen basieren auf Standard-Methoden (HTTP POST/Create, GET/Read, PUT/Update, DELETE/Delete). Nachrichten sind selbstbeschreibend.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 PUT http://mybucket.s3.amazonaws.com/myobject.txt
 ```
 
@@ -188,9 +187,8 @@ PUT http://mybucket.s3.amazonaws.com/myobject.txt
 **Definition**:
 Ein referenziell und temporal entkoppeltes Koordinationsmodell auf Basis eines gemeinsamen, persistenten Datenraums (Multimenge). Operationen sind out(t) (Tupel schreiben), in(t) (Tupel lesen und entfernen; blockierend falls kein Treffer), und rd(t) (Tupel-Kopie lesen; blockierend).
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 # Bob schreibt in den Tupelraum:
 blog._out(("bob", "distsys", "I am studying chap 2"))
 # Chuck liest blockierend mit Template:
@@ -217,9 +215,8 @@ Aufteilung eines Systems in Präsentationsebene (GUI, Eingabe), Verarbeitungsebe
 **Definition**:
 Ein strukturiertes P2P-System, bei dem Knoten und Schlüssel in einem m-Bit Ring angeordnet sind. Ein Schlüssel k wird auf dem Successor (erster Knoten mit ID >= k) gespeichert. Logarithmisches Routing wird durch Finger-Tabellen realisiert, bei denen der i-te Eintrag auf successor((n + 2^(i-1)) mod 2^m) verweist.
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 # Finger-Tabelle für Knoten 6 in 4-Bit Ring (m=4, 16 Positionen):
 # i=1: successor((6 + 1) mod 16) = successor(7) -> 9
 # i=2: successor((6 + 2) mod 16) = successor(8) -> 9
@@ -336,9 +333,9 @@ In einem Chord-basierten Peer-to-Peer-System mit einem 4-Bit-Adressraum (m=4, We
 Verwechslung des Modulo-Betriebs bei der Ring-Richtung. Bei (c) ist zu beachten, dass auf dem Ring ab 12 die Reihenfolge 12 -> 13 -> 14 -> 15 -> 0 -> ... -> 6 -> 7 -> 8 ist. 6 ist somit näher an 8 als 14 und wird daher gewählt. Vergessen, dass der Zielknoten selbst der Successor des Schlüssels ist.
 
 
+
+
 ---
-
-
 
 # Kapitel 3: Prozesse
 
@@ -454,9 +451,9 @@ Vergleich: Der Multithread-Server (50 req/s) hat einen um das 2,5-fache höheren
 Beim Singlethread-Server muss die Gesamtzeit für einen Cache-Miss 170 ms betragen (20 ms CPU + 150 ms Disk). Ein häufiger Fehler ist das Rechnen von T_single = 0.8 * 20 + 0.2 * 150 = 46 ms. Für den Multithread-Server wird die Wartezeit komplett abgezogen, da sie asynchron verborgen wird.
 
 
+
+
 ---
-
-
 
 # Kapitel 4: Kommunikation
 
@@ -498,9 +495,8 @@ Sequenz eines synchronen RPC-Aufrufs: 1. Client-Prozedur ruft Client-Stub auf. 2
 **Definition**:
 Auch 'Call-by-Value-Result'. RPC-Parameterübergabe, bei der Argumente beim Aufruf kopiert (Copy-in) und bei Rückkehr zurückkopiert (Copy-out) werden. Da keine echten Speicherreferenzen übertragen werden können, weicht das Verhalten bei Aliasing-Aufrufen wie incr(i,i) von lokaler Referenzübergabe ab, was die Zugriffstransparenz einschränkt.
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 # incr(i,i) mit i=0 anfangs:
 # Lokal (Referenz): i wird zweimal inkrementiert -> i = 2
 # RPC (Copy-in/Copy-out): i wird kopiert (0, 0), lokal inkrementiert (1, 1), bei Rückgabe wird i nacheinander mit 1 überschrieben -> i = 1
@@ -511,9 +507,8 @@ Auch 'Call-by-Value-Result'. RPC-Parameterübergabe, bei der Argumente beim Aufr
 **Definition**:
 Systemnahe Abstraktionsebene für transiente Kommunikation. Server nutzt socket(), bind(), listen() und blockiert in accept() für Verbindungen. Client nutzt socket() und connect(). Datenaustausch erfolgt über send() und recv().
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 # Server-Socket (Python):
 from socket import *
 s = socket(AF_INET, SOCK_STREAM)
@@ -530,9 +525,8 @@ conn.close()
 **Definition**:
 Bibliothek für asynchrones, nachrichtenorientiertes Transient Messaging. Kapselt systemnahe Sockets und bietet integrierte Muster wie Request-Reply (REQ/REP), Publish-Subscribe (PUB/SUB mit filterbasiertem Empfang) und Pipeline (PUSH/PULL für Lastverteilung).
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 # Request-Reply Client (Python):
 import zmq
 ctx = zmq.Context()
@@ -558,9 +552,8 @@ Metrik für die Effizienz von Multicast-Kommunikation. Gibt an, wie viele Kopien
 **Definition**:
 Verhältnis der Gesamtlatenz/Kosten einer Kommunikation über das Overlay-Netzwerk zu den Kosten über den optimalen physischen Routing-Weg im darunterliegenden IP-Netzwerk: Stretch = Kosten(Overlay) / Kosten(Physisch).
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 # Beispiel aus SS25:
 # Kosten über Overlay A->B->C->D = 10 + 16 + 14 = 40
 # Bester physischer Weg A->Ra->Rb->Rd->D = 1 + 8 + 10 + 1 = 20
@@ -684,9 +677,9 @@ Die physischen Links mit Link Stress > 1 sind somit:
 Vergessen, den Rückweg vom Host zum Router bei der Bestimmung des physischen Weges einzubeziehen (z. B. Rb -> B und direkt danach B -> Rb führt zu Stress 2 auf {B, Rb}). Falsche Latenzberechnung bei der optimalen physischen Route (Verwendung einer suboptimalen Route über Rc).
 
 
+
+
 ---
-
-
 
 # Kapitel 5: Benennung
 
@@ -723,9 +716,8 @@ Mechanismus zur Lokalisierung mobiler Entitäten (z. B. Mobile IP). Eine Entitä
 **Definition**:
 Um lineare Namen in einem Chord P2P-Ring effizient in O(log N) Schritten nachzuschlagen, hält jeder Knoten p eine Finger-Tabelle FT_p mit maximal m Einträgen: FT_p[i] = successor((p + 2^(i-1)) mod 2^m). Der Successor ist der kleinste Knoten-ID >= dem berechneten Wert.
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 # i-ter Eintrag für Knoten p bei m-Bit Bezeichner:
 # FT_p[i] = successor((p + 2**(i-1)) % (2**m))
 ```
@@ -750,9 +742,8 @@ Typen von Ressourceneinträgen im DNS: SOA (Start of Authority - Zonen-Metadaten
 **Definition**:
 Hierarchischer Verzeichnisdienst für attributbasierte Benennung. Einträge bestehen aus Attribut-Wert-Paaren (z. B. C=NL, O=VU, OU=CS, CN=Main server). Sie werden im Directory Information Tree (DIT) angeordnet. Einträge werden durch ihren Distinguished Name (DN) eindeutig identifiziert, der sich aus Relative Distinguished Names (RDN) zusammensetzt.
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 # LDAP Search Filter Beispiel:
 # search('(&(C=NL)(O=VU University)(CN=Main server))')
 ```
@@ -865,8 +856,3 @@ Nameserver-Rollen:
 
 #### Typische Stolpersteine / Fehlerquellen:
 Verwechslung von iterativer und rekursiver Auflösung (bei rekursiver Auflösung geht die Kette direkt von Server zu Server weiter). Falsches Zuordnen der Nachrichten-Nummern (ungerade Nummern sind Anfragen des Resolvers, gerade Nummern sind Antworten der Nameserver).
-
-
----
-
-

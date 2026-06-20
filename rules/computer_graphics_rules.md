@@ -54,9 +54,8 @@ Jedes einfache Polygon mit k Punkten lässt sich in k-2 Dreiecke zerlegen. Ein O
 **Definition**:
 Für Vektoren a, b ist a · b = a_x * b_x + a_y * b_y + a_z * b_z = |a| * |b| * cos(alpha). Haupteigenschaften: Orthogonale Vektoren haben ein Skalarprodukt von 0. Wird zur Berechnung des Kosinus des Winkels zwischen Vektoren und zur Bestimmung des Reflexionsvektors r = v - 2(v · n)n genutzt (wobei n der normalisierte Oberflächennormalenvektor ist).
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 Vector3df v = {1.0f, 0.0f, -1.0f};
 Vector3df n = {0.0f, 0.0f, 1.0f}; // normalisiert
 v.normalize();
@@ -68,9 +67,8 @@ Vector3df r = v.get_reflective(n); // r = v - 2 * (v * n) * n
 **Definition**:
 Nur für 3D-Vektoren definiert: a x b = (a_y*b_z - a_z*b_y, a_z*b_x - a_x*b_z, a_x*b_y - a_y*b_x). Das Ergebnis ist ein Vektor, der orthogonal auf der durch a und b aufgespannten Ebene steht (Rechte-Hand-Regel). Seine Länge |a x b| = |a| * |b| * sin(alpha) entspricht der Fläche des aufgespannten Parallelogramms (bzw. doppelte Dreiecksfläche). Es ist antikommutativ: a x b = -(b x a).
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 Vector3df a = {1.0f, 0.0f, 0.0f};
 Vector3df b = {0.0f, 1.0f, 0.0f};
 Vector3df c = a.cross_product(b); // c = {0.0f, 0.0f, 1.0f}
@@ -199,9 +197,9 @@ Wenn die Diskriminante (b^2 - 4ac) negativ ist, gibt es keinen reellen Schnittpu
 Klammern beim Quadrieren der Vektoren falsch aufgelöst (Skalarprodukt beachten). Vergessen, dass d^2 und (o-m)^2 Skalarprodukte sind, keine einfachen Skalarmultiplikationen.
 
 
+
+
 ---
-
-
 
 # Kapitel 2: Bildrepräsentation
 
@@ -237,9 +235,8 @@ Ein Bild wird durch geometrische Objekte (z. B. Linien, Kreise, Polygone) und de
 **Definition**:
 Ein textbasiertes (ASCII), unkomprimiertes Format zur Speicherung von RGB-Rastergrafiken. Die Datei beginnt mit der Magic Number 'P3', gefolgt von Breite und Höhe (in Pixeln) und dem maximalen Farbwert je Kanal. Die Pixel werden zeilenweise von oben links nach unten rechts als RGB-Tripel aufgeschrieben.
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 P3
 3 2
 255
@@ -252,9 +249,8 @@ P3
 **Definition**:
 Ein hierarchisch aufgebautes, geräteunabhängiges Dokumentenformat. Es besteht aus: Header (%PDF-X.Y), Body (indirekte Objekte wie Catalog, Pages, Page, Content-Streams), xref (Index aller Byte-Offsets der Objekte für wahlfreien Zugriff) und Trailer. Der Trailer enthält einen Verweis auf das Root-Objekt sowie das startxref-Offset. PDF-Reader verarbeiten Dateien von hinten nach vorne.
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 trailer
 << /Size 5
    /Root 1 0 R >>
@@ -268,9 +264,8 @@ startxref
 **Definition**:
 Im Content-Stream einer PDF-Seite definieren ASCII-Operatoren die Geometrie und Farbgebung: 'm' (Startpunkt setzen/moveTo), 'l' (Linie zu Punkt/lineTo), 'S' (Pfad zeichnen/Stroke), 'w' (Linienstärke), 'RG'/'rg' (Strich-/Füllfarbe in RGB), 're' (Rechteck definieren), 'B' (Füllen und Zeichnen/Fill & Stroke).
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 150 250 m
 150 350 l
 S
@@ -331,9 +326,9 @@ P3
 Falsche Anzahl Spalten/Zeilen im Header (z.B. 3 5 statt 5 3). Verwendung von falschen Farbwerten (z. B. 255 statt 16 für Blau/Rot oder 128 statt 8 für Grau bei Max-Farbwert 16). Fehlende Magic Number 'P3'.
 
 
+
+
 ---
-
-
 
 # Kapitel 3: Raytracing
 
@@ -367,9 +362,8 @@ Verfahren, bei dem Lichtstrahlen rückwärts verfolgt werden: vom Auge des Betra
 **Definition**:
 Erzeugung des Sehstrahls für ein Pixel (i, j) mit Koordinaten (p_u, p_v). Bei Parallelprojektion sind alle Strahlen parallel (ray.origin = e + p_u*u + p_v*v, ray.direction = -w). Bei Zentralprojektion starten alle Strahlen im Augenpunkt e (ray.origin = e, ray.direction = -d*w + p_u*u + p_v*v, mit Bildebenenabstand d).
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 Ray3df get_ray_perspective(float i, float j, Vector3df e, Vector3df u, Vector3df v, Vector3df w, float d, float l, float r, float b, float t, float nx, float ny) {
   float pu = l + (r - l) * (i + 0.5f) / nx;
   float pv = b + (t - b) * (j + 0.5f) / ny;
@@ -389,9 +383,8 @@ Beleuchtungsmodell für perfekt diffuse (matte) Reflexion. Die wahrgenommene Lic
 **Definition**:
 Visueller Fehler (dunkle Punkte/Muster auf beleuchteten Flächen), der durch numerische Ungenauigkeiten entsteht. Wenn der Schnittpunkt p eines Strahls berechnet wird, kann er leicht unter/hinter der Oberfläche liegen. Ein neuer Schatten- oder Reflexionsstrahl schneidet dann sofort wieder dasselbe Objekt. Lösung: Startpunkt um epsilon * n in Normalenrichtung verschieben (p_neu = p + epsilon * n).
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 Vector3df shadow_ray_origin = hit_point + 1e-4f * normal;
 ```
 
@@ -400,9 +393,8 @@ Vector3df shadow_ray_origin = hit_point + 1e-4f * normal;
 **Definition**:
 Tritt beim Übergang eines Strahls in ein anderes Medium auf: eta_1 * sin(theta) = eta_2 * sin(phi). Die Richtung des gebrochenen Strahls t berechnet sich als t = n*d - (n*(d · n) + sqrt(1 - n^2*(1 - (d · n)^2)))*n mit n = eta_1/eta_2. Wenn der Term unter der Wurzel (die Diskriminante) negativ wird, tritt Totalreflexion auf (keine Brechung).
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 Vector3df t;
 bool refract_exists = refract(eta1/eta2, normal, direction, t);
 ```
@@ -506,9 +498,9 @@ Totalreflexion kann nur auftreten, wenn Licht von einem optisch dichteren Medium
 Falsches Einsetzen der Brechungsindizes (Brechungsgesetz umgedreht). Falsche Bedingung für Totalreflexion angegeben (z. B. eta_1 < eta_2).
 
 
+
+
 ---
-
-
 
 # Kapitel 4: Transformationsmatrizen
 
@@ -650,9 +642,9 @@ Anschaulich bewirkt die Matrix also eine uniforme Skalierung des gesamten euklid
 Annahme, die Matrix habe gar keinen Effekt oder skaliere um Faktor a statt 1/a.
 
 
+
+
 ---
-
-
 
 # Kapitel 5: Projektionen
 
@@ -781,9 +773,9 @@ Einsetzen der Werte ergibt:
 Verwendung von n_x statt n_x/2 oder Vergessen der Verschiebung um -1 in der Translation (z. B. 256 statt 255.5).
 
 
+
+
 ---
-
-
 
 # Kapitel 6: Graphik-Pipeline & Rasterung
 
@@ -893,9 +885,9 @@ Er ermöglicht ein korrektes Rendern von sich überlappenden Objekten unabhängi
 Verwechslung der z-Blickrichtung (positive vs. negative z-Achse) und damit falsche Angabe der Vergleichsfunktion (GL_LESS vs. GL_GREATER).
 
 
+
+
 ---
-
-
 
 # Kapitel 7: OpenGL
 
@@ -922,9 +914,8 @@ Verwendung von Vertex Buffer Objects (VBO) zur Speicherung von Vertex-Daten auf 
 **Definition**:
 Ein Speicherpuffer im Grafikspeicher (GPU) zur Speicherung von Vertex-Attributdaten (z. B. Positionen, Farben, Normalen, Texturkoordinaten). Wird über glGenBuffers erzeugt und an das Target GL_ARRAY_BUFFER gebunden.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 GLuint VBO;
 glGenBuffers(1, &VBO);
 glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -936,9 +927,8 @@ glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 **Definition**:
 Ein Zustandsobjekt, das alle Einstellungen für Vertex-Layouts und Pufferbindungen speichert. Es kapselt die glVertexAttribPointer-Konfigurationen und die Aktivierung von Attributindizes, wodurch das Umschalten zwischen verschiedenen Modellen mit einem einzigen Aufruf möglich wird.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 GLuint VAO;
 glGenVertexArrays(1, &VAO);
 glBindVertexArray(VAO);
@@ -956,9 +946,8 @@ Spezifiziert das Format der Vertex-Attribute im gebundenen VBO. Parameter:
 5. stride: Byte-Abstand zwischen aufeinanderfolgenden Attributen
 6. pointer: Offset des ersten Werts im Puffer.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 glEnableVertexAttribArray(0);
 glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
@@ -970,9 +959,8 @@ glEnableVertexAttribArray(1);
 **Definition**:
 Die Programmiersprache für OpenGL-Shader. Läuft direkt auf der GPU. Variablen werden mittels 'in' (Eingabe) und 'out' (Ausgabe) deklariert. Der Vertex-Shader transformiert Vertices und schreibt in 'gl_Position'. Der Fragment-Shader schreibt die Pixelfarbe in ein definiertes Ausgabe-Objekt (z. B. 'FragColor'). Unterstützt Swizzling (z. B. 'color.rgb' oder 'pos.xy'). Keine Rekursion.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 #version 330 core
 layout (location = 0) in vec3 pos;
 layout (location = 1) in vec3 color;
@@ -991,9 +979,8 @@ Rendert geometrische Primitive aus dem aktiven Vertex-Array-Zustand. Parameter:
 2. first: Startindex im Array
 3. count: Anzahl der zu zeichnenden Vertices (nicht Dreiecke; z.B. 3 Vertices pro Dreieck).
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 glDrawArrays(GL_TRIANGLES, 0, 9); // Zeichnet die ersten drei Dreiecke (9 Eckpunkte)
 ```
 
@@ -1002,9 +989,8 @@ glDrawArrays(GL_TRIANGLES, 0, 9); // Zeichnet die ersten drei Dreiecke (9 Eckpun
 **Definition**:
 Zustand zur Ausblendung von Dreiecken, die der Kamera abgewandt sind. Wird mit glEnable(GL_CULL_FACE) aktiviert. Die Eckenreihenfolge der projizierten Dreiecke im 2D-Bildraum bestimmt, ob sie gegen den Uhrzeigersinn (GL_CCW) oder im Uhrzeigersinn (GL_CW) orientiert sind. Mittels glFrontFace und glCullFace wird konfiguriert, welche Seiten verworfen werden.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 glEnable(GL_CULL_FACE);
 glFrontFace(GL_CCW); // Gegenuhrzeigersinn ist Vorderseite
 glCullFace(GL_BACK);   // Rückseiten verwerfen
@@ -1124,9 +1110,9 @@ Nur Dreieck 2 ist sichtbar.
 Vergessen zu prüfen, ob Dreiecke außerhalb der kanonischen Sichtbox [-1, 1]^3 liegen (Clipping). Rechenfehler bei der Bestimmung der Drehrichtung.
 
 
+
+
 ---
-
-
 
 # Kapitel 8: Texturabbildungen
 
@@ -1169,9 +1155,8 @@ Zylindrische Projektion wickelt die Textur um die z-Achse: u = 1/(2*PI) * (PI + 
 **Definition**:
 Wrapping bestimmt, wie Texturen außerhalb des Bereichs [0, 1] wiederholt oder abgeschnitten werden (GL_TEXTURE_WRAP_S, GL_TEXTURE_WRAP_T: GL_REPEAT, GL_CLAMP_TO_EDGE). Filtering bestimmt das Verhalten bei Skalierung (GL_TEXTURE_MIN_FILTER, GL_TEXTURE_MAG_FILTER): GL_NEAREST (nächstgelegener Texel, pixelig) und GL_LINEAR (bilineare Interpolation, weich).
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 ```
@@ -1181,9 +1166,8 @@ glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 **Definition**:
 Um Texturdaten im Fragment-Shader zu nutzen, wird eine Variable uniform sampler2D texturedata deklariert. Über die Funktion texture(texturedata, texCoord) wird die RGB(A)-Farbe an der Stelle texCoord (vec2) ausgelesen.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 #version 330 core
 in vec2 texturecoordout;
 out vec4 FragColor;
@@ -1262,9 +1246,9 @@ glEnableVertexAttribArray(2);
 Falscher Stride-Wert (z. B. 2 * sizeof(float) oder 6 * sizeof(float)). Falscher Offset (z. B. 0 oder 3 * sizeof(float)).
 
 
+
+
 ---
-
-
 
 # Kapitel 9: Schattierung von Oberflächen
 
@@ -1311,9 +1295,8 @@ Ein lokales Beleuchtungsmodell. Die Pixelfarbe berechnet sich aus ambientem, dif
 **Definition**:
 Ein künstlerisches Schattierungsverfahren (Non-Photorealistic Rendering) für technische Zeichnungen. Anstatt abgewandte Seiten schwarz zu zeichnen, wird zwischen einer kalten Farbe c_c (z. B. Blau) und einer warmen Farbe c_w (z. B. Orange) interpoliert, basierend auf dem Kosinus des Winkels zwischen Normalenvektor n und Lichtrichtung l: k_w = (1 + n · l) / 2. Die Pixelfarbe ergibt sich als c = k_w * c_w + (1 - k_w) * c_c.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 float kw = (1.0 + dot(normal, lightdir)) / 2.0;
 vec3 color = kw * warmColor + (1.0 - kw) * coolColor;
 ```
@@ -1377,8 +1360,3 @@ Die resultierende RGB-Farbe ist (0.75, 0.75, 0.25).
 
 #### Typische Stolpersteine / Fehlerquellen:
 Verwendung der falschen Gooch-Formel (z.B. Lambert-Term max(0, n·l) anstelle von (1 + n·l)/2). Rechenfehler bei den Vektorkomponenten.
-
-
----
-
-

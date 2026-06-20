@@ -32,6 +32,167 @@ Der Schlüssel zum Erfolg liegt nicht in mehr Willenskraft, sondern in der intel
 
 
 
+---
+
+# Kapitel 2: Die Lösung: Der Zettelkasten als externes Gedächtnis und Denkwerkzeug
+
+## 📖 Guidelines
+
+### Das Problem
+Der Zettelkasten wird oft als reines Archiv oder mechanisches Ablagesystem missverstanden und starr in bestehende Ordnerstrukturen gepresst, ohne die umgebenden Arbeitsroutinen anzupassen. Dies verkompliziert den Prozess, statt ihn zu vereinfachen. Zudem stößt das biologische Gehirn bei der systematischen Verknüpfung komplexer, fachübergreifender Ideen ohne externe Denkwerkzeuge an seine kognitiven Grenzen.
+
+### Die Lösung
+Der Zettelkasten muss als zentraler Baustein eines ganzheitlichen Workflows verstanden werden (wie ein standardisierter Schiffscontainer). Er kombiniert die verlässliche Entlastung des Arbeitsgedächtnisses (für einen freien Kopf / 'mind like water') mit einer flexiblen, nicht-hierarchischen Verästelung der Notizen. Durch die Trennung in Lektürenotizen und Hauptzettel sowie das Setzen von Querverweisen entsteht ein externes Denkwerkzeug, das als aktiver Dialogpartner neue, unerwartete Zusammenhänge aufzeigt.
+
+## 🤖 KI-Anweisungen (AI Instructions)
+
+- Trenne strikt zwischen bibliografischen Lektürenotizen (Verweis auf Quelle + kurze Stichpunkte) und inhaltlichen Hauptzetteln (eigene Gedanken und Ideen im Zettelkasten-Kontext).
+- Verfasse Zettel einseitig und halte dich an das Prinzip 'Ein Gedanke pro Zettel' (Atomarität), um maximale Flexibilität bei der Verknüpfung zu sichern.
+- Verwende Verzweigungsnummern (z. B. 22a hinter 22) und Querverweise statt starrer Kategorien oder Ordner, um themenübergreifende Beziehungen zu ermöglichen.
+
+
+
+---
+
+# Kapitel 3: Alles, was man tun muss: Vom Ende her denken und Arbeitsschritte trennen
+
+## 📖 Guidelines
+
+### Das Problem
+Wer vor einem leeren Blatt Papier steht und versucht, alle Phasen des Schreibens (Recherche, Strukturierung, Formulierung, Überarbeitung) gleichzeitig zu bewältigen, leidet unter Schreibhemmungen und kognitiver Überlastung. Wenn der Schreibprozess bis kurz vor der Deadline aufgeschoben wird, entsteht enormer Druck und die Qualität leidet.
+
+### Die Lösung
+Der Schreibprozess muss vom Ende her gedacht werden ('umkehren'). Man beginnt nicht bei Null, sondern greift auf vorgefertigte Notizen und Gedankenstränge als Bausteine zurück. Der Schreibprozess wird in 7 klare, getrennte Schritte unterteilt (flüchtige Notizen, Lektürenotizen, dauerhafte Zettel, Einordnung/Verknüpfung, Themenfindung aus Clustern, Rohfassung schreiben, überarbeiten), wodurch die kognitive Belastung in jeder Phase minimiert wird.
+
+## 🤖 KI-Anweisungen (AI Instructions)
+
+- Trenne strikt zwischen den verschiedenen Notiztypen: flüchtige Notizen (temporär, Gedächtnisstütze), Lektürenotizen (Stichpunkte zur Quelle in eigenen Worten) und dauerhafte Zettel (ausformulierte, eigenständige Gedanken).
+- Unterstütze den Benutzer dabei, Schreibprojekte aus bereits vorhandenen Zettelansammlungen (Clustern) zu entwickeln, statt Gliederungen aus dem Nichts zu entwerfen.
+- Ermutige dazu, Lektüre- und Gedankenergebnisse kontinuierlich im Alltag zu verschriftlichen, um den Schreibaufwand vor Deadlines zu minimieren.
+
+
+
+---
+
+# Kapitel 4: Alles, was man braucht: Minimalistische und langlebige Werkzeuge
+
+## 📖 Guidelines
+
+### Das Problem
+Die Verwendung übermäßig komplexer Software und die Bindung an proprietäre, kommerzielle Tools (Vendor Lock-in) gefährdet die langfristige Nutzbarkeit und Archivierung von Notizen. Zudem lenkt der Aufbau komplexer technischer Systeme vom eigentlichen wissenschaftlichen Denken und Schreiben ab.
+
+### Die Lösung
+Konsequente Ausrichtung am 'russischen Modell' der Einfachheit (Bleistift statt Weltraumkugelschreiber). Benötigt werden exakt vier ablenkungsfreie und offene Hilfsmittel: etwas für flüchtige Notizen, eine freie Literaturverwaltung (z. B. Zotero), ein Zettelkasten-System (analog auf Papier oder digital in offenen Formaten) und ein Texteditor. Diese müssen maximale Langlebigkeit und einfache Exportmöglichkeiten bieten.
+
+## 🤖 KI-Anweisungen (AI Instructions)
+
+- Nutze und empfehle ausschließlich offene, standardisierte und plattformunabhängige Formate (z. B. Markdown, Plain-Text, JSON) für die Speicherung, um Datenverlust durch das Altern von Software zu verhindern.
+- Vermeide komplexe, proprietäre Sonderfeatures, die den Export oder die systemübergreifende Portabilität von Notizen einschränken.
+- Halte die Infrastruktur minimalistisch und trenne die vier Grundwerkzeuge (Notizbuch, Quellenverwaltung, Zettelkasten, Editor) sauber voneinander.
+
+
+
+---
+
+# Kapitel 5: Das erste Prinzip: Vom Schreiben her denken
+
+## 📖 Guidelines
+
+### Das Problem
+Die gedankliche Trennung von Wissenserwerb (Lesen, Diskutieren, Verstehen) und dem eigentlichen Schreiben. Wer das Schreiben als isolierten, abschließenden Schritt nach der Recherche betrachtet, verliert den Großteil seiner Gedanken und muss bei der Texterstellung mühsam von vorne anfangen.
+
+### Die Lösung
+Konsequente Ausrichtung aller Aktivitäten auf die Verschriftlichung. Jede Vorlesung, Diskussion und Lektüre sollte in schriftlichen Notizen münden, die dauerhaft im Zettelkasten gespeichert werden. Nur schriftlich fixierte Gedanken sind dauerhaft abrufbar, präzise verfeinerbar und anschlussfähig für wissenschaftliche Arbeiten.
+
+## 🤖 KI-Anweisungen (AI Instructions)
+
+- Richte alle Assistenzfunktionen darauf aus, dass das Verfassen und Strukturieren von Notizen das primäre Ziel jeder Lektüre und Diskussion ist.
+- Unterstütze den Benutzer dabei, gelesene Texte oder Ideen direkt in eigene Worte zu übersetzen und als dauerhafte Notiz zu formulieren.
+- Fördere die kontinuierliche Verschriftlichung im Alltag, statt das Schreiben als isolierte Aufgabe am Ende eines Projekts zu behandeln.
+
+
+
+---
+
+# Kapitel 6: Das zweite Prinzip: Vereinfachen und Vereinheitlichen
+
+## 📖 Guidelines
+
+### Das Problem
+Willkürliche Formate, unsortierte Ablageorte und das Vermischen von Notiztypen. Dies führt zu wachsendem Chaos, erschwert das Wiederfinden und verhindert, dass der Notizenschatz mit der Zeit produktiver und nützlicher wird. Typische Fehler sind das Behandeln aller Notizen als dauerhaft (chronologische Journale), als rein projektbezogen (Verlust von Synergien) oder als rein flüchtig.
+
+### Die Lösung
+Standardisierung des Notiz-Workflows (Container-Prinzip) und die strikte Trennung in genau drei Notizkategorien: 1. Flüchtige Notizen (schnelle, temporäre Gedächtnisstützen, die täglich verarbeitet oder gelöscht werden müssen). 2. Dauerhafte Notizen (Lektürenotizen mit Literaturangaben in Zotero + inhaltlich ausformulierte Zettel mit genau einem Gedanken im Zettelkasten). 3. Projektbezogene Notizen (temporäre Gliederungen, Entwürfe und Skripte, die sauber getrennt in Projektordnern/Schreibtischen liegen).
+
+## 🤖 KI-Anweisungen (AI Instructions)
+
+- Unterstütze den Benutzer aktiv dabei, zwischen flüchtigen, dauerhaften und projektbezogenen Notizen zu unterscheiden, und weise auf Fehlplatzierungen hin.
+- Erinnere daran, flüchtige Notizen zeitnah (idealerweise täglich) zu sichten, auszuwerten und zu löschen oder in dauerhafte Zettel umzuwandeln.
+- Achte darauf, dass dauerhafte Hauptzettel immer als in sich geschlossene, verständliche Texte mit genau einer zentralen Idee und dazugehörigen Quellenangaben formuliert sind.
+
+
+
+---
+
+# Kapitel 7: Das dritte Prinzip: Man ist immer mittendrin
+
+## 📖 Guidelines
+
+### Das Problem
+Die Illusion eines linearen Arbeitsprozesses, der bei Null beginnt (Themenfindung im Vakuum durch Brainstorming, gefolgt von Recherche, Lesen und schlussendlich Schreiben). Dies führt zu Angst vor dem leeren Blatt, künstlichen Schreibblockaden und Orientierungslosigkeit.
+
+### Die Lösung
+Anerkennung des zirkulären Charakters des Denkens und Schreibens (hermeneutischer Zirkel). Themen und Hypothesen werden nicht vorab im luftleeren Raum konstruiert, sondern wachsen organisch aus der kontinuierlichen schriftlichen Auseinandersetzung mit Texten im Zettelkasten. Wenn das eigentliche Schreiben des Textes beginnt, greift man auf ein reichhaltiges Fundament an bereits existierenden Notizen zurück.
+
+## 🤖 KI-Anweisungen (AI Instructions)
+
+- Vermeide es, den Benutzer zur willkürlichen Themenfindung oder Gliederungserstellung aus dem Nichts aufzufordern (z. B. durch isoliertes Brainstorming).
+- Leite den Benutzer stattdessen an, Themen und Gliederungen explorativ aus den im Zettelkasten bereits vorhandenen Notizen, Clustern und Gedankensträngen wachsen zu lassen.
+- Nutze das Interesse des Benutzers als primären Kompass für die Fortführung von Notizen und Verknüpfungen, statt an starren vorab festgelegten Hypothesen festzuhalten.
+
+
+
+---
+
+# Kapitel 8: Das vierte Prinzip: Positive Dynamiken entfachen
+
+## 📖 Guidelines
+
+### Das Problem
+Teufelskreise aus Überforderung, Frust und Prokrastination (Aufschieben) aufgrund schlechter Arbeitsorganisation. Äußere Belohnungen oder reine Willenskraft scheitern oft als Motivatoren, weil echte Motivation aus unmittelbaren Erfolgserlebnissen und Fortschritten in der Arbeit selbst erwachsen muss.
+
+### Die Lösung
+Aufbau positiver Rückkopplungsschleifen durch den Zettelkasten-Workflow. Die kleinschrittigen Aufgaben (Lesen, in eigene Worte fassen, Verknüpfen) liefern ständiges, unmittelbares Feedback und machen Lernfortschritte spürbar. Je größer das Notizen-Netzwerk wird, desto wertvoller wird es durch unerwartete Verbindungen (Serendipität/produktiver Zufall). Gleichzeitig wächst das interne Gedächtnis mit dem externen, da durch das verknüpfende Arbeiten immer mehr Anknüpfungspunkte für neues Wissen entstehen.
+
+## 🤖 KI-Anweisungen (AI Instructions)
+
+- Fördere die Selbstwirksamkeit des Benutzers, indem du Aufgaben in kleine, bewältigbare und direkt feedbackfähige Teilschritte zerlegst (z. B. erst eine Quelle paraphrasieren, dann Bezüge suchen).
+- Lenke die Aufmerksamkeit aktiv auf überraschende Querverweise oder Synergien im Zettelkasten (Serendipität), um den Mehrwert des wachsenden Netzwerks sichtbar zu machen.
+- Unterstütze den Benutzer beim verstehenden Lernen, indem du ihn anleitest, neue Konzepte mit bereits im Zettelkasten vorhandenem Wissen zu verknüpfen, statt isolierte Fakten abzuspeichern.
+
+
+
+---
+
+# Kapitel 9: Erster Schritt: Arbeitsschritte klar unterscheiden
+
+## 📖 Guidelines
+
+### Das Problem
+Kognitive Überlastung und Blockaden durch kognitives Multitasking (z. B. gleichzeitiges Formulieren und Korrigieren, Gliedern und Lesen) sowie der Verschleiß von Willenskraft (Ego-Depletion) durch ständige organisatorische Mikro-Entscheidungen über Ablageorte und Formate.
+
+### Die Lösung
+Konsequente Trennung der verschiedenen Arbeitsschritte und Aufmerksamkeitsformen (fokussiert, ausdauernd, kreativ-assoziativ). Durch die sofortige Verschriftlichung und Ablage von Gedanken werden Aufgaben für das Gehirn abgeschlossen und der Arbeitsspeicher entlastet (Zeigarnik-Effekt). Vordefinierte, einheitliche Formate und Ablageorte eliminieren organisatorische Entscheidungen im Arbeitsalltag.
+
+## 🤖 KI-Anweisungen (AI Instructions)
+
+- Achte darauf, dass der Benutzer in einer Interaktion nicht gleichzeitig kollidierende Rollen einnehmen muss (z. B. warne davor, beim ersten Entwurf schon an einzelnen Wörtern zu feilen).
+- Unterstütze die Entlastung des Kurzzeitgedächtnisses, indem du den Benutzer anleitest, lose Ideen, To-dos oder offene Fragen sofort schriftlich zu fixieren (Zeigarnik-Effekt).
+- Reduziere organisatorische Reibung, indem du stets das vordefinierte Zettel-Format einforderst und Vorschläge zur automatischen Strukturierung machst.
+
+
+
+---
 
 # Kapitel 10: Zweiter Schritt: Lesen und Verstehen
 
@@ -52,6 +213,7 @@ Schreibendes Lesen. Das Umschreiben und Verdichten des Gelesenen in eigene Worte
 
 
 
+---
 
 # Kapitel 11: Dritter Schritt: Verzetteln
 
@@ -72,6 +234,7 @@ Regelmäßiges Verfassen von Zetteln (Investorenprinzip). Ein Zettel ist eine ei
 
 
 
+---
 
 # Kapitel 12: Vierter Schritt: Zettel einordnen und verknüpfen
 
@@ -93,6 +256,7 @@ Bottom-up-Strukturierung. Themen wachsen organisch aus dem Verweisnetzwerk herau
 
 
 
+---
 
 # Kapitel 13: Fünfter Schritt: Das Manuskript vorbereiten
 
@@ -113,6 +277,7 @@ Bottom-Up-Themenfindung. Man schaut, wo sich im Zettelkasten thematische Cluster
 
 
 
+---
 
 # Kapitel 14: Sechster Schritt: Ausformulieren und überarbeiten.
 
@@ -134,158 +299,7 @@ Konsequente Trennung von Rohfassung und Überarbeitung. Der erste Entwurf dient 
 
 
 
-
-# Kapitel 2: Die Lösung: Der Zettelkasten als externes Gedächtnis und Denkwerkzeug
-
-## 📖 Guidelines
-
-### Das Problem
-Der Zettelkasten wird oft als reines Archiv oder mechanisches Ablagesystem missverstanden und starr in bestehende Ordnerstrukturen gepresst, ohne die umgebenden Arbeitsroutinen anzupassen. Dies verkompliziert den Prozess, statt ihn zu vereinfachen. Zudem stößt das biologische Gehirn bei der systematischen Verknüpfung komplexer, fachübergreifender Ideen ohne externe Denkwerkzeuge an seine kognitiven Grenzen.
-
-### Die Lösung
-Der Zettelkasten muss als zentraler Baustein eines ganzheitlichen Workflows verstanden werden (wie ein standardisierter Schiffscontainer). Er kombiniert die verlässliche Entlastung des Arbeitsgedächtnisses (für einen freien Kopf / 'mind like water') mit einer flexiblen, nicht-hierarchischen Verästelung der Notizen. Durch die Trennung in Lektürenotizen und Hauptzettel sowie das Setzen von Querverweisen entsteht ein externes Denkwerkzeug, das als aktiver Dialogpartner neue, unerwartete Zusammenhänge aufzeigt.
-
-## 🤖 KI-Anweisungen (AI Instructions)
-
-- Trenne strikt zwischen bibliografischen Lektürenotizen (Verweis auf Quelle + kurze Stichpunkte) und inhaltlichen Hauptzetteln (eigene Gedanken und Ideen im Zettelkasten-Kontext).
-- Verfasse Zettel einseitig und halte dich an das Prinzip 'Ein Gedanke pro Zettel' (Atomarität), um maximale Flexibilität bei der Verknüpfung zu sichern.
-- Verwende Verzweigungsnummern (z. B. 22a hinter 22) und Querverweise statt starrer Kategorien oder Ordner, um themenübergreifende Beziehungen zu ermöglichen.
-
-
-
-
-# Kapitel 3: Alles, was man tun muss: Vom Ende her denken und Arbeitsschritte trennen
-
-## 📖 Guidelines
-
-### Das Problem
-Wer vor einem leeren Blatt Papier steht und versucht, alle Phasen des Schreibens (Recherche, Strukturierung, Formulierung, Überarbeitung) gleichzeitig zu bewältigen, leidet unter Schreibhemmungen und kognitiver Überlastung. Wenn der Schreibprozess bis kurz vor der Deadline aufgeschoben wird, entsteht enormer Druck und die Qualität leidet.
-
-### Die Lösung
-Der Schreibprozess muss vom Ende her gedacht werden ('umkehren'). Man beginnt nicht bei Null, sondern greift auf vorgefertigte Notizen und Gedankenstränge als Bausteine zurück. Der Schreibprozess wird in 7 klare, getrennte Schritte unterteilt (flüchtige Notizen, Lektürenotizen, dauerhafte Zettel, Einordnung/Verknüpfung, Themenfindung aus Clustern, Rohfassung schreiben, überarbeiten), wodurch die kognitive Belastung in jeder Phase minimiert wird.
-
-## 🤖 KI-Anweisungen (AI Instructions)
-
-- Trenne strikt zwischen den verschiedenen Notiztypen: flüchtige Notizen (temporär, Gedächtnisstütze), Lektürenotizen (Stichpunkte zur Quelle in eigenen Worten) und dauerhafte Zettel (ausformulierte, eigenständige Gedanken).
-- Unterstütze den Benutzer dabei, Schreibprojekte aus bereits vorhandenen Zettelansammlungen (Clustern) zu entwickeln, statt Gliederungen aus dem Nichts zu entwerfen.
-- Ermutige dazu, Lektüre- und Gedankenergebnisse kontinuierlich im Alltag zu verschriftlichen, um den Schreibaufwand vor Deadlines zu minimieren.
-
-
-
-
-# Kapitel 4: Alles, was man braucht: Minimalistische und langlebige Werkzeuge
-
-## 📖 Guidelines
-
-### Das Problem
-Die Verwendung übermäßig komplexer Software und die Bindung an proprietäre, kommerzielle Tools (Vendor Lock-in) gefährdet die langfristige Nutzbarkeit und Archivierung von Notizen. Zudem lenkt der Aufbau komplexer technischer Systeme vom eigentlichen wissenschaftlichen Denken und Schreiben ab.
-
-### Die Lösung
-Konsequente Ausrichtung am 'russischen Modell' der Einfachheit (Bleistift statt Weltraumkugelschreiber). Benötigt werden exakt vier ablenkungsfreie und offene Hilfsmittel: etwas für flüchtige Notizen, eine freie Literaturverwaltung (z. B. Zotero), ein Zettelkasten-System (analog auf Papier oder digital in offenen Formaten) und ein Texteditor. Diese müssen maximale Langlebigkeit und einfache Exportmöglichkeiten bieten.
-
-## 🤖 KI-Anweisungen (AI Instructions)
-
-- Nutze und empfehle ausschließlich offene, standardisierte und plattformunabhängige Formate (z. B. Markdown, Plain-Text, JSON) für die Speicherung, um Datenverlust durch das Altern von Software zu verhindern.
-- Vermeide komplexe, proprietäre Sonderfeatures, die den Export oder die systemübergreifende Portabilität von Notizen einschränken.
-- Halte die Infrastruktur minimalistisch und trenne die vier Grundwerkzeuge (Notizbuch, Quellenverwaltung, Zettelkasten, Editor) sauber voneinander.
-
-
-
-
-# Kapitel 5: Das erste Prinzip: Vom Schreiben her denken
-
-## 📖 Guidelines
-
-### Das Problem
-Die gedankliche Trennung von Wissenserwerb (Lesen, Diskutieren, Verstehen) und dem eigentlichen Schreiben. Wer das Schreiben als isolierten, abschließenden Schritt nach der Recherche betrachtet, verliert den Großteil seiner Gedanken und muss bei der Texterstellung mühsam von vorne anfangen.
-
-### Die Lösung
-Konsequente Ausrichtung aller Aktivitäten auf die Verschriftlichung. Jede Vorlesung, Diskussion und Lektüre sollte in schriftlichen Notizen münden, die dauerhaft im Zettelkasten gespeichert werden. Nur schriftlich fixierte Gedanken sind dauerhaft abrufbar, präzise verfeinerbar und anschlussfähig für wissenschaftliche Arbeiten.
-
-## 🤖 KI-Anweisungen (AI Instructions)
-
-- Richte alle Assistenzfunktionen darauf aus, dass das Verfassen und Strukturieren von Notizen das primäre Ziel jeder Lektüre und Diskussion ist.
-- Unterstütze den Benutzer dabei, gelesene Texte oder Ideen direkt in eigene Worte zu übersetzen und als dauerhafte Notiz zu formulieren.
-- Fördere die kontinuierliche Verschriftlichung im Alltag, statt das Schreiben als isolierte Aufgabe am Ende eines Projekts zu behandeln.
-
-
-
-
-# Kapitel 6: Das zweite Prinzip: Vereinfachen und Vereinheitlichen
-
-## 📖 Guidelines
-
-### Das Problem
-Willkürliche Formate, unsortierte Ablageorte und das Vermischen von Notiztypen. Dies führt zu wachsendem Chaos, erschwert das Wiederfinden und verhindert, dass der Notizenschatz mit der Zeit produktiver und nützlicher wird. Typische Fehler sind das Behandeln aller Notizen als dauerhaft (chronologische Journale), als rein projektbezogen (Verlust von Synergien) oder als rein flüchtig.
-
-### Die Lösung
-Standardisierung des Notiz-Workflows (Container-Prinzip) und die strikte Trennung in genau drei Notizkategorien: 1. Flüchtige Notizen (schnelle, temporäre Gedächtnisstützen, die täglich verarbeitet oder gelöscht werden müssen). 2. Dauerhafte Notizen (Lektürenotizen mit Literaturangaben in Zotero + inhaltlich ausformulierte Zettel mit genau einem Gedanken im Zettelkasten). 3. Projektbezogene Notizen (temporäre Gliederungen, Entwürfe und Skripte, die sauber getrennt in Projektordnern/Schreibtischen liegen).
-
-## 🤖 KI-Anweisungen (AI Instructions)
-
-- Unterstütze den Benutzer aktiv dabei, zwischen flüchtigen, dauerhaften und projektbezogenen Notizen zu unterscheiden, und weise auf Fehlplatzierungen hin.
-- Erinnere daran, flüchtige Notizen zeitnah (idealerweise täglich) zu sichten, auszuwerten und zu löschen oder in dauerhafte Zettel umzuwandeln.
-- Achte darauf, dass dauerhafte Hauptzettel immer als in sich geschlossene, verständliche Texte mit genau einer zentralen Idee und dazugehörigen Quellenangaben formuliert sind.
-
-
-
-
-# Kapitel 7: Das dritte Prinzip: Man ist immer mittendrin
-
-## 📖 Guidelines
-
-### Das Problem
-Die Illusion eines linearen Arbeitsprozesses, der bei Null beginnt (Themenfindung im Vakuum durch Brainstorming, gefolgt von Recherche, Lesen und schlussendlich Schreiben). Dies führt zu Angst vor dem leeren Blatt, künstlichen Schreibblockaden und Orientierungslosigkeit.
-
-### Die Lösung
-Anerkennung des zirkulären Charakters des Denkens und Schreibens (hermeneutischer Zirkel). Themen und Hypothesen werden nicht vorab im luftleeren Raum konstruiert, sondern wachsen organisch aus der kontinuierlichen schriftlichen Auseinandersetzung mit Texten im Zettelkasten. Wenn das eigentliche Schreiben des Textes beginnt, greift man auf ein reichhaltiges Fundament an bereits existierenden Notizen zurück.
-
-## 🤖 KI-Anweisungen (AI Instructions)
-
-- Vermeide es, den Benutzer zur willkürlichen Themenfindung oder Gliederungserstellung aus dem Nichts aufzufordern (z. B. durch isoliertes Brainstorming).
-- Leite den Benutzer stattdessen an, Themen und Gliederungen explorativ aus den im Zettelkasten bereits vorhandenen Notizen, Clustern und Gedankensträngen wachsen zu lassen.
-- Nutze das Interesse des Benutzers als primären Kompass für die Fortführung von Notizen und Verknüpfungen, statt an starren vorab festgelegten Hypothesen festzuhalten.
-
-
-
-
-# Kapitel 8: Das vierte Prinzip: Positive Dynamiken entfachen
-
-## 📖 Guidelines
-
-### Das Problem
-Teufelskreise aus Überforderung, Frust und Prokrastination (Aufschieben) aufgrund schlechter Arbeitsorganisation. Äußere Belohnungen oder reine Willenskraft scheitern oft als Motivatoren, weil echte Motivation aus unmittelbaren Erfolgserlebnissen und Fortschritten in der Arbeit selbst erwachsen muss.
-
-### Die Lösung
-Aufbau positiver Rückkopplungsschleifen durch den Zettelkasten-Workflow. Die kleinschrittigen Aufgaben (Lesen, in eigene Worte fassen, Verknüpfen) liefern ständiges, unmittelbares Feedback und machen Lernfortschritte spürbar. Je größer das Notizen-Netzwerk wird, desto wertvoller wird es durch unerwartete Verbindungen (Serendipität/produktiver Zufall). Gleichzeitig wächst das interne Gedächtnis mit dem externen, da durch das verknüpfende Arbeiten immer mehr Anknüpfungspunkte für neues Wissen entstehen.
-
-## 🤖 KI-Anweisungen (AI Instructions)
-
-- Fördere die Selbstwirksamkeit des Benutzers, indem du Aufgaben in kleine, bewältigbare und direkt feedbackfähige Teilschritte zerlegst (z. B. erst eine Quelle paraphrasieren, dann Bezüge suchen).
-- Lenke die Aufmerksamkeit aktiv auf überraschende Querverweise oder Synergien im Zettelkasten (Serendipität), um den Mehrwert des wachsenden Netzwerks sichtbar zu machen.
-- Unterstütze den Benutzer beim verstehenden Lernen, indem du ihn anleitest, neue Konzepte mit bereits im Zettelkasten vorhandenem Wissen zu verknüpfen, statt isolierte Fakten abzuspeichern.
-
-
-
-
-# Kapitel 9: Erster Schritt: Arbeitsschritte klar unterscheiden
-
-## 📖 Guidelines
-
-### Das Problem
-Kognitive Überlastung und Blockaden durch kognitives Multitasking (z. B. gleichzeitiges Formulieren und Korrigieren, Gliedern und Lesen) sowie der Verschleiß von Willenskraft (Ego-Depletion) durch ständige organisatorische Mikro-Entscheidungen über Ablageorte und Formate.
-
-### Die Lösung
-Konsequente Trennung der verschiedenen Arbeitsschritte und Aufmerksamkeitsformen (fokussiert, ausdauernd, kreativ-assoziativ). Durch die sofortige Verschriftlichung und Ablage von Gedanken werden Aufgaben für das Gehirn abgeschlossen und der Arbeitsspeicher entlastet (Zeigarnik-Effekt). Vordefinierte, einheitliche Formate und Ablageorte eliminieren organisatorische Entscheidungen im Arbeitsalltag.
-
-## 🤖 KI-Anweisungen (AI Instructions)
-
-- Achte darauf, dass der Benutzer in einer Interaktion nicht gleichzeitig kollidierende Rollen einnehmen muss (z. B. warne davor, beim ersten Entwurf schon an einzelnen Wörtern zu feilen).
-- Unterstütze die Entlastung des Kurzzeitgedächtnisses, indem du den Benutzer anleitest, lose Ideen, To-dos oder offene Fragen sofort schriftlich zu fixieren (Zeigarnik-Effekt).
-- Reduziere organisatorische Reibung, indem du stets das vordefinierte Zettel-Format einforderst und Vorschläge zur automatischen Strukturierung machst.
-
-
-
+---
 
 # Kapitel nachwort: Nachwort
 
@@ -301,6 +315,3 @@ Aufbau fester Gewohnheiten (Stift beim Lesen, gewohnheitsmäßiges Ververzetteln
 
 - Leite den Benutzer dazu an, die Zettelkasten-Praxis als feste, tägliche Gewohnheit (Routine) zu etablieren, statt sich auf bloße gute Vorsätze zu verlassen.
 - Erinnere den Benutzer bei aufkommendem Stress or Zeitdruck daran, zu den simplen Kernpraktiken des Zettelkastens (schreiben, verzetteln, verknüpfen) zurückzukehren, um kognitive Tunnelblicke zu vermeiden.
-
-
-

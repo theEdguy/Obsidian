@@ -1,32 +1,23 @@
 ---
-id: 92a7543b-9aa1-48f4-9946-e42bc8562602
+id: a4955773-3911-5c7e-b98a-9dc4581a70cc
 title: "Objekt-Adapter"
-date: 2026-05-30
+date: 2026-06-20
 tags:
   - software_engineering
-  - design_pattern
-  - komposition
-  - adapter
+  - kapitel_15
   - draft
-source: "SWE Slides (Folien 361-375)"
+source: "Kapitel 15: Patterns – Strukturmuster"
 ---
 
 # [[Objekt-Adapter]]
 
-- **Kernkonzept:** Eine Variante des [[Adapter_Pattern|Adapter-Musters]], bei der der Adapter eine [[Instanz]] der zu adaptierenden [[Klasse]] (Adaptee) als [[Attribut]] hält und die [[Schnittstelle]] des Clients durch [[Komposition]] anpasst.
-- **Nutzen & Zweck:** Ermöglicht die Zusammenarbeit mit mehreren [[Unterklasse|Unterklassen]] des Adaptees und bietet mehr Flexibilität als der [[Klassen-Adapter]]. Geeignet, wenn das Verhalten des Adaptees durch [[Unterklasse|Unterklassen]] verändert werden soll.
-- **Abgrenzung & Grenzen:** Komplexer als der [[Klassen-Adapter]], da er [[Komposition]] statt [[Vererbung]] nutzt. Nicht geeignet, wenn die [[Schnittstelle]] des Adaptees nicht durch [[Unterklasse|Unterklassen]] erweitert werden kann.
+- **Kernkonzept:** Realisiert den Adapter über Objektkomposition. Er hält eine Referenz auf den Adaptee und delegiert Aufrufe. Funktioniert auch mit Unterklassen des Adaptees.
+- **Nutzen & Zweck:** Realisiert den Adapter über Objektkomposition. Er hält eine Referenz auf den Adaptee und delegiert Aufrufe. Funktioniert auch mit Unterklassen des Adaptees.
+- **Abgrenzung & Grenzen:** Siehe Definition.
 - **Beispiel / Code:** ```java
-// Objekt-Adapter
-class ObjectAdapter implements Target {
+public class Adapter implements Target {
     private Adaptee adaptee;
-    
-    ObjectAdapter(Adaptee adaptee) {
-        this.adaptee = adaptee;
-    }
-    
-    void targetOp() {
-        adaptee.existingOp();
-    }
+    public Adapter(Adaptee a) { this.adaptee = a; }
+    public void targetOp() { this.adaptee.existingOp(); }
 }
 ```

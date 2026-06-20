@@ -1,31 +1,22 @@
 ---
-id: a0e7a61b-339a-41e1-a616-e948ae149d95
+id: 2ca6e160-8bca-5c7d-b8bf-38f9f4215f58
 title: "Quadrat-Rechteck-Problem"
-date: 2026-05-30
+date: 2026-06-20
 tags:
   - software_engineering
-  - objektorientierung
-  - design_problem
-  - entwurfsmuster
+  - kapitel_4
   - draft
-source: "SWE Slides (Folien 76-90)"
+source: "Kapitel 4: Objektorientierung – Vererbung"
 ---
 
 # [[Quadrat-Rechteck-Problem]]
 
-- **Kernkonzept:** Ein klassisches [[Designproblem]] in der [[Objektorientierung]], bei dem die [[Vererbung_(OOP)|Vererbung]] zwischen [[Quadrat]] und [[Rechteck]] zu Verletzungen des [[Substitutionsprinzips]] führt, da ein [[Quadrat]] nicht alle [[Eigenschaft|Eigenschaften]] eines [[Rechteck|Rechtecks]] erfüllt (z. B. unabhängige Seitenlängen).
-- **Nutzen & Zweck:** Dient als [[Beispiel]] für die Grenzen der [[Vererbung_(OOP)|Vererbung]] und zeigt, wann [[Komposition]] oder andere [[Entwurfsmuster]] vorzuziehen sind. Hilft, [[Designfehler]] zu vermeiden, die durch falsche [[Ist-eine-Beziehung|„Ist-eine“-Beziehungen]] entstehen.
-- **Abgrenzung & Grenzen:** Vererbung ist hier ungeeignet, da die [[Invariante]] eines [[Quadrat|Quadrats]] (`a == b`) die [[Invariante]] eines [[Rechteck|Rechtecks]] (`a != b` möglich) verletzt. Besser: [[Quadrat]] und [[Rechteck]] als separate [[Klasse|Klassen]] modellieren oder eine gemeinsame [[Schnittstelle]] verwenden.
+- **Kernkonzept:** Ein klassischer Verstoß gegen das Substitutionsprinzip: Erbt Quadrat von Rechteck, verletzt Quadrat die Rechteck-Eigenschaft (Breite und Höhe unabhängig veränderbar, z. B. stretch(w, h)), da beim Quadrat w = h gelten muss.
+- **Nutzen & Zweck:** Ein klassischer Verstoß gegen das Substitutionsprinzip: Erbt Quadrat von Rechteck, verletzt Quadrat die Rechteck-Eigenschaft (Breite und Höhe unabhängig veränderbar, z. B. stretch(w, h)), da beim Quadrat w = h gelten muss.
+- **Abgrenzung & Grenzen:** Siehe Definition.
 - **Beispiel / Code:** ```java
-// Problem: Verletzung des Substitutionsprinzips
-Rechteck r = new Quadrat(5);
-r.setA(4); // Setzt implizit auch b = 4 → bricht Rechteck-Invariante
-
-// Lösung: Keine Vererbung, sondern Komposition oder Schnittstelle
-interface Form {
-    int flaeche();
-}
-
-class Rechteck implements Form { /* ... */ }
-class Quadrat implements Form { /* ... */ }
+Rechteck r = new Quadrat(3);
+r.setBreite(4);
+r.setHoehe(5);
+// Wenn r ein Quadrat ist, gilt nun Breite=5, Hoehe=5. Erwartet wurde aber Flaeche 20!
 ```

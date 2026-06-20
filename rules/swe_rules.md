@@ -30,6 +30,7 @@ Ein strukturiertes, ingenieurmäßiges Vorgehen unter Einsatz wissenschaftlich f
 - Stelle sicher, dass der Benutzer die empirischen Forschungsmethoden (kontrollierte Experimente, Fallstudien, Surveys, Post-Mortem-Analysen) voneinander abgrenzen und ihren jeweiligen Nutzen sowie ihre Grenzen benennen kann.
 - Leite den Benutzer an, die Notwendigkeit von Meilensteinen für die Projektsteuerung und das Risikomanagement zu verstehen.
 - Stelle sicher, dass der Benutzer die klassischen Prozessmodelle (Wasserfall, Spiralmodell, Versionsmodell) und deren Vor- und Nachteile versteht.
+- Erkläre dem Benutzer, warum agile Prozesse sich an Kunden orientieren und neue Anforderungen flexibler integrieren als das Wasserfallmodell.
 
 
 ## 💡 Konzepte & Definitionen
@@ -83,6 +84,16 @@ Risiko-getriebenes Prozessmodell nach Boehm (1988), bei dem kontinuierliches Ris
 
 **Definition**:
 Iteratives Prozessmodell, bei dem das System inkrementell in aufeinander aufbauenden Versionen (Teilsystemen) entwickelt und bewertet wird. Ermöglicht die Integration neuer Nutzeranforderungen und den frühen Einsatz eines Kernsystems.
+
+### Agiler vs. Wasserfall-Prozess
+
+**Definition**:
+Vergleich der Vorgehensmodelle: Das Wasserfallmodell bettet Phasen in eine starre, sequentielle Reihenfolge ein (Analyse, Design, Coden, Testen), bei der jede Phase komplett abgeschlossen sein muss. Der agile Ansatz hingegen zerlegt das Projekt in kleine Iterationen (Miniprojekte/Sprints), bindet den Kunden kontinuierlich ein und erlaubt das flexible Anpassen von Anforderungen bei jedem Sprint-Inkrement.
+
+### Post-Mortem-Analyse
+
+**Definition**:
+Empirische Methode zur nachträglichen Bewertung eines abgeschlossenen Projekts oder Projektphase. Ziel ist es, gewonnene Erkenntnisse ('Lessons Learned'), Erfolge und Fehltritte systematisch zu dokumentieren, um zukünftige Prozesse zu verbessern.
 
 ---
 
@@ -166,7 +177,26 @@ Vergessen, dass auch Fallstudien quantitative Daten (z. B. Metriken) sammeln kö
 
 ---
 
+### Aufgabe 4: Was zeichnet einen agilen Entwicklungsprozess aus und wie un...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, vorgehensmodelle, agil_vs_wasserfall`)
+
+
+#### Aufgabenstellung:
+Was zeichnet einen agilen Entwicklungsprozess aus und wie unterscheidet er sich im Kern vom klassischen Wasserfallmodell? (4 Punkte)
+
+
+#### Musterlösung:
+Ein agiler Entwicklungsprozess orientiert sich stark am Kunden (1 P) und ermöglicht es, neue Anforderungen flexibel im Laufe des Projekts zu integrieren (1 P). Zudem zerfällt das Projekt in Miniprojekte (Sprints/Iterationen) (1 P), an deren Ende jeweils ein lauffähiges Teilsystem (Inkrement) entsteht (1 P). Im Gegensatz dazu ist das Wasserfallmodell starr, sequentiell aufgebaut, betrachtet das Projekt als Ganzes und lässt Änderungen erst sehr spät oder nur unter hohem Aufwand zu.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Die Annahme, dass agile Prozesse gar keine Planung oder Dokumentation benötigen. Vergessen zu erwähnen, dass am Ende jeder Iteration ein *lauffähiges Inkrement* stehen muss.
+
+
+
+
+---
 
 # Kapitel 2: Entwicklungsprozesse gestern und heute
 
@@ -275,9 +305,9 @@ Erklärung: Scrum ist ein agiles Framework basierend auf iterativen Sprints. Das
 Die Annahme, dass das Inkrement pro Sprint marktreif sein muss, oder dass der Product Owner für die Technik verantwortlich ist.
 
 
+
+
 ---
-
-
 
 # Kapitel 3: Objektorientierung – eine durchgängige Sichtweise
 
@@ -322,9 +352,8 @@ Ein Modell ist ein Abbild der Realität, das von irrelevanten Details abstrahier
 **Definition**:
 Objektidentität (== in Java/C++): Zwei Referenzen zeigen auf exakt dasselbe Objekt im Speicher. Objektgleichheit (.equals() in Java): Zwei unterschiedliche Objekte besitzen identische Attributwerte.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 String x = new String("test");
 String y = new String("test");
 System.out.println(x == y);      // false (nicht identisch)
@@ -361,9 +390,9 @@ Erklärung: Der Operator `==` prüft die Objektidentität (zeigen x und y auf de
 Verwechslung von Identität (derselbe) und Gleichheit (der gleiche). Besondere Optimierungen wie String-Pooling in Java können bei Literalen (ohne 'new') verwirren.
 
 
+
+
 ---
-
-
 
 # Kapitel 4: Objektorientierung – Vererbung
 
@@ -381,6 +410,8 @@ Einsatz von Vererbung zur Strukturierung von Generalisierungen und Spezialisieru
 - Stelle sicher, dass der Benutzer die 4 Schichten der MOF-Architektur (M0 bis M3) benennen und einordnen kann.
 - Erkläre die Generalisierungsbedingungen in UML: overlapping vs. disjoint und complete vs. incomplete.
 - Vermittle die UML-Syntax für Attribute, Operationen, abstrakte Klassen und Interfaces.
+- Erkläre dem Benutzer die UML-Generalisierungs-Constraints (disjoint, complete, overlapping, incomplete) und wie sie vererbt werden.
+- Stelle sicher, dass der Benutzer Java-Generics (z. B. class P<T> {}) in die korrekte UML-Template-Notation übersetzen kann.
 
 
 ## 💡 Konzepte & Definitionen
@@ -395,9 +426,8 @@ Instanzen von Unterklassen müssen sich so verhalten, dass sie überall dort ein
 **Definition**:
 Ein klassischer Verstoß gegen das Substitutionsprinzip: Erbt Quadrat von Rechteck, verletzt Quadrat die Rechteck-Eigenschaft (Breite und Höhe unabhängig veränderbar, z. B. stretch(w, h)), da beim Quadrat w = h gelten muss.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 Rechteck r = new Quadrat(3);
 r.setBreite(4);
 r.setHoehe(5);
@@ -423,6 +453,33 @@ overlapping: Instanzen können in mehreren Unterklassen gleichzeitig sein. disjo
 
 **Definition**:
 Abstrakte Klasse: Kann Struktur (Attribute) und Implementierungen vererben; keine direkten Instanzen. Interface: Vererbt ausschließlich Operationen (Schnittstellen), besitzt im Regelfall keine Attribute oder Assoziationen.
+
+### Disjoint & Complete Constraints
+
+**Definition**:
+Generalisierungs-Constraints in UML:
+- disjoint: Eine Instanz der Oberklasse kann höchstens einer der Unterklassen angehören (keine Überlappung).
+- complete: Jede Instanz der Oberklasse muss mindestens einer Unterklasse angehören (die Vereinigung der Unterklassen deckt alle möglichen Instanzen der Oberklasse ab).
+
+### Overlapping & Incomplete Constraints
+
+**Definition**:
+Generalisierungs-Constraints in UML:
+- overlapping: Eine Instanz der Oberklasse kann mehreren Unterklassen gleichzeitig angehören (z. B. ein Mitarbeiter, der sowohl 'Dozent' als auch 'Student' ist).
+- incomplete: Es gibt Instanzen der Oberklasse, die zu keiner der definierten Unterklassen gehören (z. B. zusätzliche Eiscreme-Sorten außer den vier Standardkategorien).
+
+### UML-Template (Generics)
+
+**Definition**:
+Parametrisierte Klassen werden in UML als Template dargestellt. Der Platzhalter (z. B. <T>) wird in einem gestrichelten Kasten in der rechten oberen Ecke der Klasse notiert. Im Java-Code entspricht dies einer generischen Klasse.
+
+**Beispiel-Code**:
+```java
+public class P<T> {
+    private T daten;
+    public T getDaten() { return daten; }
+}
+```
 
 ---
 
@@ -480,7 +537,57 @@ Verwechslung der Klassendefinition (M1) mit dem UML-Metamodell (M2).
 
 ---
 
+### Aufgabe 3: Stellen Sie das folgende Java-Codefragment als UML-Klassendi...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, klassendiagramm, vererbung, interface`)
+
+
+#### Aufgabenstellung:
+Stellen Sie das folgende Java-Codefragment als UML-Klassendiagramm dar:
+
+```java
+class B extends C implements D {
+    @Override
+    public void execute() {}
+}
+```
+
+
+#### Musterlösung:
+Das Klassendiagramm besteht aus:
+1. Der Klasse `B` mit der Operation `execute()`.
+2. Der Klasse `C`. `B` ist mit `C` über einen Pfeil mit durchgezogener Linie und nicht ausgefüllter Dreiecksspitze verbunden (Generalisierung/Vererbung: B -> C).
+3. Dem Interface `D` (oder einer Klasse/Interface mit Stereotyp <<interface>>). `B` ist mit `D` über einen Pfeil mit gestrichelter Linie und nicht ausgefüllter Dreiecksspitze verbunden (Realisierung: B -> D).
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Verwechslung der Pfeilspitzen oder Linienarten. Generalisierung ist eine durchgezogene Linie, Realisierung eines Interfaces ist gestrichelt. Beide nutzen eine geschlossene, nicht ausgefüllte Dreiecksspitze.
+
+
+---
+
+### Aufgabe 4: Erklären Sie anhand des Beispiels einer Eiscreme-Klassifizie...
+
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, klassendiagramm, constraints`)
+
+
+#### Aufgabenstellung:
+Erklären Sie anhand des Beispiels einer Eiscreme-Klassifizierung (Kategorien: Milcheis, Fruchteis, Sorbet, Wassereis), wie die Constraints {disjoint, complete} wirken.
+
+
+#### Musterlösung:
+Wenn die Vererbung von der Basisklasse 'Speiseeis' auf die vier Unterklassen als `{disjoint, complete}` definiert ist, bedeutet dies:
+- disjoint (disjunkt): Ein konkretes Eis kann nicht gleichzeitig zwei Kategorien angehören (z. B. kann es nicht zugleich Fruchteis und Milcheis sein).
+- complete (vollständig): Jedes Eis auf der Welt muss sich in mindestens eine dieser vier Kategorien einordnen lassen. Es gibt kein Speiseeis außerhalb dieser Klassifizierung.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Verwechslung der Begriffe: complete bedeutet Vollständigkeit der Unterklassen (keine Reste), disjoint bedeutet Überschneidungsfreiheit.
+
+
+
+
+---
 
 # Kapitel 5: Objektorientierung – Komposition, Aggregation und Assoziation
 
@@ -497,6 +604,8 @@ Nutzung differenzierter UML-Beziehungen. Die Assoziation als allgemeine Verbindu
 - Stelle sicher, dass der Benutzer Komposition und Aggregation präzise voneinander abgrenzen kann, insbesondere bezüglich der Existenzabhängigkeit und Erzeugungs-/Zerstörungsverantwortung.
 - Erkläre die Notation und Semantik von Multiplizitäten, Rollenbezeichnern, Navigierbarkeit, Assoziationsklassen und Qualifiers in UML-Diagrammen.
 - Vermittle das Konzept von Abhängigkeiten (Dependencies/<<use>>) und deren Abgrenzung zu permanenten Assoziationen.
+- Erkläre die fortgeschrittenen Constraints bei Assoziationen: {xor}, {subsets} und {ordered}.
+- Stelle sicher, dass der Benutzer Assoziationsklassen und Qualifiers korrekt zeichnet und im Code instanziiert.
 
 
 ## 💡 Konzepte & Definitionen
@@ -531,12 +640,31 @@ Schwache Teile-Ganzes-Beziehung (leere Raute). Teile sind existenzunabhängig un
 **Definition**:
 Eine temporäre Beziehung (gestrichelter Pfeil). Zeigt an, dass eine Klasse eine andere temporär nutzt (z. B. als Methodenparameter oder lokales Objekt), ohne eine dauerhafte Assoziation (Instanzvariable) zu halten.
 
-
-**Beispiel / Code**:
-```cpp
+**Beispiel-Code**:
+```java
 public int leistungsprognose(Date datum) {
     // Temporäre Nutzung von Date; Dependency <<use>> auf Date
 }
+```
+
+### XOR Constraint (UML)
+
+**Definition**:
+Ein Constraint zwischen zwei oder mehr Assoziationen, dargestellt durch eine gestrichelte Linie mit der Aufschrift `{xor}`. Es besagt, dass eine Instanz der Quellklasse zu einem Zeitpunkt nur an genau einer der betroffenen Assoziationen teilnehmen darf.
+
+### Subset Constraint (UML)
+
+**Definition**:
+Ein Constraint zwischen zwei Assoziationen, dargestellt als `{subsets <assoziations_name>}`. Es besagt, dass die Menge der über diese Assoziation verknüpften Objekte eine Teilmenge der Objekte der anderen Assoziation sein muss (z. B. 'Betreuer' ist eine Teilmenge der 'Projektmitarbeiter').
+
+### Ordered Constraint (UML)
+
+**Definition**:
+Constraint, das vorgibt, dass die verknüpften Objekte an einem Assoziationsende in einer festen, definierten Reihenfolge vorliegen müssen (z. B. sortierte Listen), dargestellt durch `{ordered}`.
+
+**Beispiel-Code**:
+```java
+private List<Mitglied> mitglieder = new ArrayList<>(); // Die Reihenfolge der Liste ist relevant
 ```
 
 ---
@@ -569,7 +697,30 @@ Verwechslung der Rauten (gefüllt = Komposition/stark, leer = Aggregation/schwac
 
 ---
 
+### Aufgabe 2: Zeichnen Sie ein UML-Klassendiagramm für folgendes Szenario:
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, klassendiagramm, qualifier, assoziationsklasse`)
+
+
+#### Aufgabenstellung:
+Zeichnen Sie ein UML-Klassendiagramm für folgendes Szenario:
+Ein Hotel hat Zimmer. Gäste können Zimmer reservieren. Für jede Reservierung wird der Zeitraum (von, bis) festgehalten. Ein Gast kann mehrere Reservierungen haben. Um die Suche nach Zimmern zu beschleunigen, wird an der Klasse Hotel ein Qualifier 'zimmerNummer' verwendet.
+
+
+#### Musterlösung:
+Das Diagramm enthält:
+1. Klassen `Hotel`, `Zimmer` und `Gast`.
+2. Eine Assoziation zwischen `Hotel` und `Zimmer`. Am Hotel-Ende ist ein Qualifier-Kästchen mit dem Attribut `zimmerNummer: int` angebracht. Am Zimmer-Ende ist die Multiplizität `0..1` (da eine Zimmernummer in einem Hotel eindeutig ein Zimmer bestimmt), am Hotel-Ende `1`.
+3. Eine Assoziation zwischen `Gast` und `Zimmer` mit der Assoziationsklasse `Reservierung`, welche die Attribute `von: Date` und `bis: Date` enthält.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Falsche Platzierung des Qualifiers: Er gehört an die Quellklasse (Hotel), die den Index hält, nicht an die Zielklasse. Falsches Zeichnen der Assoziationsklasse (sie wird mit einer gestrichelten Linie an die Assoziationslinie gehängt, nicht direkt verbunden).
+
+
+
+
+---
 
 # Kapitel 6: Requirements
 
@@ -674,9 +825,9 @@ Erklärung: Nicht-funktionale Anforderungen wie 'Benutzerfreundlichkeit' oder 'h
 Die falsche Vorstellung, Metriken würden Kosten senken oder automatisch Code generieren.
 
 
+
+
 ---
-
-
 
 # Kapitel 7: Use Cases erstellen und beschreiben
 
@@ -692,6 +843,8 @@ Einsatz von Use Cases (Anwendungsfällen) zur Beschreibung zusammenhängender In
 
 - Stelle sicher, dass der Benutzer einen Use Case korrekt von einer einzelnen Aktion abgrenzen kann (ein Use Case ist eine fachlich sinnvolle Einheit, kein einzelner Schritt wie 'Mail senden').
 - Erkläre die Beziehungen zwischen Use Cases in UML: <<include>> (Abläufe wiederverwenden), <<extend>> (optionale Erweiterung am Extension Point) und Generalisierung (Spezialfall).
+- Erkläre den Unterschied zwischen include- und extend-Beziehungen und die Definition eines Extension Points.
+- Leite den Benutzer an, die Vererbung (Generalisierung) zwischen Use Cases richtig anzuwenden.
 
 
 ## 💡 Konzepte & Definitionen
@@ -725,6 +878,16 @@ Eine optionale Erweiterung eines Basis-Use-Cases. Der erweiternde Use Case wird 
 
 **Definition**:
 Eine Beziehung, bei der ein spezialisierter Use Case das Verhalten und die Beziehungen eines allgemeineren Use Cases erbt und ggf. erweitert oder überschreibt.
+
+### Use Case Generalisierung
+
+**Definition**:
+Eine Vererbungsbeziehung zwischen Use Cases. Sie wird verwendet, wenn ein Use Case eine spezialisierte Variante eines allgemeineren Use Cases darstellt (z. B. 'Bezahlen' als Oberklasse und 'Bezahlen mit PayPal' / 'Bezahlen mit Kreditkarte' als Unterklassen).
+
+### Extension Point (Erweiterungspunkt)
+
+**Definition**:
+Ein benannter Punkt im Ablauf eines Use Cases, an dem das Verhalten eines erweiternden Use Cases (via <<extend>>) unter einer bestimmten Bedingung eingefügt werden kann. Er wird in der Use-Case-Ellipse im unteren Abteil deklariert.
 
 ---
 
@@ -782,7 +945,28 @@ Falsche Richtung bei extend (extend zeigt vom optionalen Zweig zum Basis-Use-Cas
 
 ---
 
+### Aufgabe 3: Wann spricht man bei Use Cases von einer Extend-Beziehung un...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, use_cases, include, extend, extension_point`)
+
+
+#### Aufgabenstellung:
+Wann spricht man bei Use Cases von einer Extend-Beziehung und wann von einer Include-Beziehung? Was versteht man unter einem Extension Point? (6 Punkte)
+
+
+#### Musterlösung:
+- Include-Beziehung (2 P): Wird verwendet, wenn die Aktionen eines Use Cases (B) im Wesentlichen komplett in einen anderen Use Case (A) eingebunden werden (Wiederverwendung von Abläufen). Der aufgerufene Use Case ist zwingend erforderlich für den Ablauf des aufrufenden Use Cases.
+- Extend-Beziehung (2 P): Beschreibt eine optionale Erweiterung eines Basis-Use-Cases. Der erweiternde Use Case wird nur unter bestimmten Bedingungen ausgeführt.
+- Extension Point (2 P): Der konkret definierte Punkt im Ablauf des Basis-Use-Cases, an dem die Erweiterung stattfinden darf (z. B. 'nach Eingabe der PIN').
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Verwechslung der Pfeilrichtungen: Bei <<include>> zeigt der Pfeil vom Basis-Use-Case auf den inkludierten Use Case (A -> B). Bei <<extend>> zeigt der Pfeil vom erweiternden Use Case auf den Basis-Use-Case (B -> A).
+
+
+
+
+---
 
 # Kapitel 8: Use Cases verstehen
 
@@ -799,6 +983,8 @@ Verfeinerung von Use Cases über Szenarien (Szenariobeschreibungen). Komplexe Ab
 - Stelle sicher, dass der Benutzer den Unterschied zwischen High-Level-Use-Cases (grober Überblick) und erweiterten Use-Cases (detaillierte Szenarien) versteht.
 - Erkläre das Konzept von Szenarien als konkreten Ausprägungen (Instanzen) eines Use Cases.
 - Vermittle den Nutzen von Aktivitätsdiagrammen (Activity Diagrams) in UML zur Modellierung von Workflows, Algorithmen und Datenflüssen.
+- Erkläre das Token-Tracing in Aktivitätsdiagrammen mit parallelen (Fork/Join) und alternativen (Decision/Merge) Flüssen.
+- Erkläre den Unterschied zwischen Action- und State-gesteuerten Übergängen.
 
 
 ## 💡 Konzepte & Definitionen
@@ -833,6 +1019,21 @@ Elemente in Aktivitätsdiagrammen zur Modellierung des Datenflusses. Sie fungier
 **Definition**:
 Organisatorische oder architektonische Verantwortungsbereiche (Spalten/Zeilen) in Aktivitätsdiagrammen, denen Aktionen eindeutig zugeordnet werden (z. B. Akteure, Subsysteme).
 
+### Swimlanes (Aktivitätsdiagramm)
+
+**Definition**:
+Verantwortungsbereiche im Aktivitätsdiagramm (z. B. Abteilungen, Personen oder Subsysteme), dargestellt als vertikale oder horizontale Bahnen. Jede Aktion wird in genau eine Swimlane platziert, um die Zuständigkeit zu modellieren.
+
+### Fork & Join Node (UML)
+
+**Definition**:
+Fork (Gabelung) parallelisiert den Kontrollfluss, indem ein eingehender Token in mehrere ausgehende Token dupliziert wird. Join (Synchronisation) führt mehrere parallele Flüsse wieder zusammen; er gibt erst dann einen Token weiter, wenn auf allen eingehenden Pfaden ein Token eingetroffen ist.
+
+### Pins & Object Nodes (UML)
+
+**Definition**:
+Pins stellen die Ein- und Ausgänge von Aktionen für Daten bzw. Objekte dar (kleine Quadrate an den Rändern einer Aktion). Object Nodes repräsentieren Objekte im Kontrollfluss, die durch Aktionen erzeugt oder konsumiert werden.
+
 ---
 
 ## 📝 Übungsaufgaben & Klausurfragen
@@ -863,7 +1064,36 @@ Verwechslung des Begriffs 'Zustand' (State) mit einer 'Aktivität' (Activity). B
 
 ---
 
+### Aufgabe 2: Gegeben sei ein Aktivitätsdiagramm mit 5 Aktionen (A bis E) ...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, aktivitaetsdiagramm, token_tracing, fork_join`)
+
+
+#### Aufgabenstellung:
+Gegeben sei ein Aktivitätsdiagramm mit 5 Aktionen (A bis E) und zwei Swimlanes:
+Der Kontrollfluss beginnt mit Aktion A in Swimlane 1. Danach teilt sich der Fluss an einer Fork-Node in zwei parallele Pfade: Pfad 1 führt zu Aktion B in Swimlane 1, Pfad 2 führt zu Aktion C in Swimlane 2. Beide Pfade werden an einer Join-Node zusammengeführt, gefolgt von Aktion D in Swimlane 2. Nach D führt eine Decision-Node bei (cond=true) zu Aktion E, ansonsten endet der Fluss. Beschreiben Sie das Token-Tracing.
+
+
+#### Musterlösung:
+1. Der Fluss startet, ein Token wird an Aktion A (Swimlane 1) übergeben. A wird ausgeführt.
+2. Der Token verlässt A und erreicht die Fork-Node. Die Fork-Node dupliziert den Token. Jetzt gibt es zwei parallele Token:
+   - Token 1 geht zu Aktion B (Swimlane 1).
+   - Token 2 geht zu Aktion C (Swimlane 2).
+3. B und C werden unabhängig voneinander ausgeführt.
+4. Nach Abschluss von B kommt Token 1 an der Join-Node an und wartet dort, bis auch C abgeschlossen ist (Token 2 kommt an).
+5. Erst wenn beide Token am Join vorliegen, verschmilzt der Join sie zu einem einzigen Token und gibt ihn an Aktion D (Swimlane 2) weiter.
+6. D wird ausgeführt. Danach entscheidet die Decision-Node:
+   - Wenn cond=true: Token geht zu E, E wird ausgeführt, danach Endknoten.
+   - Wenn cond=false: Der Fluss endet direkt.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Vergessen, dass Join blockiert, bis *alle* eingehenden Pfade einen Token geliefert haben. Verwechslung von Fork/Join (Parallelität, dicker Balken) mit Decision/Merge (Alternative, Raute).
+
+
+
+
+---
 
 # Kapitel 9: Use Cases interpretieren
 
@@ -880,6 +1110,8 @@ Identifikation von Konzepten/Klassen der Problemdomäne (z. B. via Checkliste vo
 - Leite den Benutzer an, Klassen der Problemdomäne über Substantiv-Analyse (Noun Extraction) und Checklisten (Dinge, Rollen, Prozesse, Ereignisse) zu identifizieren.
 - Erkläre die Faustregel: Dinge, die man anfassen kann und keine reinen Werte (Texte, Zahlen) sind, sind Konzepte/Klassen, keine Attribute.
 - Vermittle den Aufbau von System-Sequenz-Diagrammen (SSD) mit Lifelines, Activation Bars und UML-Fragmenten (loop, alt, opt).
+- Leite den Benutzer an, System-Operationen und deren Parameter/Rückgabetypen aus System-Sequenzdiagrammen (SSD) oder Aktivitätsdiagrammen abzuleiten.
+- Vermittle das Konzept von System-Operationen als Transaktionsgrenzen.
 
 
 ## 💡 Konzepte & Definitionen
@@ -908,6 +1140,16 @@ Strukturelemente in Sequenzdiagrammen zur Modellierung von Kontrollflüssen: 'al
 
 **Definition**:
 Eine vom System bereitgestellte Schnittstellenfunktion, die durch ein externes Systemereignis (Trigger) eines Akteurs ausgelöst wird.
+
+### System-Operation
+
+**Definition**:
+Eine Operation, die das System als Ganzes an seiner Außengrenze (Schnittstelle) anbietet. Sie wird durch eingehende Nachrichten in System-Sequenzdiagrammen (SSD) identifiziert. Sie kapselt einen logischen Arbeitsschritt und besitzt oft Vor- und Nachbedingungen.
+
+### Schnittstellen-Ableitung (UML)
+
+**Definition**:
+Prozess, bei dem aus den Interaktionen an der Systemgrenze (SSD oder Übergänge zwischen Komponenten im Aktivitätsdiagramm) die konkrete Programmierschnittstelle (Methodensignaturen) abgeleitet wird.
 
 ---
 
@@ -939,7 +1181,30 @@ Verwechslung von SSDs (Blackbox, System-Schnittstellen) mit normalen Sequenzdiag
 
 ---
 
+### Aufgabe 2: Ein Aktivitätsdiagramm zeigt den Austausch zwischen Akteur '...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, system_operationen, schnittstelle, aktivitaetsdiagramm`)
+
+
+#### Aufgabenstellung:
+Ein Aktivitätsdiagramm zeigt den Austausch zwischen Akteur 'Kunde' und System. Der Kunde wählt 'ISBN erfassen', woraufhin das System 'Buch suchen' ausführt. Dann wählt der Kunde 'Bestätigen' und das System führt 'Buch inventarisieren' aus. Welche Systemoperationen müssen für die Schnittstelle des Systems definiert werden?
+
+
+#### Musterlösung:
+Es müssen zwei Systemoperationen deklariert werden:
+1. `suchen(isbn: String): Buch` (wird durch 'ISBN erfassen' getriggert).
+2. `inventarisieren(buchId: int): void` (wird durch 'Bestätigen' getriggert).
+
+Erklärung: Jedes Mal, wenn der Kontrollfluss die Systemgrenze vom Akteur zum System überschreitet, wird eine Operation aufgerufen. Die Aktionen innerhalb des Systems beschreiben die Zuständigkeit der jeweiligen Operation.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Das Erstellen von Operationen für Aktionen des Akteurs (z. B. `isbnErfassen()`). Die Schnittstelle enthält nur Operationen, die das *System* ausführt.
+
+
+
+
+---
 
 # Kapitel 10: Von der Analyse zur Systemarchitektur
 
@@ -956,6 +1221,8 @@ Einführung eines Drei-Schichtenmodells (Präsentation, Logik/Business, Persiste
 - Erkläre die Architekturprinzipien des Drei-Schichtenmodells und die strikte Trennung von Benutzeroberfläche und Businesslogik (UI triggers, logic executes).
 - Stelle sicher, dass der Benutzer die Konzepte Interoperabilität, Portabilität und Erweiterbarkeit verteilter Systeme kennt.
 - Vermittle den Aufbau von UML-Komponentendiagrammen (Components, Ports, Assembly/Delegation Connectors) und UML-Deployment-Diagrammen (Devices, Deployed Artifacts).
+- Erkläre den Unterschied zwischen Assembly Connector und Delegation Connector in Komponentendiagrammen.
+- Stelle sicher, dass der Benutzer das Drei-Schichten-Modell versteht und die Abhängigkeiten strikt einhält.
 
 
 ## 💡 Konzepte & Definitionen
@@ -999,6 +1266,25 @@ Verbindet die externe Schnittstelle (Port) einer Komponente mit den internen Sub
 
 **Definition**:
 Visualisiert die physische Verteilung von Softwareartefakten auf Laufzeitknoten (Hardware, VMs, Server) und deren Kommunikationswege.
+
+### Assembly Connector
+
+**Definition**:
+Verbindungsglied in Komponentendiagrammen, das eine bereitgestellte Schnittstelle (Lollipop-Notation) einer Komponente direkt mit einer benötigten Schnittstelle (Socket-Notation) einer anderen Komponente auf gleicher Hierarchieebene verbindet.
+
+### Delegation Connector
+
+**Definition**:
+Verbindungsglied, das einen äußeren Port einer Komponente mit einem internen Teil (Subkomponente oder Klasse) verbindet. Er leitet Anrufe von außen nach innen weiter oder umgekehrt.
+
+### Drei-Schichten-Architektur
+
+**Definition**:
+Klassisches Architekturmuster:
+1. Präsentationsschicht (Presentation): Interaktion mit dem Nutzer (UI).
+2. Logikschicht (Logic): Kapselt Geschäftsregeln und Anwendungslogik.
+3. Datenhaltungsschicht (Persistence): Verwaltet Datenhaltung und Persistenz.
+Regel: Aufrufe dürfen nur von oben nach unten erfolgen (Präsentation -> Logik -> Datenhaltung). Die unteren Schichten kennen die oberen nicht direkt.
 
 ---
 
@@ -1056,7 +1342,32 @@ Verwechslung von Dezentralisierung mit Unordnung oder Missinterpretation von Int
 
 ---
 
+### Aufgabe 3: Skizzieren Sie ein Komponentendiagramm zu folgender Beschrei...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, komponentendiagramm, ports, assembly`)
+
+
+#### Aufgabenstellung:
+Skizzieren Sie ein Komponentendiagramm zu folgender Beschreibung:
+Eine Komponente A verfügt über zwei Ports B und C. Am Port B stellt sie die Interfaces D und E bereit. Am Port C benötigt sie das Interface F, welches von einer Komponente G am Port H bereitgestellt wird.
+
+
+#### Musterlösung:
+Das Diagramm besteht aus:
+1. Einer Komponente `A` mit zwei quadratischen Ports `B` und `C` an den Rändern.
+2. Am Port `B` sind zwei Lollipops (Kreise) angebracht, beschriftet mit den bereitgestellten Schnittstellen (interfaces) `D` und `E`.
+3. Am Port `C` ist eine Halbschale (Socket) für das benötigte Interface `F` angebracht.
+4. Einer Komponente `G` mit einem Port `H` und einem Lollipop für `F`.
+5. Einem Assembly Connector (Zusammenführung von Lollipop und Halbschale) zwischen Port `C` (A) und Port `H` (G).
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Verwechslung von Lollipop (bereitgestellt / provided) und Socket (benötigt / required). Falsche Darstellung von Ports (sie müssen als kleine Quadrate auf der Systemgrenze der Komponente gezeichnet werden).
+
+
+
+
+---
 
 # Kapitel 11: MVC-Architektur und das Observer-Muster
 
@@ -1073,6 +1384,8 @@ Einsatz des Model-View-Controller (MVC) Musters zur Entkopplung von Daten/Wissen
 - Kläre die Rollenverteilung in MVC: Der Controller enthält keine Businesslogik, das Model enthält Daten und Logik.
 - Erkläre die Initialisierungsreihenfolge in MVC: 1. Model erzeugen, 2. Views erzeugen (registrieren sich beim Model als Observer und erzeugen ihren Controller), 3. Event-Schleife starten.
 - Vermittle die Funktionsweise des Observer-Musters (attach, detach, notify, update) zur Entkopplung von Model und View (Push-from-below).
+- Erkläre die genaue Initialisierungs-Reihenfolge einer MVC-Architektur.
+- Vermittle das Zusammenspiel zwischen Subject, Observer und Controller im Kontext von Events.
 
 
 ## 💡 Konzepte & Definitionen
@@ -1101,6 +1414,16 @@ Ein Verhaltensmuster, bei dem ein Subjekt (Subject) eine Liste von Beobachtern (
 
 **Definition**:
 Ein Benachrichtigungsprinzip, bei dem die tiefere Schicht (Model) die höhere Schicht (View) über Änderungen benachrichtigt, ohne sie direkt zu kennen (durch Nutzung von Schnittstellen wie Observer).
+
+### MVC-Initialisierungsreihenfolge
+
+**Definition**:
+Der strukturierte Ablauf beim Starten einer MVC-Anwendung:
+1. Erzeugung des Modells (Model).
+2. Erzeugung der Views (und Controller).
+3. Views registrieren sich als Observer beim Modell (Subject), um über Zustandsänderungen benachrichtigt zu werden.
+4. Controller registrieren sich bei den Views für Benutzer-Events.
+5. Der Event-Loop wird gestartet.
 
 ---
 
@@ -1158,7 +1481,30 @@ Verwechslung des Controller-Verhaltens (Eingabe) mit dem Subjekt-Verhalten (Zust
 
 ---
 
+### Aufgabe 3: Skizzieren Sie die Initialisierungsreihenfolge einer MVC-Anw...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, mvc, initialisierung, sequenzdiagramm`)
+
+
+#### Aufgabenstellung:
+Skizzieren Sie die Initialisierungsreihenfolge einer MVC-Anwendung mithilfe eines Sequenzdiagramms. Welche Objekte werden in welcher Reihenfolge erzeugt und wer registriert sich bei wem?
+
+
+#### Musterlösung:
+1. Der Client/Starter erzeugt das Model `m = new Model()`.
+2. Der Client erzeugt die View `v = new View(m)`. Im Konstruktor der View registriert sich die View beim Model als Observer: `m.attach(this)`.
+3. Der Client erzeugt den Controller `c = new Controller(m, v)`.
+4. Der Controller registriert sich bei der View für Benutzeraktionen (z. B. Button-Klicks).
+5. Die Anwendung ist bereit.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Die Annahme, der Controller erzeuge das Model. Das Model existiert unabhängig und wird in der Regel an View und Controller übergeben. Die View registriert sich beim Model als Observer, nicht umgekehrt.
+
+
+
+
+---
 
 # Kapitel 12: Protokoll-Automaten
 
@@ -1175,6 +1521,8 @@ Explizite Definition und Überwachung der zulässigen Operationen über einen Pr
 - Erkläre den Unterschied zwischen Protokoll-Automaten (erlaubte Sequenzen von Systemoperationen) und klassischen Zustandsdiagrammen (alle Zustände).
 - Zeige auf, wie Zustände als Enums (z. B. in Interfaces) modelliert und über Facades überwacht werden (Vor- und Nachbedingungen abprüfen).
 - Vermittle den Aufbau komplexer Zustände (Compound States, History-Zustände, Parallelität, Synchronisierung) und die vordefinierten internen Übergänge (entry, exit, do, completion).
+- Erkläre komplexe Zustände wie zusammengesetzte Zustände, History-Zustände, Parallelität und Synchronisierung.
+- Stelle sicher, dass der Benutzer den Unterschied zwischen internen Übergängen (Entry, Do, Exit) und normalen Transitionen kennt.
 
 
 ## 💡 Konzepte & Definitionen
@@ -1213,6 +1561,19 @@ Die Aufteilung eines Zustands in orthogonale Regionen, die unabhängig voneinand
 
 **Definition**:
 Die Zusammenführung paralleler Pfade, wobei ein Folgezustand erst erreicht wird, wenn alle orthogonalen Regionen ihren Endzustand erreicht haben.
+
+### History-Zustand (History State)
+
+**Definition**:
+Ein Pseudozustand in Zustandsdiagrammen (dargestellt als Kreis mit einem 'H'). Er dient als Gedächtnis innerhalb eines zusammengesetzten Zustands: Tritt ein Ereignis auf, das den Zustand verlässt und später wieder betritt, wird dank des History-Zustands in den zuletzt aktiven Unterzustand zurückgekehrt.
+
+### Interne Übergänge (Entry, Do, Exit)
+
+**Definition**:
+Aktionen innerhalb eines Zustands, die keine Transition (Zustandswechsel) auslösen:
+- entry: Wird sofort beim Betreten des Zustands ausgeführt.
+- do: Wird ausgeführt, solange man sich im Zustand befindet (kann langlaufend sein).
+- exit: Wird direkt vor dem Verlassen des Zustands ausgeführt.
 
 ---
 
@@ -1270,7 +1631,27 @@ Verwechslung von allgemeinen Ereignissen (Events) mit den spezifischen Systemope
 
 ---
 
+### Aufgabe 3: Erklären Sie anhand einer Skizze oder Beschreibung den Unter...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, zustandsdiagramm, history_state`)
+
+
+#### Aufgabenstellung:
+Erklären Sie anhand einer Skizze oder Beschreibung den Unterschied zwischen einem flachen History-Zustand (H) und einem tiefen History-Zustand (H*).
+
+
+#### Musterlösung:
+- Flacher History-Zustand (H): Speichert nur den Zustand auf der aktuellen Verschachtelungsebene des zusammengesetzten Zustands. Unterzustände von Unterzuständen werden beim Wiedereintritt auf ihre jeweiligen Default-Startzustände zurückgesetzt.
+- Tiefer History-Zustand (H*): Speichert rekursiv alle aktiven Unterzustände über alle Verschachtelungsebenen hinweg und stellt den exakten Zustand beim Wiedereintritt wieder her.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Verwechslung von H und H*. Falsche Annahme, dass der flache History-Zustand beliebig tief speichert.
+
+
+
+
+---
 
 # Kapitel 13: Interaktionsdiagramme und GRASP-Verantwortlichkeiten
 
@@ -1286,6 +1667,8 @@ Anwendung der GRASP-Prinzipien (General Responsibility Assignment Software Patte
 
 - Erkläre die fünf grundlegenden GRASP-Muster: Information Expert, Creator, Low Coupling, High Cohesion und Controller/Management.
 - Stelle sicher, dass der Benutzer den Unterschied zwischen Sequenzdiagrammen (zeitlicher Fokus, Lifelines, Gates, Fragmente) und Kommunikationsdiagrammen (räumlicher Fokus, Objektdiagramm-Basis) versteht.
+- Erkläre die GRASP-Entwurfsmuster (Information Expert, Creator, Low Coupling, High Cohesion, Controller).
+- Stelle sicher, dass der Benutzer komplexe Sequenzdiagramm-Fragmente wie alt, loop, par und critical versteht und zeichnen kann.
 
 
 ## 💡 Konzepte & Definitionen
@@ -1329,6 +1712,24 @@ Ein Interaktionsdiagramm, das den zeitlichen Ablauf von Nachrichten zwischen Obj
 
 **Definition**:
 Ein Interaktionsdiagramm, das den Schwerpunkt auf die Netzbeziehungen und die räumliche Anordnung der beteiligten Objekte legt.
+
+### GRASP-Muster
+
+**Definition**:
+General Responsibility Assignment Software Patterns. Ein Satz von Prinzipien zur Zuweisung von Verantwortlichkeiten an Klassen:
+- Information Expert: Weise die Verantwortlichkeit der Klasse zu, die die Informationen besitzt, um sie zu erfüllen.
+- Creator: Klasse A sollte B erzeugen, wenn A eine Aggregation/Komposition von B ist oder die Daten zur Initialisierung besitzt.
+- Controller: Erstes Objekt hinter der Systemgrenze, das Systemoperationen entgegennimmt.
+- Low Coupling & High Cohesion: Entwurfsziele zur Minimierung von Abhängigkeiten und Maximierung des funktionalen Fokus einer Klasse.
+
+### Sequenzdiagramm-Fragmente (UML)
+
+**Definition**:
+Strukturelemente zur Steuerung des Ablaufs in Sequenzdiagrammen:
+- alt (Alternative): Wenn/Sonst-Bedingung (nur ein Zweig wird ausgeführt).
+- loop: Wiederholung eines Blocks, solange die Bedingung wahr ist.
+- par (Parallel): Parallele Ausführung von Lebenslinien.
+- critical (Kritischer Abschnitt): Atomare Ausführung ohne Unterbrechung durch andere Threads.
 
 ---
 
@@ -1386,7 +1787,31 @@ Falsche Zuweisung an Creator (der Objekte baut) oder Controller (der Systemevent
 
 ---
 
+### Aufgabe 3: Ein Knoten in einem Graphen besitzt eine Methode `pathExists...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, sequenzdiagramm, recursion, grasp`)
+
+
+#### Aufgabenstellung:
+Ein Knoten in einem Graphen besitzt eine Methode `pathExists(Node target, Set<Node> visited)`. Skizzieren Sie das Sequenzdiagramm für einen erfolgreichen rekursiven Aufruf, bei dem ein Nachbar besucht wird, der noch nicht in `visited` enthalten ist.
+
+
+#### Musterlösung:
+1. Der Client ruft `n1:Node.pathExists(target, visited)` auf.
+2. `n1` fügt sich selbst der Menge `visited` hinzu: `visited.add(n1)`.
+3. `n1` prüft, ob `n1 == target` (hier false).
+4. `n1` holt seine Nachbarn und iteriert. Für einen unbesuchten Nachbarn `n2` ruft `n1` auf: `n2.pathExists(target, visited)` innerhalb eines `loop`- und `alt`-Fragments.
+5. `n2` führt dieselben Schritte aus und gibt schließlich `true` zurück.
+6. `n1` erhält `true` und reicht dieses Ergebnis an den Client weiter.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Vergessen der Rekursion im Sequenzdiagramm (Pfeil von `n1` auf eine andere Instanz `n2` desselben Typs `Node`). Das fehlerhafte Zeichnen der Parameterübergabe.
+
+
+
+
+---
 
 # Kapitel 14: Patterns – Erzeugungsmuster
 
@@ -1431,6 +1856,14 @@ Entwurfsprinzip, bei dem Clients nur die abstrakten Schnittstellen (Interfaces) 
 
 **Definition**:
 Die Bevorzugung von Komposition/Aggregation (Schnittstellennutzung zur Laufzeit) gegenüber Vererbung (Kopplung an Implementierung zur Compilezeit). Erhöht Flexibilität.
+
+### Fabrikmethode-Varianten
+
+**Definition**:
+Es gibt drei Hauptvarianten der Objekterzeugung bei Fabriken:
+- Variante I: Die konkreten Unterklassen einer abstrakten Fabrik implementieren die Erzeugungsmethoden direkt.
+- Variante II: Die abstrakte Fabrik delegiert die Erzeugung an registrierte Prototypen oder Fabrikmethoden in den Produkten selbst.
+- Variante III: Die Fabrik ist konkret und wird parametrisiert (z. B. über Klassen-Referenzen oder Enums) zur Laufzeit.
 
 ---
 
@@ -1486,9 +1919,9 @@ Erklärung: Da die Abstrakte Fabrik Schnittstellen für die Erzeugung einer fest
 Vergessen, dass die Produktpalette bei einer Abstrakten Fabrik fest vorgegeben ist, während neue Familien leicht durch neue Fabriken ergänzt werden können.
 
 
+
+
 ---
-
-
 
 # Kapitel 15: Patterns – Strukturmuster
 
@@ -1524,9 +1957,8 @@ Realisiert den Adapter über Vererbung (Mehrfachvererbung in C++, in Java über 
 **Definition**:
 Realisiert den Adapter über Objektkomposition. Er hält eine Referenz auf den Adaptee und delegiert Aufrufe. Funktioniert auch mit Unterklassen des Adaptees.
 
-
-**Beispiel / Code**:
-```python
+**Beispiel-Code**:
+```java
 public class Adapter implements Target {
     private Adaptee adaptee;
     public Adapter(Adaptee a) { this.adaptee = a; }
@@ -1548,6 +1980,13 @@ Entkoppelt eine Abstraktion von ihrer Implementierung, sodass beide unabhängig 
 
 **Definition**:
 Die Abstraktion definiert die Schnittstelle für den Client, während die Implementierungsoberklasse (Implementor) primitive Operationen bereitstellt, die von der Abstraktion genutzt werden.
+
+### Bridge vs. Adapter
+
+**Definition**:
+Vergleich zweier Strukturmuster:
+- Adapter (post-facto): Verbindet zwei existierende, inkompatible Schnittstellen im Nachhinein.
+- Bridge (up-front): Wird von vornherein geplant, um eine Abstraktionshierarchie von einer Implementierungshierarchie sauber zu trennen, damit beide unabhängig erweitert werden können.
 
 ---
 
@@ -1603,9 +2042,9 @@ Erklärung: Das Adapter-Muster ist ideal, um bestehende Komponenten mit inkompat
 Sich von der Bridge ablenken lassen, die für das bewusste Aufteilen eigener Klassen gedacht ist, nicht für das Verpacken fremder APIs.
 
 
+
+
 ---
-
-
 
 # Kapitel 16: GUI-Anbindung und Persistenz
 
@@ -1646,6 +2085,11 @@ Der vom OR-Mapper verwaltete Kontext, der geladene Objekte im Speicher trackt un
 **Definition**:
 Die Anforderung, auf eine Datenbank-Session nicht aus unterschiedlichen Threads parallel zuzugreifen, um Locks, unvorhersehbare Transaktionszustände und Race Conditions zu verhindern.
 
+### B+-Baum Key-Value-Store
+
+**Definition**:
+Ein strukturiertes Persistenzkonzept, bei dem Daten in den Blättern (Blöcken) eines B+-Baums verwaltet werden. Ein Dictionary fungiert dabei oft als Abstraktionsebene, um dem System einen transparenten Key-Value-Zugriff anzubieten.
+
 ---
 
 ## 📝 Übungsaufgaben & Klausurfragen
@@ -1676,4 +2120,25 @@ Die falsche Annahme, dass relationale Datenbanken an sich keine Nebenläufigkeit
 
 ---
 
+### Aufgabe 2: Skizzieren Sie ein Aktivitätsdiagramm für den Use Case 'Adre...
 
+- **Klausurrelevant**: Ja (Tags: `klausur_vorbereitung, aktivitaetsdiagramm, persistenz, dictionary`)
+
+
+#### Aufgabenstellung:
+Skizzieren Sie ein Aktivitätsdiagramm für den Use Case 'Adresse bearbeiten'. Das System nutzt ein Dictionary, das die Daten in Blöcken eines B+-Baums verwaltet. Berücksichtigen Sie die Interaktion zwischen UI-Controller, Dictionary-Komponente und dem Key-Value-Store.
+
+
+#### Musterlösung:
+Das Aktivitätsdiagramm enthält:
+1. Drei Swimlanes: `Controller`, `Dictionary` und `Store`.
+2. Der Fluss startet im `Controller` mit der Aktion 'Eingabedaten lesen'.
+3. Der Controller ruft `put(key, value)` auf dem `Dictionary` auf.
+4. In der `Dictionary`-Swimlane wird 'Pfad im B+-Baum suchen' und 'Passenden Block laden' ausgeführt.
+5. Das Dictionary ruft `readBlock(blockId)` auf dem `Store` auf.
+6. Der `Store` liest den Block und gibt ihn zurück. Die Dictionary-Swimlane führt 'Eintrag im Block aktualisieren' aus und ruft `writeBlock(blockId, blockData)` auf dem `Store` auf.
+7. Nach erfolgreichem Schreiben gibt das Dictionary `true` an den Controller zurück, der 'Erfolg anzeigen' ausführt.
+
+
+#### Typische Stolpersteine / Fehlerquellen:
+Falsche Zuweisung der Aktionen zu den Swimlanes. Das Dictionary führt die logische Verwaltung des B+-Baums durch, der Store liest/schreibt nur rohe Blöcke.

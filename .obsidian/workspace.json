@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zettel/Use-Case-Diagramm.md",
-                "mode": "preview",
+                "file": "literature/software_engineering_folien_1_bis_15.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Use-Case-Diagramm"
+              "title": "software_engineering_folien_1_bis_15"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 420.5086555480957
+    "width": 200
   },
   "right": {
     "id": "6da7ebbb4a999fac",
@@ -183,38 +183,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "b28faa2ba49ee668",
+  "active": "580d0772ae66f5ab",
   "lastOpenFiles": [
-    "literature/software_engineering_folien_181_bis_195.md",
-    "literature/software_engineering_folien_196_bis_210.md",
-    "literature/software_engineering_folien_211_bis_225.md",
-    "literature/software_engineering_folien_166_bis_180.md",
-    "literature/software_engineering_folien_151_bis_165.md",
-    "literature/software_engineering_folien_136_bis_150.md",
-    "literature/software_engineering_folien_121_bis_135.md",
-    "literature/software_engineering_folien_106_bis_120.md",
-    "literature/software_engineering_folien_91_bis_105.md",
-    "literature/software_engineering_folien_76_bis_90.md",
-    "literature/software_engineering_folien_61_bis_75.md",
-    "literature/software_engineering_folien_46_bis_60.md",
-    "literature/software_engineering_folien_31_bis_45.md",
+    "quizzes/Quiz_SOFTWARE_ENGINEERING_Kapitel_1.md",
+    "podcasts/Podcast_SOFTWARE_ENGINEERING_Kapitel_1.txt",
+    "podcasts/Podcast_SOFTWARE_ENGINEERING_Kapitel_1.mp3",
+    "podcasts",
     "literature/software_engineering_folien_16_bis_30.md",
     "literature/software_engineering_folien_1_bis_15.md",
-    "exercises/Klausur_SoSe2022_Aufgabe2_Use_Case_Diagramm.md",
-    "exercises/Uebersicht_Klausuraufgaben.md",
-    "exercises/Klausur_SoSe2023_Aufgabe1_Vorgehensmodelle_Wasserfall_vs_Agil.md",
-    "zettel/Stack_Overflow.md",
-    "zettel/Sortieralgorithmus.md",
-    "zettel/Objektorientierte_Programmierung.md",
-    "zettel/Liste_Datenstruktur.md",
-    "zettel/Binaere_Suche.md",
-    "zettel/Lineare_Suche.md",
-    "zettel/Kunstwerk.md",
-    "zettel/Wrapper_Klasse.md",
-    "Lernplan_Software_Engineering.md.compressed.tmp",
-    "templates",
-    "fleeting",
-    "literature",
-    "zettel"
+    "quizzes/Quiz_Kapitel1_Empirische_Forschungsmethoden.md",
+    "zettel/Abhängigkeit_(Dependency__use).md",
+    "Projekt_Status.md",
+    "zettel/1-zu-1_Wrapper-Komplexität_(O(N²)).md",
+    "templates/zettel_template.md",
+    "templates/literature_template.md",
+    "literature/software_engineering_folien_31_bis_45.md",
+    "literature/Lernplan_Software_Engineering.md",
+    "exercises/Kapitel_1_Aufgabe_3.md",
+    "exercises/Kapitel_1_Aufgabe_2.md",
+    "exercises/Kapitel_1_Aufgabe_1.md",
+    "quizzes/Quiz_SOFTWARE_ENGINEERING_Slides_326-327.md",
+    "quizzes/Quiz_SOFTWARE_ENGINEERING_Slides_326-350.md",
+    "exercises/Kapitel_16_Aufgabe_2.md",
+    "exercises/Kapitel_16_Aufgabe_1.md",
+    "exercises/Kapitel_15_Aufgabe_2.md",
+    "exercises/Kapitel_15_Aufgabe_1.md",
+    "exercises/Kapitel_14_Aufgabe_2.md",
+    "exercises/Kapitel_14_Aufgabe_1.md",
+    "exercises/Kapitel_13_Aufgabe_3.md",
+    "exercises/Kapitel_13_Aufgabe_2.md",
+    "exercises/Kapitel_13_Aufgabe_1.md",
+    "exercises/Kapitel_12_Aufgabe_3.md",
+    "podcasts/Chapter_1_Grundlagen_und_Prozesse/Podcast_SWE_Chapter_1.mp3",
+    "podcasts/Chapter_5_Entwurfsmuster",
+    "podcasts/Chapter_4_Systemarchitektur_und_Interaktion",
+    "podcasts/Chapter_3_Anforderungen_und_Use_Cases/Podcast_SWE_Chapter_3.mp3",
+    "podcasts/Chapter_3_Anforderungen_und_Use_Cases/Podcast_SWE_Chapter_3.txt",
+    "podcasts/Chapter_3_Anforderungen_und_Use_Cases",
+    "podcasts/Chapter_2_Objektorientierte_Konzepte/Podcast_SWE_Chapter_2.mp3"
   ]
 }

@@ -1,24 +1,17 @@
 ---
-id: 51ca3364-3130-4139-a1cc-893c97adf213
+id: e2882bf6-1be6-5501-a0cc-6a4d1f50dfe3
 title: "Qualifier"
-date: 2026-05-30
+date: 2026-06-20
 tags:
   - software_engineering
-  - modellierung
-  - datenstruktur
-  - uml
+  - kapitel_5
   - draft
-source: "SWE Slides (Folien 106-120)"
+source: "Kapitel 5: Objektorientierung – Komposition, Aggregation und Assoziation"
 ---
 
 # [[Qualifier]]
 
-- **Kernkonzept:** Ein [[Qualifier]] ist ein [[Attribut]] einer [[Assoziation]], das die Menge der [[Instanz|Instanzen]] auf der gegenüberliegenden Seite der [[Assoziation]] partitioniert und den Zugriff auf eine Teilmenge ermöglicht.
-- **Nutzen & Zweck:** Er reduziert die [[Stelligkeit]] einer [[Assoziation]] von n auf 1, indem er den Zugriff auf [[Objekt|Objekte]] über einen eindeutigen Schlüssel ermöglicht, ähnlich wie ein [[Index]] in [[Datenbank|Datenbanken]].
-- **Abgrenzung & Grenzen:** Nicht sinnvoll, wenn die [[Assoziation]] keine partitionierbare Menge von [[Instanz|Instanzen]] hat oder wenn die [[Stelligkeit]] bereits 1 ist. Kann die [[Modellkomplexität]] erhöhen.
-- **Beispiel / Code:** ```java
-class Team {
-    private Map<Integer, Mitglied> mitgliederNachPosition;
-    // Zugriff über Qualifier (teamPos)
-}
-```
+- **Kernkonzept:** Ein UML-Element, das an einem Assoziationsende platziert wird. Er partitioniert die menge der assoziierten Objekte und ermöglicht den gezielten Zugriff (vergleichbar mit einem Schlüssel in einer Map/Dictionary).
+- **Nutzen & Zweck:** Ein UML-Element, das an einem Assoziationsende platziert wird. Er partitioniert die menge der assoziierten Objekte und ermöglicht den gezielten Zugriff (vergleichbar mit einem Schlüssel in einer Map/Dictionary).
+- **Abgrenzung & Grenzen:** Siehe Definition.
+- **Beispiel / Code:** Kein Codebeispiel vorhanden.

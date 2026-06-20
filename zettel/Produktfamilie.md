@@ -1,18 +1,17 @@
 ---
-id: 54f1928e-6757-4cf9-b131-f914beb3c791
+id: b7c3e68d-da12-588a-b2e1-f9a5e12e178f
 title: "Produktfamilie"
-date: 2026-05-30
+date: 2026-06-20
 tags:
   - software_engineering
-  - konzept
-  - architektur
+  - kapitel_14
   - draft
-source: "SWE Slides (Folien 346-360)"
+source: "Kapitel 14: Patterns – Erzeugungsmuster"
 ---
 
 # [[Produktfamilie]]
 
-- **Kernkonzept:** Eine [[Produktfamilie]] bezeichnet eine Gruppe von [[Produkt|Produkten]], die zusammengehören und gemeinsam entwickelt, getestet und verwendet werden.
-- **Nutzen & Zweck:** Sie stellt sicher, dass [[Objekt|Objekte]] innerhalb einer [[Produktfamilie]] zueinander kompatibel sind und fördert die [[Konsistenz]] sowie [[Wiederverwendbarkeit]] von [[Code]]. Besonders nützlich in [[Internationalisierung]] oder bei [[Themenwechsel|Themenwechseln]].
-- **Abgrenzung & Grenzen:** Nicht geeignet, wenn [[Produkt|Produkte]] unabhängig voneinander entwickelt oder verwendet werden sollen. In solchen Fällen sind [[Einzelkomponenten]] oder [[Modularisierung]] vorzuziehen.
-- **Beispiel / Code:** Eine [[Produktfamilie]] könnte aus `GermanAddressLabel`, `GermanTelephoneLabel` und `GermanBusinessLabel` bestehen, die alle von `GermanLabelFactory` erstellt werden.
+- **Kernkonzept:** Eine Menge von Produktklassen (z. B. GermanAL, GermanTL, GermanBL), die aufeinander abgestimmt sind und gemeinsam verwendet werden müssen, um Inkonsistenzen zu vermeiden.
+- **Nutzen & Zweck:** Eine Menge von Produktklassen (z. B. GermanAL, GermanTL, GermanBL), die aufeinander abgestimmt sind und gemeinsam verwendet werden müssen, um Inkonsistenzen zu vermeiden.
+- **Abgrenzung & Grenzen:** Siehe Definition.
+- **Beispiel / Code:** Kein Codebeispiel vorhanden.

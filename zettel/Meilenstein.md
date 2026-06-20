@@ -1,23 +1,17 @@
 ---
-id: 7e9d79ae-272f-43ac-b6f5-9261b45158ed
+id: 5113054e-ec26-56e5-b032-4a9cb2c94398
 title: "Meilenstein"
-date: 2026-05-30
+date: 2026-06-20
 tags:
   - software_engineering
-  - projektmanagement
-  - planung
+  - kapitel_1
   - draft
-source: "SWE Slides (Folien 16-30)"
+source: "Kapitel 1: Die Notwendigkeit eines Prozesses"
 ---
 
 # [[Meilenstein]]
 
-- **Kernkonzept:** Ein definierter [[Projektmanagement|Projektmanagement]]-Punkt, der den Abschluss einer Phase oder eines [[Arbeitspaket|Arbeitspakets]] markiert und zur Fortschrittsmessung sowie Steuerung dient.
-- **Nutzen & Zweck:** Ermöglicht die transparente Überwachung von [[Projektfortschritt|Projektfortschritt]], frühzeitige Erkennung von [[Verzögerung|Verzögerungen]] und Anpassung von [[Ressourcen|Ressourcen]] oder [[Zielsetzung|Zielsetzungen]].
-- **Abgrenzung & Grenzen:** Kein Ersatz für kontinuierliche [[Qualitätssicherung|Qualitätssicherung]]; kann bei zu starren Definitionen [[Agilität|Agilität]] einschränken. In [[Agile_Methodik|agilen Methoden]] oft durch [[Sprint|Sprints]] ersetzt.
-- **Beispiel / Code:** ```markdown
-# Beispiel: Meilensteinplan für ein Software-Projekt
-1. Meilenstein: Anforderungsanalyse abgeschlossen (KW 10)
-2. Meilenstein: Architektur-Design freigegeben (KW 14)
-3. Meilenstein: Beta-Version bereitgestellt (KW 20)
-```
+- **Kernkonzept:** Klar definierte Abschnitte oder Übergangspunkte in der Entwicklung einer Anwendung. Meilensteine helfen, den Fortschritt zu messen, und bilden die Grundlage für Steuermechanismen (z. B. Gegenmaßnahmen einleiten, Ressourcen anfordern, Projekt einstellen).
+- **Nutzen & Zweck:** Klar definierte Abschnitte oder Übergangspunkte in der Entwicklung einer Anwendung. Meilensteine helfen, den Fortschritt zu messen, und bilden die Grundlage für Steuermechanismen (z. B. Gegenmaßnahmen einleiten, Ressourcen anfordern, Projekt einstellen).
+- **Abgrenzung & Grenzen:** Siehe Definition.
+- **Beispiel / Code:** Kein Codebeispiel vorhanden.

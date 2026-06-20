@@ -1,21 +1,26 @@
 ---
-id: a5867894-335b-4c19-8158-4b087fcda698
+id: 11d1c8cf-a362-5f53-b420-79feba794504
 title: "ZeroMQ"
-date: 2026-06-01
+date: 2026-06-20
 tags:
-  - verteilte_systeme
-  - nachrichtenorientierte-kommunikation
-  - verteilte-systeme
-  - asynchrone-kommunikation
-  - netzwerkprogrammierung
-  - middleware
+  - software_engineering
+  - kapitel_4
   - draft
-source: "VS2 Handout Chapter 04 (Kommunikation)"
+source: "Kapitel 4: Kommunikation"
 ---
 
 # [[ZeroMQ]]
 
-- **Kernkonzept:** ZeroMQ ist eine leichtgewichtige [[Nachrichtenbibliothek|Nachrichtenbibliotheken]], die asynchrone Kommunikation zwischen [[Prozess|Prozessen]] in [[Verteiltes System|verteilten Systemen]] durch vordefinierte [[Kommunikationsmuster]] wie Request-Reply, Publish-Subscribe und Pipeline vereinfacht.
-- **Nutzen & Zweck:** ZeroMQ löst das [[Problem]] der komplexen [[Socket-Programmierung]] in [[Verteilte Systeme|verteilten Systemen]], indem es höhere Abstraktionen für [[Nachrichtenorientierte Kommunikation]] bereitstellt. Es reduziert [[Programmierfehler]] und beschleunigt die Entwicklung von [[Skalierbar|skalierbaren]] und [[Entkoppelt|entkoppelten]] [[Anwendung|Anwendungen]].
-- **Abgrenzung & Grenzen:** ZeroMQ eignet sich nicht für [[Synchron|synchrone]] [[Kommunikation]] mit strikten [[Transaktionsgarantien]] oder [[Echtzeitanforderungen]]. Im Vergleich zu [[RPC]]-Frameworks wie [[gRPC]] fehlen [[Typensicherheit]] und [[IDL]]-Unterstützung. Für [[Persistente Nachrichten]] oder [[Message Broker]] wie [[Apache Kafka]] ist es weniger geeignet.
-- **Beispiel / Code:** {'beschreibung': 'Ein einfaches Request-Reply-Muster in ZeroMQ (Python):', 'server': {'code': 'import zmq\ncontext = zmq.Context()\ns = context.socket(zmq.REP)\ns.bind("tcp://*:5555")\nwhile True:\n    message = s.recv()\n    s.send(b"Reply: " + message)', 'erlaeuterung': 'Der Server wartet auf [[Nachricht|Nachrichten]] und antwortet mit einer modifizierten Version.'}, 'client': {'code': 'import zmq\ncontext = zmq.Context()\ns = context.socket(zmq.REQ)\ns.connect("tcp://localhost:5555")\ns.send(b"Hello")\nprint(s.recv())', 'erlaeuterung': 'Der Client sendet eine [[Nachricht]] und blockiert, bis die Antwort eintrifft.'}}
+- **Kernkonzept:** Bibliothek für asynchrones, nachrichtenorientiertes Transient Messaging. Kapselt systemnahe Sockets und bietet integrierte Muster wie Request-Reply (REQ/REP), Publish-Subscribe (PUB/SUB mit filterbasiertem Empfang) und Pipeline (PUSH/PULL für Lastverteilung).
+- **Nutzen & Zweck:** Bibliothek für asynchrones, nachrichtenorientiertes Transient Messaging. Kapselt systemnahe Sockets und bietet integrierte Muster wie Request-Reply (REQ/REP), Publish-Subscribe (PUB/SUB mit filterbasiertem Empfang) und Pipeline (PUSH/PULL für Lastverteilung).
+- **Abgrenzung & Grenzen:** Siehe Definition.
+- **Beispiel / Code:** ```java
+# Request-Reply Client (Python):
+import zmq
+ctx = zmq.Context()
+s = ctx.socket(zmq.REQ)
+s.connect('tcp://localhost:5555')
+s.send(b'Hello')
+msg = s.recv()
+print(msg)
+```
