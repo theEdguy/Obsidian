@@ -1,8 +1,8 @@
 # Obsidian Workspace State (Local device config)
 .obsidian/workspace.json
 
-# Large Audio / Podcast files
-podcasts/**/*.mp3
+# Large Audio / Lecture files
+lectures/**/*.mp3
 
 # Operating System Files
 .DS_Store
