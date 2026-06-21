@@ -1,0 +1,9 @@
+# Obsidian Workspace State (Local device config)
+.obsidian/workspace.json
+
+# Large Audio / Podcast files
+podcasts/**/*.mp3
+
+# Operating System Files
+.DS_Store
+Thumbs.db
