@@ -1,17 +1,25 @@
 ---
-id: 427c1878-1979-5b55-bd00-904ef0c40f3f
+id: 51643d91-9783-4c27-881b-a836bcdd077b
 title: "Wasserfallmodell"
-date: 2026-06-20
+date: 2026-06-24
 tags:
   - software_engineering
-  - kapitel_1
+  - prozessmodelle
+  - klassisch
   - draft
-source: "Kapitel 1: Die Notwendigkeit eines Prozesses"
+source: "SWE Slides – Kapitel 1: Die Notwendigkeit eines Prozesses"
 ---
 
 # [[Wasserfallmodell]]
 
-- **Kernkonzept:** Klassisches, phasenbasiertes Prozessmodell (Analyse, Design, Coden, Integration/Test, Betrieb). Jede Phase ist vor dem Übergang vollständig abzuschließen, eine Rückkopplung ist im Regelfall nur im Fehlerfall vorgesehen.
-- **Nutzen & Zweck:** Klassisches, phasenbasiertes Prozessmodell (Analyse, Design, Coden, Integration/Test, Betrieb). Jede Phase ist vor dem Übergang vollständig abzuschließen, eine Rückkopplung ist im Regelfall nur im Fehlerfall vorgesehen.
-- **Abgrenzung & Grenzen:** Siehe Definition.
-- **Beispiel / Code:** Kein Codebeispiel vorhanden.
+- **Kernkonzept:** Ein [[sequenzielles_Prozessmodell]], bei dem [[Phasen]] wie [[Anforderungsanalyse]], [[Design]], [[Implementierung]] und [[Test]] nacheinander abgeschlossen werden.
+- **Nutzen & Zweck:** Ermöglicht klare [[Meilensteine]] und [[Dokumentation]] für [[Projekte]] mit stabilen [[Anforderungen]]. Einfach zu verstehen und zu verwalten.
+- **Abgrenzung & Grenzen:** Unflexibel bei sich ändernden [[Anforderungen]]. Unterscheidet sich von [[Agile_Entwicklung]] durch starre [[Phasen]]. Nicht geeignet für [[Innovationsprojekte]] oder [[Forschungsprojekte]].
+- **Beispiel / Code:** ```text
+// Beispiel für Wasserfallmodell-Ablauf
+1. Anforderungsanalyse → Dokumentation
+2. Systemdesign → Architektur
+3. Implementierung → Code
+4. Test → Fehlerbehebung
+5. Wartung → Updates
+```

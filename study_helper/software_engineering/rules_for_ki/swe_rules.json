@@ -1,0 +1,1372 @@
+{
+  "meta": {
+    "title": "KI-Regelwerk für Software-Engineering-Verarbeitung",
+    "description": "Systemregeln und Kontextvorgaben für KI-Assistenten basierend auf Prof. Dr. Thomas Fuchß: Software-Engineering.",
+    "version": "1.0.0"
+  },
+  "general_rules": [
+    {
+      "id": "never_do_more_than_requested",
+      "rule": "Tue niemals mehr als verlangt. Halte die Antworten präzise, direkt und beschränke dich strikt auf die angeforderte Aufgabe."
+    }
+  ],
+  "chapters": {
+    "1": {
+      "title": "Die Notwendigkeit eines Prozesses",
+      "guidelines": {
+        "das_problem": "Die Entwicklung großer Software-Systeme birgt hohe Risiken wie mangelndes Problemverständnis, unterschätzte Komplexität und ineffiziente Ressourcennutzung. Ein naiver 'Codieren und Verbessern'-Ansatz führt schnell zu unbrauchbarem Code, fehlerhaftem Design und hohen Kosten, da Phasen wie Requirements-Analyse und systematisches Design übergangen werden.",
+        "die_loesung": "Ein strukturiertes, ingenieurmäßiges Vorgehen unter Einsatz wissenschaftlich fundierter, empirischer Methoden und standardisierter Entwicklungsprozesse (Prozessmodelle wie Wasserfall, Spiral- oder Versionsmodell) is unabdingbar. Dies ermöglicht die Steuerung von Projekten durch Meilensteine, macht den Fortschritt transparent und minimiert Risiken frühzeitig."
+      },
+      "ai_instructions": [
+        "Vermittle dem Benutzer den Unterschied zwischen qualitativem (Verhalten/Motivation verstehen) und quantitativem (Messen/Analysieren) Vorgehen im Software Engineering.",
+        "Stelle sicher, dass der Benutzer die empirischen Forschungsmethoden (kontrollierte Experimente, Fallstudien, Surveys, Post-Mortem-Analysen) voneinander abgrenzen und ihren jeweiligen Nutzen sowie ihre Grenzen benennen kann.",
+        "Leite den Benutzer an, die Notwendigkeit von Meilensteinen für die Projektsteuerung und das Risikomanagement zu verstehen.",
+        "Stelle sicher, dass der Benutzer die klassischen Prozessmodelle (Wasserfall, Spiralmodell, Versionsmodell) und deren Vor- und Nachteile versteht.",
+        "Erkläre dem Benutzer, warum agile Prozesse sich an Kunden orientieren und neue Anforderungen flexibler integrieren als das Wasserfallmodell."
+      ],
+      "concepts": [
+        {
+          "begriff": "Software-Engineering",
+          "definition": "Der Teil der Informatik, der sich mit der systematischen Entwicklung und Wartung softwarebasierter Anwendungen beschäftigt, um große Software-Systeme ingenieurmäßig unter Verwendung bewährter, systematischer Vorgehensweisen, Prinzipien, Methoden und Werkzeuge zu entwickeln.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Qualitative Forschungsmethoden",
+          "definition": "Empirischer Ansatz zur Untersuchung des 'Warum'. Ziel ist es, Verhalten, Meinungen und Motivationen zu verstehen und zu interpretieren (z. B. durch Beobachtungen, offene Fragen in Interviews).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Quantitative Forschungsmethoden",
+          "definition": "Empirischer Ansatz zur Untersuchung des 'Wie viel'. Ziel ist es, Zahlen, Korrelationen und Zusammenhänge zu ermitteln, zu messen und statistisch zu analysieren (z. B. durch geschlossene Fragen in Umfragen, Messungen).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Kontrolliertes Experiment",
+          "definition": "Wissenschaftliche Untersuchung von Ursache-Wirkungs-Beziehungen unter kontrollierten Laborbedingungen. Es werden unabhängige Variablen (Faktoren, die verglichen werden) systematisch manipuliert, um deren Einfluss auf abhängige Variablen (Messwerte) reproduzierbar zu bestimmen. Vorteil: Klare kausale Beziehungen. Kontra: Künstliche Umgebung erschwert Übertragbarkeit.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Fallstudie (Case Study)",
+          "definition": "Explorative Untersuchung realer Prozesse in ihrem natürlichen Umfeld (Beobachtung, Überwachung und Dokumentation). Sie liefert wertvolle Erkenntnisse und Zusammenhänge aus der Praxis, kann jedoch keine eindeutigen Ursache-Wirkungs-Beziehungen beweisen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Umfrage (Survey)",
+          "definition": "Systematisches Sammeln von Daten aus einer großen Gruppe. Typische Techniken sind Fragebögen (mit geschlossenen Fragen für die quantitative Analyse) und Interviews (mit offenen Fragen für qualitative Einblicke). Kann deskriptiv, explorativ oder explanativ sein.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Meilenstein",
+          "definition": "Klar definierte Abschnitte oder Übergangspunkte in der Entwicklung einer Anwendung. Meilensteine helfen, den Fortschritt zu messen, und bilden die Grundlage für Steuermechanismen (z. B. Gegenmaßnahmen einleiten, Ressourcen anfordern, Projekt einstellen).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Wasserfallmodell",
+          "definition": "Klassisches, phasenbasiertes Prozessmodell (Analyse, Design, Coden, Integration/Test, Betrieb). Jede Phase ist vor dem Übergang vollständig abzuschließen, eine Rückkopplung ist im Regelfall nur im Fehlerfall vorgesehen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Spiralmodell",
+          "definition": "Risiko-getriebenes Prozessmodell nach Boehm (1988), bei dem kontinuierliches Risikomanagement in jeder Schleife (Ziele bestimmen, Risiken eliminieren, entwickeln/verifizieren, nächste Phase planen) den Entwicklungsverlauf bestimmt. Schwierige Aufgaben mit hohem Risiko kommen zuerst.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Versionsmodell",
+          "definition": "Iteratives Prozessmodell, bei dem das System inkrementell in aufeinander aufbauenden Versionen (Teilsystemen) entwickelt und bewertet wird. Ermöglicht die Integration neuer Nutzeranforderungen und den frühen Einsatz eines Kernsystems.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Agiler vs. Wasserfall-Prozess",
+          "definition": "Vergleich der Vorgehensmodelle: Das Wasserfallmodell bettet Phasen in eine starre, sequentielle Reihenfolge ein (Analyse, Design, Coden, Testen), bei der jede Phase komplett abgeschlossen sein muss. Der agile Ansatz hingegen zerlegt das Projekt in kleine Iterationen (Miniprojekte/Sprints), bindet den Kunden kontinuierlich ein und erlaubt das flexible Anpassen von Anforderungen bei jedem Sprint-Inkrement.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Post-Mortem-Analyse",
+          "definition": "Empirische Methode zur nachträglichen Bewertung eines abgeschlossenen Projekts oder Projektphase. Ziel ist es, gewonnene Erkenntnisse ('Lessons Learned'), Erfolge und Fehltritte systematisch zu dokumentieren, um zukünftige Prozesse zu verbessern.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welche Aussage beschreibt ein zentrales Merkmal einer Fallstudie (Case Study) im Kontext empirischer Forschung?\n\nA) Sie findet ausschließlich in kontrollierten Laborumgebungen statt, um Störfaktoren zu minimieren.\nB) Sie untersucht reale Prozesse in ihrem natürlichen Umfeld und liefert explorative Erkenntnisse aus der Praxis.\nC) Sie dient primär der Überprüfung von Kausalzusammenhängen durch systematische Manipulation unabhängiger Variablen.\nD) Sie sammelt Daten durch standardisierte Fragebögen mit geschlossenen Fragen, um quantitative Analysen zu ermöglichen.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Fallstudien zeichnen sich durch die Untersuchung realer Prozesse in ihrem natürlichen Umfeld aus. Sie sind explorativ und liefern Erkenntnisse aus der Praxis, zeigen aber keine klaren Ursache-Wirkung-Beziehungen (im Gegensatz zu kontrollierten Experimenten).",
+          "stolpersteine": "Verwechslung von Fallstudien (im natürlichen Umfeld, explorativ, keine Kausalität) mit kontrollierten Experimenten (im Labor, Manipulation von Variablen, Kausalität) oder Umfragen (Surveys).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "empirische_methoden",
+            "fallstudie"
+          ]
+        },
+        {
+          "aufgabenstellung": "Welche Aussage trifft auf die Durchführung eines kontrollierten Experiments in der empirischen Softwareforschung zu?\n\nA) Die Umgebung wird bewusst natürlich gehalten, um die Realitätsnähe zu erhöhen.\nB) Die Ergebnisse sind nicht reproduzierbar, da sie stark vom Kontext abhängen.\nC) Unabhängige Variablen werden systematisch manipuliert, um deren Einfluss auf abhängige Variablen zu messen.\nD) Die Methode eignet sich besonders für die Erforschung subjektiver Qualitätsanforderungen, da sie qualitative Daten priorisiert.",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Kontrollierte Experimente manipulieren gezielt unabhängige Variablen unter kontrollierten Bedingungen, um deren Einfluss auf abhängige Variablen zu messen und reproduzierbare statistische Daten zu erheben.",
+          "stolpersteine": "Die Annahme, Experimente fänden in einer natürlichen Umgebung statt (das trifft auf Fallstudien zu), oder die Annahme, ihre Ergebnisse seien nicht reproduzierbar (Reproduzierbarkeit ist ein Hauptziel).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "empirische_methoden",
+            "experiment"
+          ]
+        },
+        {
+          "aufgabenstellung": "Was ist ein wesentlicher Nachteil von kontrollierten Experimenten im Vergleich zu Fallstudien?\n\nA) Fallstudien liefern keine reproduzierbaren Ergebnisse, während Experimente diese garantieren.\nB) Experimente sind weniger aufwendig in der Durchführung, da sie keine reale Umgebung benötigen.\nC) Die künstliche Umgebung von Experimenten erschwert die Übertragbarkeit der Ergebnisse auf die Praxis.\nD) Fallstudien können keine quantitativen Daten sammeln, während Experimente dies ermöglichen.",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Die künstliche Umgebung und die streng kontrollierten Bedingungen in Laborexperimenten führen zu einer geringeren externen Validität, was die Übertragbarkeit der Ergebnisse auf reale, komplexe Softwareprojekte erschwert.",
+          "stolpersteine": "Vergessen, dass auch Fallstudien quantitative Daten (z. B. Metriken) sammeln können, und Falscheinschätzung des Vorbereitungsaufwands von Laborexperimenten.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "empirische_methoden",
+            "validitaet"
+          ]
+        },
+        {
+          "aufgabenstellung": "Was zeichnet einen agilen Entwicklungsprozess aus und wie unterscheidet er sich im Kern vom klassischen Wasserfallmodell? (4 Punkte)",
+          "loesung": "Ein agiler Entwicklungsprozess orientiert sich stark am Kunden (1 P) und ermöglicht es, neue Anforderungen flexibel im Laufe des Projekts zu integrieren (1 P). Zudem zerfällt das Projekt in Miniprojekte (Sprints/Iterationen) (1 P), an deren Ende jeweils ein lauffähiges Teilsystem (Inkrement) entsteht (1 P). Im Gegensatz dazu ist das Wasserfallmodell starr, sequentiell aufgebaut, betrachtet das Projekt als Ganzes und lässt Änderungen erst sehr spät oder nur unter hohem Aufwand zu.",
+          "stolpersteine": "Die Annahme, dass agile Prozesse gar keine Planung oder Dokumentation benötigen. Vergessen zu erwähnen, dass am Ende jeder Iteration ein *lauffähiges Inkrement* stehen muss.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "vorgehensmodelle",
+            "agil_vs_wasserfall"
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Entwicklungsprozesse gestern und heute",
+      "guidelines": {
+        "das_problem": "Prozessmodelle werden oft starr, unvollständig oder dogmatisch gelebt, ohne sie an Technologie, Personen, Unternehmensstrukturen und Projektgrößen anzupassen. Ein fehlerhafter Prozess führt zu verfehlten Fristen, explodierenden Kosten und ineffektiver Qualitätssicherung.",
+        "die_loesung": "Der Einsatz flexibler, iterativer und risikoorientierter Prozessmodelle als konfigurierbares Framework. Die Zerlegung in überschaubare Mini-Projekte (Iterationen/Sprints) mit Meilensteinen zur kontinuierlichen Messung und Risikominimierung, unterteilt in Phase I (Evaluierung/Vorprojekt) und Phase II (Umsetzung)."
+      },
+      "ai_instructions": [
+        "Stelle sicher, dass der Benutzer die CMMI-Fähigkeitsgrade (Capability Levels L0-L3) und Reifegrade (Maturity Levels L1-L5) sowie deren Bedeutung für den Projekterfolg kennt.",
+        "Erkläre dem Benutzer den Aufbau eines iterativen Entwicklungsprozesses nach Craig Larman (Phase I mit Evaluierung/Vorprojekt, Phase II mit Umsetzung) und dessen Verbindung zu SCRUM."
+      ],
+      "concepts": [
+        {
+          "begriff": "Prozessmodell",
+          "definition": "Ein Prozessmodell definiert die zu erbringenden Aufgaben und deren zeitliche Abfolge. Es bildet einen steuerbaren, transparenten Rahmen für eine effiziente Entwicklung, indem es Risiken verringert und die Vorhersehbarkeit erhöht.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "CMMI (Capability Maturity Model Integration)",
+          "definition": "Ein Stufenmodell zur Bewertung der Fähigkeiten eines Unternehmens bei der Projektabwicklung. Es unterscheidet Capability Levels (Fähigkeitsgrade) und Maturity Levels (Reifegrade).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "CMMI Capability Levels",
+          "definition": "Fähigkeitsgrade zur Bewertung einzelner Prozesse: L0 (Incomplete: nicht/teilweise durchgeführt), L1 (Performed: individuell befolgt), L2 (Managed: überwacht und gesteuert), L3 (Defined: präzise zugeschnitten und formal fixiert).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "CMMI Maturity Levels",
+          "definition": "Reifegrade der gesamten Organisation: L1 (Initial: chaotisch), L2 (Managed: geplant/überwacht unter Stress), L3 (Defined: normiert/generisch), L4 (Quantitatively Managed: messbar/vorhersehbar), L5 (Optimizing: kontinuierliche Verbesserung).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Iteration / Sprint",
+          "definition": "Die Zerlegung eines großen Softwareprojekts in Mini-Projekte. Jede Iteration liefert ein lauffähiges Inkrement, baut auf vorherigen Modellen auf und fokussiert sich auf Use Cases. Risikoreiche Aufgaben werden zuerst gelöst.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Phase I (Larman)",
+          "definition": "Die Evaluierungsphase (Vorprojekt), in der zentrale Anforderungen analysiert, eine prinzipielle Architektur definiert, das Problemverständnis durch erste Vorversionen geschärft und Planungssicherheit gewonnen wird.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Phase II (Larman)",
+          "definition": "Die Erstellungs- und Umsetzungsphase, in der verbliebene Kernfunktionalitäten umgesetzt, die Architektur konsolidiert (Infrastruktur) und anschließend restliche Funktionalitäten ohne Architekturänderungen vervollständigt werden.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welche grundlegende Eigenschaft unterscheidet das Spiralmodell nach Boehm von klassischen sequenziellen Modellen wie dem Wasserfallmodell?\n\nA) Das Spiralmodell verzichtet vollständig auf Dokumentation und setzt stattdessen auf direkte Kommunikation.\nB) Das Spiralmodell führt Risikomanagement als zentralen Steuerungsmechanismus ein und durchläuft iterative Schleifen mit klar definierten Phasen.\nC) Das Spiralmodell ist ein rein lineares Modell, das jedoch durch Prototypen ergänzt wird.\nD) Das Spiralmodell erzwingt eine strikte Trennung zwischen Analyse, Design und Implementierung in jeder Iteration.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Das Spiralmodell nach Boehm (1988) zeichnet sich durch ein kontinuierliches Risikomanagement aus. Jede Schleife stellt eine Phase dar, in der schwierige Aufgaben mit hohem Risiko zuerst angegangen werden. Dies unterscheidet es fundamental vom klassischen Wasserfallmodell.",
+          "stolpersteine": "Verwechslung des Spiralmodells mit einem rein linearen Prototypen-Ansatz oder der Annahme, es verzichte auf Dokumentation.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "vorgehensmodelle",
+            "spiralmodell"
+          ]
+        },
+        {
+          "aufgabenstellung": "Welche Aussage zum Scrum-Framework ist fachlich korrekt?\n\nA) Scrum sieht vor, dass das Entwicklungsteam in jeder Iteration (Sprint) eine vollständige, marktreife Software liefern muss.\nB) Scrum ist ein hybrides Modell, das Elemente des Wasserfalls und des Spiralmodells kombiniert.\nC) Scrum basiert auf iterativen Sprints, in denen Anforderungen priorisiert und in Inkrementen umgesetzt werden, wobei das Product Backlog kontinuierlich angepasst wird.\nD) Scrum erfordert eine feste Rollenverteilung, bei der der Product Owner für die technische Umsetzung verantwortlich ist.",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Scrum ist ein agiles Framework basierend auf iterativen Sprints. Das Product Backlog wird kontinuierlich angepasst und verfeinert (Grooming), und am Ende jedes Sprints steht ein potenziell auslieferbares Produktinkrement (nicht zwingend marktreife Software). Der Product Owner ist für die Anforderungen zuständig, nicht die technische Umsetzung.",
+          "stolpersteine": "Die Annahme, dass das Inkrement pro Sprint marktreif sein muss, oder dass der Product Owner für die Technik verantwortlich ist.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "vorgehensmodelle",
+            "scrum"
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Objektorientierung – eine durchgängige Sichtweise",
+      "guidelines": {
+        "das_problem": "Klassische Softwareentwicklung trennte Daten und Funktionen strikt. Dies führte bei großen Anwendungen zu mangelnder Wartbarkeit, Konsistenzproblemen und schlechter Abbildung komplexer realer Szenarien (Problemraum) im Code (Lösungsraum).",
+        "die_loesung": "Einsatz von Objektorientierung (OO) als durchgängiges Stilmittel. OO begreift Daten und Funktionen als Einheit (Klassen/Objekte) und bietet methodische Durchgängigkeit von der Analyse (UML-Klassen) bis zur Implementierung (Code-Klassen)."
+      },
+      "ai_instructions": [
+        "Erkläre die drei historischen Säulen der Objektorientierung: Natürliche Modellierung (Simula), Sharing (Smalltalk) und Abstrakte Datentypen (Eiffel).",
+        "Stelle sicher, dass der Benutzer den Unterschied zwischen Objektidentität (Derselbe) und Objektgleichheit (Der gleiche) versteht und anwenden kann."
+      ],
+      "concepts": [
+        {
+          "begriff": "Historische Säulen der OO",
+          "definition": "1. Natürliche Modellierung (Simula 67): Objekte modellieren die Realität. 2. Sharing (Smalltalk-80): Objekte teilen sich gemeinsame Eigenschaften (super/self). 3. Abstrakte Datentypen (Eiffel): Objekte kapseln ihren Zustand über definierte Schnittstellen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Treaty of Orlando (1989)",
+          "definition": "Definiert zwei Mechanismen der Vererbung: 1. Empathy (Nachempfinden): Ein Objekt teilt das Verhalten eines anderen ohne explizite Redefinition (Delegation). 2. Templates: Fähigkeit, neue Objekte basierend auf Vorlagen zu erstellen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Methodische Durchgängigkeit",
+          "definition": "Die nahtlose Übertragung von Strukturen aus dem Problemraum (Anforderungsanalyse) über das UML-Modell (Designraum) in den Quellcode (Lösungsraum), z. B. die Repräsentation eines 'Mitglieds' auf allen Ebenen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Abstraktion (Modellierung)",
+          "definition": "Ein Modell ist ein Abbild der Realität, das von irrelevanten Details abstrahiert und nur die für das konkrete Problem relevanten Eigenschaften betrachtet.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Objektidentität vs. Objektgleichheit",
+          "definition": "Objektidentität (== in Java/C++): Zwei Referenzen zeigen auf exakt dasselbe Objekt im Speicher. Objektgleichheit (.equals() in Java): Zwei unterschiedliche Objekte besitzen identische Attributwerte.",
+          "beispiel_code": "String x = new String(\"test\");\nString y = new String(\"test\");\nSystem.out.println(x == y);      // false (nicht identisch)\nSystem.out.println(x.equals(y)); // true (gleich)"
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Gegeben sind in Java zwei Instanzen:\n`String x = new String(\"text\");` und `String y = new String(\"text\");`.\nWelches Ergebnis liefern die Ausdrücke `(x == y)` und `x.equals(y)`?\n\nA) Beide liefern `true`.\nB) Beide liefern `false`.\nC) `(x == y)` liefert `true`, `x.equals(y)` liefert `false`.\nD) `(x == y)` liefert `false`, `x.equals(y)` liefert `true`.",
+          "loesung": "Richtige Antwort: D\n\nErklärung: Der Operator `==` prüft die Objektidentität (zeigen x und y auf denselben Speicherbereich?). Da beide mit `new` erzeugt wurden, sind sie unterschiedliche Objekte (false). Die Methode `equals()` prüft die inhaltliche Gleichheit (ist der Text derselbe?), was hier zutrifft (true).",
+          "stolpersteine": "Verwechslung von Identität (derselbe) und Gleichheit (der gleiche). Besondere Optimierungen wie String-Pooling in Java können bei Literalen (ohne 'new') verwirren.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "objektorientierung",
+            "identitaet"
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Objektorientierung – Vererbung",
+      "guidelines": {
+        "das_problem": "Redundante Daten- und Verhaltensstrukturen führen zu aufgeblähtem und schwer wartbarem Code. Ohne einheitliche Schnittstellen und Typbeziehungen können Klassen nicht flexibel miteinander kombiniert oder ausgetauscht werden.",
+        "die_loesung": "Einsatz von Vererbung zur Strukturierung von Generalisierungen und Spezialisierungen. Unterklassen erben Eigenschaften und Beziehungen ihrer Oberklassen, können diese überschreiben und erweitern, und sind über das Substitutionsprinzip typkompatibel."
+      },
+      "ai_instructions": [
+        "Erkläre das Liskovsche Substitutionsprinzip anhand des klassischen Beispiels Quadrat vs. Rechteck.",
+        "Stelle sicher, dass der Benutzer die 4 Schichten der MOF-Architektur (M0 bis M3) benennen und einordnen kann.",
+        "Erkläre die Generalisierungsbedingungen in UML: overlapping vs. disjoint und complete vs. incomplete.",
+        "Vermittle die UML-Syntax für Attribute, Operationen, abstrakte Klassen und Interfaces.",
+        "Erkläre dem Benutzer die UML-Generalisierungs-Constraints (disjoint, complete, overlapping, incomplete) und wie sie vererbt werden.",
+        "Stelle sicher, dass der Benutzer Java-Generics (z. B. class P<T> {}) in die korrekte UML-Template-Notation übersetzen kann."
+      ],
+      "concepts": [
+        {
+          "begriff": "Substitutionsprinzip (Liskov)",
+          "definition": "Instanzen von Unterklassen müssen sich so verhalten, dass sie überall dort eingesetzt werden können, wo Instanzen der Oberklasse erwartet werden, ohne die Korrektheit des Programms zu gefährden.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Quadrat-Rechteck-Problem",
+          "definition": "Ein klassischer Verstoß gegen das Substitutionsprinzip: Erbt Quadrat von Rechteck, verletzt Quadrat die Rechteck-Eigenschaft (Breite und Höhe unabhängig veränderbar, z. B. stretch(w, h)), da beim Quadrat w = h gelten muss.",
+          "beispiel_code": "Rechteck r = new Quadrat(3);\nr.setBreite(4);\nr.setHoehe(5);\n// Wenn r ein Quadrat ist, gilt nun Breite=5, Hoehe=5. Erwartet wurde aber Flaeche 20!"
+        },
+        {
+          "begriff": "MOF-Schichten (Meta Object Facility)",
+          "definition": "M3 (Meta-Meta-Modell): Definiert die Sprache für Meta-Modelle (z. B. MOF). M2 (Meta-Modell): Definiert die Modellierungssprache (z. B. UML: Class, Association). M1 (Modell): Ein konkretes Diagramm (z. B. Klasse Mitglied). M0 (Reale Objekte/Laufzeit): Konkrete Programminstanzen im Speicher oder Datenbankdatensätze.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "UML Attribut-Syntax",
+          "definition": "Syntax: visibility / name : type [multiplicity] = initial-value {property}. Z. B. - alter: Date. Das Zeichen '/' markiert ein abgeleitetes (berechenbares) Attribut. Multiplizität legt fest, wie viele Werte existieren.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Generalisierungsbedingungen in UML",
+          "definition": "overlapping: Instanzen können in mehreren Unterklassen gleichzeitig sein. disjoint: Keine Schnittmengen. complete: Keine weiteren Unterklassen außerhalb möglich. incomplete: Weitere Unterklassen sind zulässig und sinnvoll.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Abstrakte Klasse vs. Interface",
+          "definition": "Abstrakte Klasse: Kann Struktur (Attribute) und Implementierungen vererben; keine direkten Instanzen. Interface: Vererbt ausschließlich Operationen (Schnittstellen), besitzt im Regelfall keine Attribute oder Assoziationen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Disjoint & Complete Constraints",
+          "definition": "Generalisierungs-Constraints in UML:\n- disjoint: Eine Instanz der Oberklasse kann höchstens einer der Unterklassen angehören (keine Überlappung).\n- complete: Jede Instanz der Oberklasse muss mindestens einer Unterklasse angehören (die Vereinigung der Unterklassen deckt alle möglichen Instanzen der Oberklasse ab).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Overlapping & Incomplete Constraints",
+          "definition": "Generalisierungs-Constraints in UML:\n- overlapping: Eine Instanz der Oberklasse kann mehreren Unterklassen gleichzeitig angehören (z. B. ein Mitarbeiter, der sowohl 'Dozent' als auch 'Student' ist).\n- incomplete: Es gibt Instanzen der Oberklasse, die zu keiner der definierten Unterklassen gehören (z. B. zusätzliche Eiscreme-Sorten außer den vier Standardkategorien).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "UML-Template (Generics)",
+          "definition": "Parametrisierte Klassen werden in UML als Template dargestellt. Der Platzhalter (z. B. <T>) wird in einem gestrichelten Kasten in der rechten oberen Ecke der Klasse notiert. Im Java-Code entspricht dies einer generischen Klasse.",
+          "beispiel_code": "public class P<T> {\n    private T daten;\n    public T getDaten() { return daten; }\n}"
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Warum ist die Vererbung `Quadrat erbt von Rechteck` im Sinne des Liskovschen Substitutionsprinzips problematisch?\n\nA) Weil ein Quadrat geometrisch kein Rechteck ist.\nB) Weil Operationen des Rechtecks wie `stretch(width, height)` oder unabhängige Setter die Invariante des Quadrats (Breite = Höhe) verletzen.\nC) Weil Java keine Mehrfachvererbung unterstützt.\nD) Weil das Quadrat weniger Attribute als das Rechteck benötigt.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Das Substitutionsprinzip verlangt, dass ein Quadrat überall dort verwendet werden kann, wo ein Rechteck erwartet wird. Wenn ein Client auf einem Rechteck-Objekt die Breite und Höhe unabhängig voneinander ändert (z.B. setBreite(4), setHoehe(5)), bricht diese Logik bei einem Quadrat zusammen, da sich dessen Invariante (w == h) nicht aufrechterhalten lässt, ohne das Verhalten der Oberklasse zu verfälschen.",
+          "stolpersteine": "Umgangssprachliches Denken ('Ein Quadrat ist doch ein Rechteck') kollidiert hier mit der Verhaltenskompatibilität im Softwaredesign.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "objektorientierung",
+            "liskov",
+            "vererbung"
+          ]
+        },
+        {
+          "aufgabenstellung": "Ordne die UML-Modellierungsebene einer konkreten Klasse (z.B. 'class Mitglied') und einer konkreten Instanz zur Laufzeit (z.B. 'new Mitglied(\"Meier\")') den korrekten Schichten der MOF-Architektur (Meta Object Facility) zu.\n\nA) Klasse = M3, Instanz = M2\nB) Klasse = M2, Instanz = M1\nC) Klasse = M1, Instanz = M0\nD) Klasse = M2, Instanz = M0",
+          "loesung": "Richtige Antwort: C\n\nErklärung: In der MOF-Architektur ist M1 die Modell-Ebene (wo wir Klassen wie 'Mitglied' modellieren). M0 ist die Laufzeit-Ebene mit den realen Objekten im Speicher ('Meier'). M2 enthält das Meta-Modell (die UML-Definition von 'Class' und 'Attribute'), und M3 ist das Meta-Meta-Modell.",
+          "stolpersteine": "Verwechslung der Klassendefinition (M1) mit dem UML-Metamodell (M2).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "metamodellierung",
+            "mof"
+          ]
+        },
+        {
+          "aufgabenstellung": "Stellen Sie das folgende Java-Codefragment als UML-Klassendiagramm dar:\n\n```java\nclass B extends C implements D {\n    @Override\n    public void execute() {}\n}\n```",
+          "loesung": "Das Klassendiagramm besteht aus:\n1. Der Klasse `B` mit der Operation `execute()`.\n2. Der Klasse `C`. `B` ist mit `C` über einen Pfeil mit durchgezogener Linie und nicht ausgefüllter Dreiecksspitze verbunden (Generalisierung/Vererbung: B -> C).\n3. Dem Interface `D` (oder einer Klasse/Interface mit Stereotyp <<interface>>). `B` ist mit `D` über einen Pfeil mit gestrichelter Linie und nicht ausgefüllter Dreiecksspitze verbunden (Realisierung: B -> D).",
+          "stolpersteine": "Verwechslung der Pfeilspitzen oder Linienarten. Generalisierung ist eine durchgezogene Linie, Realisierung eines Interfaces ist gestrichelt. Beide nutzen eine geschlossene, nicht ausgefüllte Dreiecksspitze.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "klassendiagramm",
+            "vererbung",
+            "interface"
+          ]
+        },
+        {
+          "aufgabenstellung": "Erklären Sie anhand des Beispiels einer Eiscreme-Klassifizierung (Kategorien: Milcheis, Fruchteis, Sorbet, Wassereis), wie die Constraints {disjoint, complete} wirken.",
+          "loesung": "Wenn die Vererbung von der Basisklasse 'Speiseeis' auf die vier Unterklassen als `{disjoint, complete}` definiert ist, bedeutet dies:\n- disjoint (disjunkt): Ein konkretes Eis kann nicht gleichzeitig zwei Kategorien angehören (z. B. kann es nicht zugleich Fruchteis und Milcheis sein).\n- complete (vollständig): Jedes Eis auf der Welt muss sich in mindestens eine dieser vier Kategorien einordnen lassen. Es gibt kein Speiseeis außerhalb dieser Klassifizierung.",
+          "stolpersteine": "Verwechslung der Begriffe: complete bedeutet Vollständigkeit der Unterklassen (keine Reste), disjoint bedeutet Überschneidungsfreiheit.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "klassendiagramm",
+            "constraints"
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "Objektorientierung – Komposition, Aggregation und Assoziation",
+      "guidelines": {
+        "das_problem": "Softwareobjekte müssen miteinander interagieren, um komplexe Aufgaben zu lösen. Ohne strukturierte Modellierung von Beziehungen (Assoziationen, Aggregationen, Kompositionen) entstehen unübersichtliche Abhängigkeiten und Speicherlecks durch unklare Objektlebenszyklen.",
+        "die_loesung": "Nutzung differenzierter UML-Beziehungen. Die Assoziation als allgemeine Verbindung, die Aggregation als schwache Teile-Ganzes-Beziehung (Teile existieren unabhängig) und die Komposition als starke Teile-Ganzes-Beziehung (existenzabhängige Teile, erzeugt/zerstört durch das Ganze)."
+      },
+      "ai_instructions": [
+        "Stelle sicher, dass der Benutzer Komposition und Aggregation präzise voneinander abgrenzen kann, insbesondere bezüglich der Existenzabhängigkeit und Erzeugungs-/Zerstörungsverantwortung.",
+        "Erkläre die Notation und Semantik von Multiplizitäten, Rollenbezeichnern, Navigierbarkeit, Assoziationsklassen und Qualifiers in UML-Diagrammen.",
+        "Vermittle das Konzept von Abhängigkeiten (Dependencies/<<use>>) und deren Abgrenzung zu permanenten Assoziationen.",
+        "Erkläre die fortgeschrittenen Constraints bei Assoziationen: {xor}, {subsets} und {ordered}.",
+        "Stelle sicher, dass der Benutzer Assoziationsklassen und Qualifiers korrekt zeichnet und im Code instanziiert."
+      ],
+      "concepts": [
+        {
+          "begriff": "Assoziation (UML)",
+          "definition": "Die allgemeinste Beziehung zwischen Klassen, dargestellt als Linie. Beschreibt, dass Instanzen miteinander kommunizieren können. Kann Multiplizitäten, Rollenbezeichnungen und Richtungen (Navigierbarkeit) besitzen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Assoziationsklasse",
+          "definition": "Eine Klasse, die einer Assoziation zugeordnet ist. Sie wird verwendet, wenn Eigenschaften oder Beziehungen nicht eindeutig einer der beteiligten Klassen zugewiesen werden können (z.B. 'Ranking' oder 'seit'-Datum bei einer Vereinsmitgliedschaft).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Qualifier",
+          "definition": "Ein UML-Element, das an einem Assoziationsende platziert wird. Er partitioniert die menge der assoziierten Objekte und ermöglicht den gezielten Zugriff (vergleichbar mit einem Schlüssel in einer Map/Dictionary).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Komposition (UML)",
+          "definition": "Starke Teile-Ganzes-Beziehung (gefüllte Raute). Teile sind existenzabhängig vom Ganzen und können nicht zu mehreren Ganzen gehören. Das Ganze verantwortet die Erzeugung und Zerstörung der Teile. Multiplizität auf Seite des Ganzen ist stets 1.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Aggregation (UML)",
+          "definition": "Schwache Teile-Ganzes-Beziehung (leere Raute). Teile sind existenzunabhängig und können ohne das Ganze existieren oder an mehreren Aggregaten beteiligt sein. Das Aggregat agiert oft als Stellvertreter.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Abhängigkeit (Dependency / <<use>>)",
+          "definition": "Eine temporäre Beziehung (gestrichelter Pfeil). Zeigt an, dass eine Klasse eine andere temporär nutzt (z. B. als Methodenparameter oder lokales Objekt), ohne eine dauerhafte Assoziation (Instanzvariable) zu halten.",
+          "beispiel_code": "public int leistungsprognose(Date datum) {\n    // Temporäre Nutzung von Date; Dependency <<use>> auf Date\n}"
+        },
+        {
+          "begriff": "XOR Constraint (UML)",
+          "definition": "Ein Constraint zwischen zwei oder mehr Assoziationen, dargestellt durch eine gestrichelte Linie mit der Aufschrift `{xor}`. Es besagt, dass eine Instanz der Quellklasse zu einem Zeitpunkt nur an genau einer der betroffenen Assoziationen teilnehmen darf.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Subset Constraint (UML)",
+          "definition": "Ein Constraint zwischen zwei Assoziationen, dargestellt als `{subsets <assoziations_name>}`. Es besagt, dass die Menge der über diese Assoziation verknüpften Objekte eine Teilmenge der Objekte der anderen Assoziation sein muss (z. B. 'Betreuer' ist eine Teilmenge der 'Projektmitarbeiter').",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Ordered Constraint (UML)",
+          "definition": "Constraint, das vorgibt, dass die verknüpften Objekte an einem Assoziationsende in einer festen, definierten Reihenfolge vorliegen müssen (z. B. sortierte Listen), dargestellt durch `{ordered}`.",
+          "beispiel_code": "private List<Mitglied> mitglieder = new ArrayList<>(); // Die Reihenfolge der Liste ist relevant"
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welche Aussage beschreibt den Unterschied zwischen einer Aggregation und einer Komposition in UML korrekt?\n\nA) Bei der Aggregation können Teile nicht ohne das Ganze existieren, bei der Komposition schon.\nB) Die Komposition ist eine exklusive Besitzbeziehung mit Existenzabhängigkeit (Teil stirbt mit dem Ganzen); bei der Aggregation können Teile unabhängig existieren.\nC) Aggregations-Teile werden immer zur Compilezeit erzeugt, Kompositions-Teile zur Laufzeit.\nD) Komposition wird durch eine leere Raute dargestellt, Aggregation durch eine gefüllte Raute.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Bei der Komposition (gefüllte Raute) liegt eine starke Existenzabhängigkeit vor. Das Ganze steuert den Lebenszyklus der Teile. Bei der Aggregation (leere Raute) handelt es sich um eine lose Kopplung; die Teile existieren unabhängig weiter, wenn das Aggregat zerstört wird (z. B. ein Buch im Bücherregal).",
+          "stolpersteine": "Verwechslung der Rauten (gefüllt = Komposition/stark, leer = Aggregation/schwach) und Missinterpretation der Lebenszyklus-Verantwortlichkeiten.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "objektorientierung",
+            "beziehungen",
+            "komposition"
+          ]
+        },
+        {
+          "aufgabenstellung": "Zeichnen Sie ein UML-Klassendiagramm für folgendes Szenario:\nEin Hotel hat Zimmer. Gäste können Zimmer reservieren. Für jede Reservierung wird der Zeitraum (von, bis) festgehalten. Ein Gast kann mehrere Reservierungen haben. Um die Suche nach Zimmern zu beschleunigen, wird an der Klasse Hotel ein Qualifier 'zimmerNummer' verwendet.",
+          "loesung": "Das Diagramm enthält:\n1. Klassen `Hotel`, `Zimmer` und `Gast`.\n2. Eine Assoziation zwischen `Hotel` und `Zimmer`. Am Hotel-Ende ist ein Qualifier-Kästchen mit dem Attribut `zimmerNummer: int` angebracht. Am Zimmer-Ende ist die Multiplizität `0..1` (da eine Zimmernummer in einem Hotel eindeutig ein Zimmer bestimmt), am Hotel-Ende `1`.\n3. Eine Assoziation zwischen `Gast` und `Zimmer` mit der Assoziationsklasse `Reservierung`, welche die Attribute `von: Date` und `bis: Date` enthält.",
+          "stolpersteine": "Falsche Platzierung des Qualifiers: Er gehört an die Quellklasse (Hotel), die den Index hält, nicht an die Zielklasse. Falsches Zeichnen der Assoziationsklasse (sie wird mit einer gestrichelten Linie an die Assoziationslinie gehängt, nicht direkt verbunden).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "klassendiagramm",
+            "qualifier",
+            "assoziationsklasse"
+          ]
+        }
+      ]
+    },
+    "6": {
+      "title": "Requirements",
+      "guidelines": {
+        "das_problem": "Das Entwickeln von Software ohne klares Problemverständnis führt zum Scheitern von Projekten, da falsche Funktionalitäten implementiert, Risiken ignoriert und Aufwände unterschätzt werden. Subjektive nicht-funktionale Anforderungen lassen sich ohne konkrete Kriterien nicht bewerten.",
+        "die_loesung": "Ein systematisches Anforderungsmanagement in Phase I (Evaluierung). Erfassung funktionaler Anforderungen (Systemfunktionen) und nicht-funktionaler Anforderungen (Qualitätseigenschaften), die über Metriken objektivierbar gemacht werden. Strukturierung der Anforderungen in Use Cases."
+      },
+      "ai_instructions": [
+        "Grenze funktionale Anforderungen, nicht-funktionale Anforderungen und technische Randbedingungen (Constraints) sauber voneinander ab.",
+        "Stelle sicher, dass der Benutzer die Bedeutung von Metriken zur Bewertung nicht-funktionaler Anforderungen versteht.",
+        "Erkläre die Arbeitsschritte im Detailprozess 'Aufgabe verstehen' nach Larman (Plan, Report, Requirements, Use Cases, Analysemodell, Systemarchitektur, Wiki)."
+      ],
+      "concepts": [
+        {
+          "begriff": "Funktionale Anforderungen",
+          "definition": "Beschreiben konkrete Systemfunktionen, Dienste oder Berechnungen, die das System ausführen können muss (z. B. 'System berechnet Mitgliedsbeitrag automatisch').",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Nicht-funktionale Anforderungen (NFA)",
+          "definition": "Definieren qualitative Eigenschaften, Einschränkungen oder Kriterien des Systems (z. B. Performance, Zuverlässigkeit, Benutzbarkeit, Sicherheit).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Technische Randbedingungen (Constraints)",
+          "definition": "Vorgaben, die den Lösungsraum einschränken (z. B. einzusetzende Programmiersprachen, Betriebssystemkompatibilität, Datenbanken oder Protokolle wie OAuth 2.0).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Metrik",
+          "definition": "Messbare und objektive Kriterien (z. B. Antwortzeit in Sekunden, Ausfallrate in Prozent), um NFAs bewertbar und überprüfbar zu machen und deren Subjektivität aufzuheben.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Aufgabe verstehen (Larman)",
+          "definition": "7-Schritte-Vorprojekt: 1. Vorläufiger Plan, 2. Erster Report (Motivation/Ziel), 3. Zentrale Requirements (Lastenheft), 4. Use Cases, 5. Erstes Analysemodell, 6. Erste Systemarchitektur, 7. Plan verfeinern (Meilensteine/Iterationen). Begleitet von einem Wiki.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Iterations-Erfolgsfaktoren",
+          "definition": "Risiken, die den Erfolg einer Iteration gefährden: Einführung neuer Technologien, Personalprobleme/Mangel an Experten, hoher Koordinationsaufwand im Team und Unterschätzen der Architektur-Komplexität.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welche der folgenden Anforderungen stellt eine nicht-funktionale Anforderung dar?\n\nA) Das System muss Benutzer authentifizieren können.\nB) Die Authentifizierung muss mit OAuth 2.0 erfolgen.\nC) Die Authentifizierung darf maximal 5 Sekunden dauern.\nD) Die Authentifizierung muss in der Datenbank gespeichert werden.",
+          "loesung": "Richtige Antwort: C\n\nErklärung: NFAs beschreiben Qualitätseigenschaften. Eine Antwortzeit von 'maximal 5 Sekunden' is ein messbares Qualitätskriterium. A ist eine funktionale Anforderung (was das System tut), B und D sind technische Randbedingungen (Constraints für Protokoll und Speicherung).",
+          "stolpersteine": "Verwechslung von NFAs (Qualitätseigenschaften) mit technischen Randbedingungen (Constraints/Umsetzungsvorgaben).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "requirements",
+            "nfa"
+          ]
+        },
+        {
+          "aufgabenstellung": "Warum sind Metriken bei nicht-funktionalen Anforderungen (NFA) wichtig?\n\nA) Weil sie die subjektive Natur nicht-funktionaler Anforderungen messbar und bewertbar machen.\nB) Weil sie die Entwicklungskosten reduzieren.\nC) Weil sie die funktionalen Anforderungen ersetzen.\nD) Weil sie die Architektur des Systems automatisch generieren.",
+          "loesung": "Richtige Antwort: A\n\nErklärung: Nicht-funktionale Anforderungen wie 'Benutzerfreundlichkeit' oder 'hohe Performance' sind subjektiv und vage. Erst durch Metriken (z. B. 'Kontrastverhältnis von 4,5:1' oder '99,9% Verfügbarkeit') werden sie objektiv testbar und vertraglich überprüfbar.",
+          "stolpersteine": "Die falsche Vorstellung, Metriken würden Kosten senken oder automatisch Code generieren.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "requirements",
+            "metriken"
+          ]
+        }
+      ]
+    },
+    "7": {
+      "title": "Use Cases erstellen und beschreiben",
+      "guidelines": {
+        "das_problem": "Requirements liegen oft nur als unstrukturierte, vage Wunschlisten vor. Ohne systematische Aufbereitung entstehen Missverständnisse über den Systemumfang, und es fehlen klare Abgrenzungen zur Umgebung (Wer macht was?).",
+        "die_loesung": "Einsatz von Use Cases (Anwendungsfällen) zur Beschreibung zusammenhängender Interaktionseinheiten aus Sicht der Akteure. Die Modellierung erfolgt über Use-Case-Diagramme mit Akteuren, Systemgrenzen und gerichteten Beziehungen (<<include>>, <<extend>>, Generalisierung)."
+      },
+      "ai_instructions": [
+        "Stelle sicher, dass der Benutzer einen Use Case korrekt von einer einzelnen Aktion abgrenzen kann (ein Use Case ist eine fachlich sinnvolle Einheit, kein einzelner Schritt wie 'Mail senden').",
+        "Erkläre die Beziehungen zwischen Use Cases in UML: <<include>> (Abläufe wiederverwenden), <<extend>> (optionale Erweiterung am Extension Point) und Generalisierung (Spezialfall).",
+        "Erkläre den Unterschied zwischen include- und extend-Beziehungen und die Definition eines Extension Points.",
+        "Leite den Benutzer an, die Vererbung (Generalisierung) zwischen Use Cases richtig anzuwenden."
+      ],
+      "concepts": [
+        {
+          "begriff": "Use Case (Anwendungsfall)",
+          "definition": "Eine zusammenhängende Einheit von Aktionen aus Benutzersicht, die einen fachlich sinnvollen Ablauf im Anwendungsumfeld beschreibt. Er bildet die Basis für Analyse, Design, Implementierung und Tests.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Akteur (UML)",
+          "definition": "Eine externe Entität (Mensch, Rolle oder Fremdsystem), die außerhalb des betrachteten Systems liegt, aber an der Durchführung eines Use Cases beteiligt ist oder von dessen Ergebnissen betroffen ist.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Systemgrenze (UML)",
+          "definition": "Die visuelle Abgrenzung im Use-Case-Diagramm, die festlegt, welche Funktionalitäten Teil des zu entwickelnden Systems sind (innerhalb der Systemgrenze) und welche extern liegen (Akteure).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "<<include>> (Beziehung)",
+          "definition": "Einordnung eines Use Cases in einen anderen. Der eingebundene Use Case wird zwingend als Ganzes im Ablauf des aufrufenden Use Cases ausgeführt. Dient der Vermeidung von Redundanz.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "<<extend>> (Beziehung)",
+          "definition": "Eine optionale Erweiterung eines Basis-Use-Cases. Der erweiternde Use Case wird nur dann ausgeführt, wenn eine definierte Bedingung an einem bestimmten Extension Point erfüllt ist.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Generalisierung (Use Case)",
+          "definition": "Eine Beziehung, bei der ein spezialisierter Use Case das Verhalten und die Beziehungen eines allgemeineren Use Cases erbt und ggf. erweitert oder überschreibt.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Use Case Generalisierung",
+          "definition": "Eine Vererbungsbeziehung zwischen Use Cases. Sie wird verwendet, wenn ein Use Case eine spezialisierte Variante eines allgemeineren Use Cases darstellt (z. B. 'Bezahlen' als Oberklasse und 'Bezahlen mit PayPal' / 'Bezahlen mit Kreditkarte' als Unterklassen).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Extension Point (Erweiterungspunkt)",
+          "definition": "Ein benannter Punkt im Ablauf eines Use Cases, an dem das Verhalten eines erweiternden Use Cases (via <<extend>>) unter einer bestimmten Bedingung eingefügt werden kann. Er wird in der Use-Case-Ellipse im unteren Abteil deklariert.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welche der folgenden Aussagen beschreibt korrekt die Rolle von Use Cases im Software-Engineering-Prozess?\n\nA) Use Cases dienen ausschließlich der Dokumentation von nicht-funktionalen Anforderungen und haben keine Bedeutung für die Architektur.\nB) Use Cases sind nur für die Testphase relevant, da sie die Grundlage für Testfälle bilden.\nC) Use Cases helfen bei der Strukturierung und Organisation des Projekts, indem sie Anforderungen in zentrale Abläufe überführen und die Grundlage für Analyse, Architektur, Design und Tests bilden.\nD) Use Cases ersetzen klassische Anforderungsdokumente wie Lasten- und Pflichtenhefte vollständig.",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Use Cases bilden die methodische Grundlage für den gesamten Entwicklungsprozess. Sie bündeln Anforderungen in didaktisch und technisch nachvollziehbare Einheiten, die sowohl für das Design (UML) als auch für die Implementierung und Testfallerstellung verwendet werden.",
+          "stolpersteine": "Verwechslung von Use Cases mit reinen Testartefakten oder der Annahme, sie würden alle sonstigen Anforderungsdokumente ersetzen.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "use_cases",
+            "prozess"
+          ]
+        },
+        {
+          "aufgabenstellung": "Ein Use Case 'Buch bestellen' soll um den Use Case 'Zahlung prüfen' erweitert werden. Welche Beziehung ist zu verwenden, wenn die Prüfung immer durchgeführt werden muss?\n\nA) Generalisierung\nB) <<extend>>\nC) <<include>>\nD) Assoziation ohne Stereotyp",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Wenn ein Anwendungsfall zwingend ein anderes Verhalten erfordert, wird dies über eine <<include>>-Beziehung modelliert. Ein <<extend>> wird verwendet, wenn das Verhalten optional bzw. bedingt ist.",
+          "stolpersteine": "Falsche Richtung bei extend (extend zeigt vom optionalen Zweig zum Basis-Use-Case) und Verwechslung von Pflicht (include) und Option (extend).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "use_cases",
+            "beziehungen"
+          ]
+        },
+        {
+          "aufgabenstellung": "Wann spricht man bei Use Cases von einer Extend-Beziehung und wann von einer Include-Beziehung? Was versteht man unter einem Extension Point? (6 Punkte)",
+          "loesung": "- Include-Beziehung (2 P): Wird verwendet, wenn die Aktionen eines Use Cases (B) im Wesentlichen komplett in einen anderen Use Case (A) eingebunden werden (Wiederverwendung von Abläufen). Der aufgerufene Use Case ist zwingend erforderlich für den Ablauf des aufrufenden Use Cases.\n- Extend-Beziehung (2 P): Beschreibt eine optionale Erweiterung eines Basis-Use-Cases. Der erweiternde Use Case wird nur unter bestimmten Bedingungen ausgeführt.\n- Extension Point (2 P): Der konkret definierte Punkt im Ablauf des Basis-Use-Cases, an dem die Erweiterung stattfinden darf (z. B. 'nach Eingabe der PIN').",
+          "stolpersteine": "Verwechslung der Pfeilrichtungen: Bei <<include>> zeigt der Pfeil vom Basis-Use-Case auf den inkludierten Use Case (A -> B). Bei <<extend>> zeigt der Pfeil vom erweiternden Use Case auf den Basis-Use-Case (B -> A).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "use_cases",
+            "include",
+            "extend",
+            "extension_point"
+          ]
+        }
+      ]
+    },
+    "8": {
+      "title": "Use Cases verstehen",
+      "guidelines": {
+        "das_problem": "Use Cases geben nur den groben Interaktionsrahmen vor. Ohne detaillierte Untersuchung der verschiedenen Ablaufszenarien bleibt unklar, wie das System in konkreten Situationen reagiert und wie die Klassen zur Laufzeit interagieren.",
+        "die_loesung": "Verfeinerung von Use Cases über Szenarien (Szenariobeschreibungen). Komplexe Abläufe und logische Zusammenhänge werden mithilfe von Aktivitätsdiagrammen (Aktionen, Transitionen, Verzweigungen, Split/Join, Objektknoten, Parameter/Pins, Swimlanes) visualisiert, um Klassen und Operationen präzise zu spezifizieren."
+      },
+      "ai_instructions": [
+        "Stelle sicher, dass der Benutzer den Unterschied zwischen High-Level-Use-Cases (grober Überblick) und erweiterten Use-Cases (detaillierte Szenarien) versteht.",
+        "Erkläre das Konzept von Szenarien als konkreten Ausprägungen (Instanzen) eines Use Cases.",
+        "Vermittle den Nutzen von Aktivitätsdiagrammen (Activity Diagrams) in UML zur Modellierung von Workflows, Algorithmen und Datenflüssen.",
+        "Erkläre das Token-Tracing in Aktivitätsdiagrammen mit parallelen (Fork/Join) und alternativen (Decision/Merge) Flüssen.",
+        "Erkläre den Unterschied zwischen Action- und State-gesteuerten Übergängen."
+      ],
+      "concepts": [
+        {
+          "begriff": "Szenario",
+          "definition": "Eine konkrete Instanz oder Ausprägung eines Use Cases, die eine bestimmte Interaktionssequenz zwischen Akteuren und dem System beschreibt. Komplexe Use Cases benötigen meist mehrere Szenarien (z. B. Erfolgsfall vs. Fehlerfall).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Aktivitätsdiagramm (UML)",
+          "definition": "Ein UML-Verhaltensdiagramm zur Darstellung von Abläufen und Workflows als zusammenhängende Aktionen. Ein Übergang (Transition) erfolgt automatisch nach Abschluss einer Aktion (im Gegensatz zu zustandsgesteuerten Transitionen).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "High-Level Use Case",
+          "definition": "Ein Anwendungsfall, der in wenigen Sätzen den zentralen Ablauf beschreibt. Dient in der frühen Phase zum schnellen Aufbau eines gemeinsamen Problemverständnisses.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Erweiterter Use Case",
+          "definition": "Detaillierte textuelle Beschreibung eines Anwendungsfalls unter Berücksichtigung von Akteuren, Vorbedingungen, Nachbedingungen, Hauptszenario (Erfolgsablauf) und Alternativszenarien (Ausnahmen).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Objektknoten (UML)",
+          "definition": "Elemente in Aktivitätsdiagrammen zur Modellierung des Datenflusses. Sie fungieren als Container für Objekte eines Typs und können Zustände definieren (z. B. [Zustand]).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Swimlanes (Aktivitätsdiagramm)",
+          "definition": "Organisatorische oder architektonische Verantwortungsbereiche (Spalten/Zeilen) in Aktivitätsdiagrammen, denen Aktionen eindeutig zugeordnet werden (z. B. Akteure, Subsysteme).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Swimlanes (Aktivitätsdiagramm)",
+          "definition": "Verantwortungsbereiche im Aktivitätsdiagramm (z. B. Abteilungen, Personen oder Subsysteme), dargestellt als vertikale oder horizontale Bahnen. Jede Aktion wird in genau eine Swimlane platziert, um die Zuständigkeit zu modellieren.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Fork & Join Node (UML)",
+          "definition": "Fork (Gabelung) parallelisiert den Kontrollfluss, indem ein eingehender Token in mehrere ausgehende Token dupliziert wird. Join (Synchronisation) führt mehrere parallele Flüsse wieder zusammen; er gibt erst dann einen Token weiter, wenn auf allen eingehenden Pfaden ein Token eingetroffen ist.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Pins & Object Nodes (UML)",
+          "definition": "Pins stellen die Ein- und Ausgänge von Aktionen für Daten bzw. Objekte dar (kleine Quadrate an den Rändern einer Aktion). Object Nodes repräsentieren Objekte im Kontrollfluss, die durch Aktionen erzeugt oder konsumiert werden.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Was unterscheidet ein Aktivitätsdiagramm (Activity Diagram) primär von einem Zustandsdiagramm (State Machine) in UML?\n\nA) Aktivitätsdiagramme stellen keine Verzweigungen dar.\nB) Aktivitätsdiagramme sind Strukturdiagramme, Zustandsdiagramme sind Verhaltensdiagramme.\nC) In Aktivitätsdiagrammen werden Transitionen durch den Abschluss einer Aktion (Activity) ausgelöst, während in Zustandsdiagrammen explizite Ereignisse (Events) Zustandsübergänge triggern.\nD) Zustandsdiagramme dürfen keine Schleifen enthalten.",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Ein Aktivitätsdiagramm zeigt den Kontrollfluss von Aktion zu Aktion; Übergänge finden statt, sobald eine Aktion abgeschlossen ist. Ein Zustandsdiagramm zeigt Zustände eines Objekts und wechselt diese typischerweise als Reaktion auf asynchrone, externe Ereignisse.",
+          "stolpersteine": "Verwechslung des Begriffs 'Zustand' (State) mit einer 'Aktivität' (Activity). Beide Diagramme stellen dynamisches Verhalten dar.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "uml",
+            "aktivitaetsdiagramm"
+          ]
+        },
+        {
+          "aufgabenstellung": "Gegeben sei ein Aktivitätsdiagramm mit 5 Aktionen (A bis E) und zwei Swimlanes:\nDer Kontrollfluss beginnt mit Aktion A in Swimlane 1. Danach teilt sich der Fluss an einer Fork-Node in zwei parallele Pfade: Pfad 1 führt zu Aktion B in Swimlane 1, Pfad 2 führt zu Aktion C in Swimlane 2. Beide Pfade werden an einer Join-Node zusammengeführt, gefolgt von Aktion D in Swimlane 2. Nach D führt eine Decision-Node bei (cond=true) zu Aktion E, ansonsten endet der Fluss. Beschreiben Sie das Token-Tracing.",
+          "loesung": "1. Der Fluss startet, ein Token wird an Aktion A (Swimlane 1) übergeben. A wird ausgeführt.\n2. Der Token verlässt A und erreicht die Fork-Node. Die Fork-Node dupliziert den Token. Jetzt gibt es zwei parallele Token:\n   - Token 1 geht zu Aktion B (Swimlane 1).\n   - Token 2 geht zu Aktion C (Swimlane 2).\n3. B und C werden unabhängig voneinander ausgeführt.\n4. Nach Abschluss von B kommt Token 1 an der Join-Node an und wartet dort, bis auch C abgeschlossen ist (Token 2 kommt an).\n5. Erst wenn beide Token am Join vorliegen, verschmilzt der Join sie zu einem einzigen Token und gibt ihn an Aktion D (Swimlane 2) weiter.\n6. D wird ausgeführt. Danach entscheidet die Decision-Node:\n   - Wenn cond=true: Token geht zu E, E wird ausgeführt, danach Endknoten.\n   - Wenn cond=false: Der Fluss endet direkt.",
+          "stolpersteine": "Vergessen, dass Join blockiert, bis *alle* eingehenden Pfade einen Token geliefert haben. Verwechslung von Fork/Join (Parallelität, dicker Balken) mit Decision/Merge (Alternative, Raute).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "aktivitaetsdiagramm",
+            "token_tracing",
+            "fork_join"
+          ]
+        }
+      ]
+    },
+    "9": {
+      "title": "Use Cases interpretieren",
+      "guidelines": {
+        "das_problem": "Use Cases und Anforderungen beschreiben fachliche Abläufe, bieten aber keine direkte Systemstruktur. Ohne systematische Interpretation bleibt der Übergang zum Klassendesign und zu konkreten Systemschnittstellen unklar.",
+        "die_loesung": "Identifikation von Konzepten/Klassen der Problemdomäne (z. B. via Checkliste von Kategorien oder Noun-Extraction aus Beschreibungen). Entwicklung von System-Sequenz-Diagrammen (SSD) zur Ermittlung von Systemereignissen und Operationen, inklusive detaillierter Beschreibungen (Name, Vor-/Nachbedingungen, Ausnahmen)."
+      },
+      "ai_instructions": [
+        "Leite den Benutzer an, Klassen der Problemdomäne über Substantiv-Analyse (Noun Extraction) und Checklisten (Dinge, Rollen, Prozesse, Ereignisse) zu identifizieren.",
+        "Erkläre die Faustregel: Dinge, die man anfassen kann und keine reinen Werte (Texte, Zahlen) sind, sind Konzepte/Klassen, keine Attribute.",
+        "Vermittle den Aufbau von System-Sequenz-Diagrammen (SSD) mit Lifelines, Activation Bars und UML-Fragmenten (loop, alt, opt).",
+        "Leite den Benutzer an, System-Operationen und deren Parameter/Rückgabetypen aus System-Sequenzdiagrammen (SSD) oder Aktivitätsdiagrammen abzuleiten.",
+        "Vermittle das Konzept von System-Operationen als Transaktionsgrenzen."
+      ],
+      "concepts": [
+        {
+          "begriff": "Noun Extraction (Substantivanalyse)",
+          "definition": "Eine Technik zum Auffinden von Domänenkonzepten, bei der alle Substantive in Use-Case-Beschreibungen gesammelt und als potenzielle Klassenkandidaten bewertet werden.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Konzept-Kategorien-Checkliste",
+          "definition": "Eine Liste typischer Kategorien zur Identifikation von Objekten (z. B. physische Dinge, Rollen, Organisationen, Prozesse, Ereignisse), um die Noun-Extraction abzusichern.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "System-Sequenz-Diagramm (SSD)",
+          "definition": "Ein UML-Interaktionsdiagramm, das für ein Szenario eines Use Cases die Interaktionen zwischen externen Akteuren und dem System als Blackbox darstellt, um Systemoperationen zu identifizieren.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "UML-Fragmente (alt, opt, loop)",
+          "definition": "Strukturelemente in Sequenzdiagrammen zur Modellierung von Kontrollflüssen: 'alt' für Alternativen (if-else), 'opt' für optionale Abläufe (if) und 'loop' für Iterationen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Systemoperation (Schnittstelle)",
+          "definition": "Eine vom System bereitgestellte Schnittstellenfunktion, die durch ein externes Systemereignis (Trigger) eines Akteurs ausgelöst wird.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "System-Operation",
+          "definition": "Eine Operation, die das System als Ganzes an seiner Außengrenze (Schnittstelle) anbietet. Sie wird durch eingehende Nachrichten in System-Sequenzdiagrammen (SSD) identifiziert. Sie kapselt einen logischen Arbeitsschritt und besitzt oft Vor- und Nachbedingungen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Schnittstellen-Ableitung (UML)",
+          "definition": "Prozess, bei dem aus den Interaktionen an der Systemgrenze (SSD oder Übergänge zwischen Komponenten im Aktivitätsdiagramm) die konkrete Programmierschnittstelle (Methodensignaturen) abgeleitet wird.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "In welcher Phase des Software-Entwicklungsprozesses wird ein System-Sequenzdiagramm (SSD) typischerweise erstellt und welchen Hauptzweck erfüllt es?\n\nA) In der Analysephase, um die Schnittstellen eines Use Cases zu identifizieren.\nB) In der Designphase, um die Implementierungsdetails einer Klasse zu spezifizieren.\nC) In der Analysephase, um die statische Struktur des Systems zu modellieren.\nD) In der Testphase, um die Korrektheit der Klassenimplementierung zu verifizieren.",
+          "loesung": "Richtige Antwort: A\n\nErklärung: SSDs zeigen das System als Blackbox und stellen die Interaktionen mit externen Akteuren dar. Sie dienen in der Analysephase dazu, die notwendigen Systemoperationen (Schnittstellen) zu bestimmen, bevor internes Klassendesign stattfindet.",
+          "stolpersteine": "Verwechslung von SSDs (Blackbox, System-Schnittstellen) mit normalen Sequenzdiagrammen (Whitebox, interne Objekt-Interaktionen) oder Klassendiagrammen.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "analyse",
+            "ssd"
+          ]
+        },
+        {
+          "aufgabenstellung": "Ein Aktivitätsdiagramm zeigt den Austausch zwischen Akteur 'Kunde' und System. Der Kunde wählt 'ISBN erfassen', woraufhin das System 'Buch suchen' ausführt. Dann wählt der Kunde 'Bestätigen' und das System führt 'Buch inventarisieren' aus. Welche Systemoperationen müssen für die Schnittstelle des Systems definiert werden?",
+          "loesung": "Es müssen zwei Systemoperationen deklariert werden:\n1. `suchen(isbn: String): Buch` (wird durch 'ISBN erfassen' getriggert).\n2. `inventarisieren(buchId: int): void` (wird durch 'Bestätigen' getriggert).\n\nErklärung: Jedes Mal, wenn der Kontrollfluss die Systemgrenze vom Akteur zum System überschreitet, wird eine Operation aufgerufen. Die Aktionen innerhalb des Systems beschreiben die Zuständigkeit der jeweiligen Operation.",
+          "stolpersteine": "Das Erstellen von Operationen für Aktionen des Akteurs (z. B. `isbnErfassen()`). Die Schnittstelle enthält nur Operationen, die das *System* ausführt.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "system_operationen",
+            "schnittstelle",
+            "aktivitaetsdiagramm"
+          ]
+        }
+      ]
+    },
+    "10": {
+      "title": "Von der Analyse zur Systemarchitektur",
+      "guidelines": {
+        "das_problem": "Ein ungeordnetes System ohne Schichteneinteilung leidet unter hoher Kopplung und mangelnder Wartbarkeit. Wenn Präsentationsschicht, Logikschicht und Persistenzschicht stark miteinander verwoben sind, führt dies zu Performanceproblemen, Sicherheitslücken und starr gekoppelten Komponenten.",
+        "die_loesung": "Einführung eines Drei-Schichtenmodells (Präsentation, Logik/Business, Persistenz/Datenzugriff) mit einer klaren Richtung der Abhängigkeiten (höhere Schichten nutzen tiefere, niemals umgekehrt). Modellierung der physischen Komponenten über Komponentendiagramme (mit Ports und Assembly/Delegation Connectors) und Deployment-Diagramme."
+      },
+      "ai_instructions": [
+        "Erkläre die Architekturprinzipien des Drei-Schichtenmodells und die strikte Trennung von Benutzeroberfläche und Businesslogik (UI triggers, logic executes).",
+        "Stelle sicher, dass der Benutzer die Konzepte Interoperabilität, Portabilität und Erweiterbarkeit verteilter Systeme kennt.",
+        "Vermittle den Aufbau von UML-Komponentendiagrammen (Components, Ports, Assembly/Delegation Connectors) und UML-Deployment-Diagrammen (Devices, Deployed Artifacts).",
+        "Erkläre den Unterschied zwischen Assembly Connector und Delegation Connector in Komponentendiagrammen.",
+        "Stelle sicher, dass der Benutzer das Drei-Schichten-Modell versteht und die Abhängigkeiten strikt einhält."
+      ],
+      "concepts": [
+        {
+          "begriff": "Drei-Schichtenmodell",
+          "definition": "Die Aufteilung einer Anwendung in Präsentationsschicht (Zugriff über Fenster/Webseiten), Logikschicht (Businesslogik) und Persistenzschicht (Datenbankanbindung, Drittsysteme).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Interoperabilität",
+          "definition": "Die Fähigkeit von Systemen, über vordefinierte Schnittstellen effizient zusammenzuarbeiten.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Portabilität",
+          "definition": "Die Möglichkeit, eine Anwendung auf unterschiedlichen Plattformen auszuführen, ohne den Quellcode ändern zu müssen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Komponentendiagramm (UML)",
+          "definition": "Zeigt modulare Einheiten (Komponenten) und deren Verbindungen. Komponenten sind unabhängig von konkreten Clients und stellen/benötigen Schnittstellen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Port (UML)",
+          "definition": "Ein dedizierter Interaktionspunkt einer Komponente mit der Umgebung, definiert durch angebotene und benötigte Interfaces.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Assembly Connector",
+          "definition": "Verbindet die bereitgestellte Schnittstelle (Lollipop-Notation) einer Komponente mit der benötigten Schnittstelle (Socket-Notation) einer anderen Komponente.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Delegation Connector",
+          "definition": "Verbindet die externe Schnittstelle (Port) einer Komponente mit den internen Sub-Komponenten, die diese realisieren.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Deployment-Diagramm (UML)",
+          "definition": "Visualisiert die physische Verteilung von Softwareartefakten auf Laufzeitknoten (Hardware, VMs, Server) und deren Kommunikationswege.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Assembly Connector",
+          "definition": "Verbindungsglied in Komponentendiagrammen, das eine bereitgestellte Schnittstelle (Lollipop-Notation) einer Komponente direkt mit einer benötigten Schnittstelle (Socket-Notation) einer anderen Komponente auf gleicher Hierarchieebene verbindet.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Delegation Connector",
+          "definition": "Verbindungsglied, das einen äußeren Port einer Komponente mit einem internen Teil (Subkomponente oder Klasse) verbindet. Er leitet Anrufe von außen nach innen weiter oder umgekehrt.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Drei-Schichten-Architektur",
+          "definition": "Klassisches Architekturmuster:\n1. Präsentationsschicht (Presentation): Interaktion mit dem Nutzer (UI).\n2. Logikschicht (Logic): Kapselt Geschäftsregeln und Anwendungslogik.\n3. Datenhaltungsschicht (Persistence): Verwaltet Datenhaltung und Persistenz.\nRegel: Aufrufe dürfen nur von oben nach unten erfolgen (Präsentation -> Logik -> Datenhaltung). Die unteren Schichten kennen die oberen nicht direkt.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welche der folgenden Aussagen beschreibt am präzisesten die Bedeutung von Systemgrenzen in der Softwarearchitektur?\n\nA) Systemgrenzen definieren ausschließlich die technische Schnittstelle zwischen Hardware und Software.\nB) Systemgrenzen bestimmen, welche Komponenten, Funktionen und Daten zum System gehören und welche externen Systeme oder Akteure außerhalb stehen.\nC) Systemgrenzen legen fest, welche externen Cloud-Services in das System integriert werden dürfen.\nD) Systemgrenzen dienen primär der Dokumentation und haben keinen direkten Einfluss auf die Implementierung.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Systemgrenzen legen fest, was Teil des Systems (Daten, Logik, Komponenten) ist und was außerhalb als externer Akteur (Mensch oder Fremdsystem) agiert. Dies ist kritisch für die Eingrenzung des Projekts und die Schnittstellengestaltung.",
+          "stolpersteine": "Einengung der Grenzen auf reine Hardware-Schnittstellen (A) oder Missachtung des Einflusses auf die Systemgestaltung (D).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "architektur",
+            "systemgrenze"
+          ]
+        },
+        {
+          "aufgabenstellung": "Welches der folgenden Ziele stellt KEIN primäres Entwurfsprinzip für offene verteilte Systeme dar?\n\nA) Interoperabilität\nB) Portabilität\nC) Zentralisierung aller Daten und Logik in einem Monolithen\nD) Erweiterbarkeit über offene Schnittstellen",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Verteilte Systeme streben nach Dezentralisierung und Modularität, um Skalierbarkeit und Fehlertoleranz zu gewährleisten. Monolithische Zentralisierung steht diesem Prinzip diametral entgegen.",
+          "stolpersteine": "Verwechslung von Dezentralisierung mit Unordnung oder Missinterpretation von Interoperabilität.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "architektur",
+            "verteilte_systeme"
+          ]
+        },
+        {
+          "aufgabenstellung": "Skizzieren Sie ein Komponentendiagramm zu folgender Beschreibung:\nEine Komponente A verfügt über zwei Ports B und C. Am Port B stellt sie die Interfaces D und E bereit. Am Port C benötigt sie das Interface F, welches von einer Komponente G am Port H bereitgestellt wird.",
+          "loesung": "Das Diagramm besteht aus:\n1. Einer Komponente `A` mit zwei quadratischen Ports `B` und `C` an den Rändern.\n2. Am Port `B` sind zwei Lollipops (Kreise) angebracht, beschriftet mit den bereitgestellten Schnittstellen (interfaces) `D` und `E`.\n3. Am Port `C` ist eine Halbschale (Socket) für das benötigte Interface `F` angebracht.\n4. Einer Komponente `G` mit einem Port `H` und einem Lollipop für `F`.\n5. Einem Assembly Connector (Zusammenführung von Lollipop und Halbschale) zwischen Port `C` (A) und Port `H` (G).",
+          "stolpersteine": "Verwechslung von Lollipop (bereitgestellt / provided) und Socket (benötigt / required). Falsche Darstellung von Ports (sie müssen als kleine Quadrate auf der Systemgrenze der Komponente gezeichnet werden).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "komponentendiagramm",
+            "ports",
+            "assembly"
+          ]
+        }
+      ]
+    },
+    "11": {
+      "title": "MVC-Architektur und das Observer-Muster",
+      "guidelines": {
+        "das_problem": "Wenn GUI-Elemente direkt auf der Geschäftslogik operieren oder Geschäftslogik-Klassen direkt GUI-Widgets manipulieren, bricht das Schichtenmodell zusammen. Die GUI wird unteilbar mit der Logik verschmolzen, was automatisiertes Testen und die Unterstützung mehrerer Benutzeroberflächen unmöglich macht.",
+        "die_loesung": "Einsatz des Model-View-Controller (MVC) Musters zur Entkopplung von Daten/Wissen (Model), Präsentation (View) und Steuerung (Controller). Die lose Kopplung und asynchrone Benachrichtigung bei Änderungen wird über das Observer-Muster (Subject/Observer) realisiert."
+      },
+      "ai_instructions": [
+        "Kläre die Rollenverteilung in MVC: Der Controller enthält keine Businesslogik, das Model enthält Daten und Logik.",
+        "Erkläre die Initialisierungsreihenfolge in MVC: 1. Model erzeugen, 2. Views erzeugen (registrieren sich beim Model als Observer und erzeugen ihren Controller), 3. Event-Schleife starten.",
+        "Vermittle die Funktionsweise des Observer-Musters (attach, detach, notify, update) zur Entkopplung von Model und View (Push-from-below).",
+        "Erkläre die genaue Initialisierungs-Reihenfolge einer MVC-Architektur.",
+        "Vermittle das Zusammenspiel zwischen Subject, Observer und Controller im Kontext von Events."
+      ],
+      "concepts": [
+        {
+          "begriff": "Model (MVC)",
+          "definition": "Das Modell verwaltet die Anwendungsdaten und das domänenspezifische Wissen (Geschäftsregeln). Es ist kein Monolith, sondern besteht aus Domänenobjekten und Services.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "View (MVC)",
+          "definition": "Visualisiert die Daten des Modells für den Benutzer und reagiert als Observer auf Änderungen des Modells.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Controller (MVC)",
+          "definition": "Empfängt Benutzereingaben von der View, interpretiert sie und stößt die entsprechenden Systemoperationen auf dem Modell an. Besitzt keine eigene Geschäftslogik.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Observer-Pattern (Beobachter-Muster)",
+          "definition": "Ein Verhaltensmuster, bei dem ein Subjekt (Subject) eine Liste von Beobachtern (Observer) verwaltet und diese bei Zustandsänderungen über eine einheitliche Schnittstelle (update) benachrichtigt.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Push-from-below",
+          "definition": "Ein Benachrichtigungsprinzip, bei dem die tiefere Schicht (Model) die höhere Schicht (View) über Änderungen benachrichtigt, ohne sie direkt zu kennen (durch Nutzung von Schnittstellen wie Observer).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "MVC-Initialisierungsreihenfolge",
+          "definition": "Der strukturierte Ablauf beim Starten einer MVC-Anwendung:\n1. Erzeugung des Modells (Model).\n2. Erzeugung der Views (und Controller).\n3. Views registrieren sich als Observer beim Modell (Subject), um über Zustandsänderungen benachrichtigt zu werden.\n4. Controller registrieren sich bei den Views für Benutzer-Events.\n5. Der Event-Loop wird gestartet.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welche Komponente im MVC-Pattern übernimmt typischerweise die Rolle des Subjekts im Observer-Muster?\n\nA) Die View\nB) Der Controller\nC) Das Model\nD) Die Zustandsmaschine",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Das Model verwaltet die Daten und den Zustand der Anwendung. Es fungiert als Subjekt und bietet Schnittstellen wie attach(Observer), um Views und Controller über Zustandsänderungen zu informieren, damit sich diese synchronisieren.",
+          "stolpersteine": "Falsche Zuweisung des Subjekts an den Controller (der Eingaben steuert, aber keine Daten verwaltet) oder an die View.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "mvc",
+            "observer"
+          ]
+        },
+        {
+          "aufgabenstellung": "Welche Methode gehört typischerweise NICHT zu den Schnittstellenoperationen des Subjekts im Observer-Muster?\n\nA) attach(Observer)\nB) detach(Observer)\nC) notify()\nD) handleEvent()",
+          "loesung": "Richtige Antwort: D\n\nErklärung: attach, detach und notify sind die typischen Operationen des Subjekts zur Verwaltung und Benachrichtigung von Beobachtern. handleEvent() ist eine Methode des Controllers zur Verarbeitung von Benutzeraktionen.",
+          "stolpersteine": "Verwechslung des Controller-Verhaltens (Eingabe) mit dem Subjekt-Verhalten (Zustandsänderung).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "observer",
+            "entwurfsmuster"
+          ]
+        },
+        {
+          "aufgabenstellung": "Skizzieren Sie die Initialisierungsreihenfolge einer MVC-Anwendung mithilfe eines Sequenzdiagramms. Welche Objekte werden in welcher Reihenfolge erzeugt und wer registriert sich bei wem?",
+          "loesung": "1. Der Client/Starter erzeugt das Model `m = new Model()`.\n2. Der Client erzeugt die View `v = new View(m)`. Im Konstruktor der View registriert sich die View beim Model als Observer: `m.attach(this)`.\n3. Der Client erzeugt den Controller `c = new Controller(m, v)`.\n4. Der Controller registriert sich bei der View für Benutzeraktionen (z. B. Button-Klicks).\n5. Die Anwendung ist bereit.",
+          "stolpersteine": "Die Annahme, der Controller erzeuge das Model. Das Model existiert unabhängig und wird in der Regel an View und Controller übergeben. Die View registriert sich beim Model als Observer, nicht umgekehrt.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "mvc",
+            "initialisierung",
+            "sequenzdiagramm"
+          ]
+        }
+      ]
+    },
+    "12": {
+      "title": "Protokoll-Automaten",
+      "guidelines": {
+        "das_problem": "Systeme geraten leicht in inkonsistente Zustände, wenn Systemoperationen in einer unzulässigen Reihenfolge aufgerufen werden (z. B. Daten bearbeiten ohne erfolgreichen Login). Wenn die Einhaltung dieser Reihenfolgen dezentral und implizit in der Logik verteilt ist, wird der Code unübersichtlich und fehleranfällig.",
+        "die_loesung": "Explizite Definition und Überwachung der zulässigen Operationen über einen Protokoll-Automaten (Zustandsmaschine). Die Verwaltung des Systemzustands wird in einer zentralen Klasse (z. B. `StateMachineImpl` als Subject) gekapselt, während Systemoperationen über Vor- und Nachbedingungen abgesichert werden."
+      },
+      "ai_instructions": [
+        "Erkläre den Unterschied zwischen Protokoll-Automaten (erlaubte Sequenzen von Systemoperationen) und klassischen Zustandsdiagrammen (alle Zustände).",
+        "Zeige auf, wie Zustände als Enums (z. B. in Interfaces) modelliert und über Facades überwacht werden (Vor- und Nachbedingungen abprüfen).",
+        "Vermittle den Aufbau komplexer Zustände (Compound States, History-Zustände, Parallelität, Synchronisierung) und die vordefinierten internen Übergänge (entry, exit, do, completion).",
+        "Erkläre komplexe Zustände wie zusammengesetzte Zustände, History-Zustände, Parallelität und Synchronisierung.",
+        "Stelle sicher, dass der Benutzer den Unterschied zwischen internen Übergängen (Entry, Do, Exit) und normalen Transitionen kennt."
+      ],
+      "concepts": [
+        {
+          "begriff": "Protokoll-Automat",
+          "definition": "Eine spezielle Form von Zustandsmaschine, die festlegt, in welchen Zuständen welche Systemoperationen (Trigger) aufgerufen werden dürfen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Vorbedingung (Precondition)",
+          "definition": "Die Menge der Zustände, in denen ein Aufruf einer Operation zulässig ist.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Nachbedingung (Postcondition)",
+          "definition": "Der Zielzustand (oder die Menge möglicher Zustände), der nach Abschluss der Operation eingenommen wird.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Interner Übergang (UML)",
+          "definition": "Ein Übergang innerhalb eines Zustands, der den Zustand nicht verlässt (kein exit/entry-Event auslöst). Vordefiniert: entry, exit, do (für langlebige Aktivitäten).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "History-Zustand (History State)",
+          "definition": "Ein Pseudozustand in UML, der sich beim Verlassen eines zusammengesetzten Zustands den zuletzt aktiven Unterzustand merkt, um bei Rückkehr dorthin zu springen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Parallelität (Zustandsdiagramm)",
+          "definition": "Die Aufteilung eines Zustands in orthogonale Regionen, die unabhängig voneinander Zustände wechseln.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Synchronisierung (Zustandsdiagramm)",
+          "definition": "Die Zusammenführung paralleler Pfade, wobei ein Folgezustand erst erreicht wird, wenn alle orthogonalen Regionen ihren Endzustand erreicht haben.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "History-Zustand (History State)",
+          "definition": "Ein Pseudozustand in Zustandsdiagrammen (dargestellt als Kreis mit einem 'H'). Er dient als Gedächtnis innerhalb eines zusammengesetzten Zustands: Tritt ein Ereignis auf, das den Zustand verlässt und später wieder betritt, wird dank des History-Zustands in den zuletzt aktiven Unterzustand zurückgekehrt.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Interne Übergänge (Entry, Do, Exit)",
+          "definition": "Aktionen innerhalb eines Zustands, die keine Transition (Zustandswechsel) auslösen:\n- entry: Wird sofort beim Betreten des Zustands ausgeführt.\n- do: Wird ausgeführt, solange man sich im Zustand befindet (kann langlaufend sein).\n- exit: Wird direkt vor dem Verlassen des Zustands ausgeführt.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welche Aussage beschreibt korrekt die Rolle von Vor- und Nachbedingungen in einem Protokoll-Automaten?\n\nA) Vorbedingungen definieren die Zustände nach einer Operation, Nachbedingungen die Zustände davor.\nB) Vorbedingungen spezifizieren die Menge der Zustände, in denen ein Aufruf einer Systemoperation zulässig ist, Nachbedingungen den Zustand nach Abschluss der Operation.\nC) Beide Bedingungen sind optional und dienen nur der Entwickler-Dokumentation.\nD) Vor- und Nachbedingungen legen ausschließlich die GUI-Aktivität fest.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Vorbedingungen legen fest, wann ein API-Aufruf oder eine Systemoperation valide ist. Nachbedingungen sichern zu, in welchen Zustand das System nach der Ausführung übergeht.",
+          "stolpersteine": "Vertauschen von Vor- und Nachbedingung oder Geringschätzung ihrer formalen Bedeutung für die Zustandskonsistenz.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "state_machine",
+            "protokoll_automat"
+          ]
+        },
+        {
+          "aufgabenstellung": "Was gilt als 'Trigger' in einem Protokoll-Automaten?\n\nA) Die Änderung eines Attributwerts in der Datenbank\nB) Der Aufruf einer Systemoperation (z. B. login()), die im Protokoll definiert ist\nC) Ein beliebiges asynchrones UI-Redraw-Event\nD) Die Instanziierung einer Service-Klasse",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Im Protokoll-Automaten ist ein Trigger der Aufruf einer Systemoperation, der den Übergang von einem Protokollzustand in den nächsten auslösen kann.",
+          "stolpersteine": "Verwechslung von allgemeinen Ereignissen (Events) mit den spezifischen Systemoperationsaufrufen (Triggern) des Protokolls.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "state_machine",
+            "trigger"
+          ]
+        },
+        {
+          "aufgabenstellung": "Erklären Sie anhand einer Skizze oder Beschreibung den Unterschied zwischen einem flachen History-Zustand (H) und einem tiefen History-Zustand (H*).",
+          "loesung": "- Flacher History-Zustand (H): Speichert nur den Zustand auf der aktuellen Verschachtelungsebene des zusammengesetzten Zustands. Unterzustände von Unterzuständen werden beim Wiedereintritt auf ihre jeweiligen Default-Startzustände zurückgesetzt.\n- Tiefer History-Zustand (H*): Speichert rekursiv alle aktiven Unterzustände über alle Verschachtelungsebenen hinweg und stellt den exakten Zustand beim Wiedereintritt wieder her.",
+          "stolpersteine": "Verwechslung von H und H*. Falsche Annahme, dass der flache History-Zustand beliebig tief speichert.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "zustandsdiagramm",
+            "history_state"
+          ]
+        }
+      ]
+    },
+    "13": {
+      "title": "Interaktionsdiagramme und GRASP-Verantwortlichkeiten",
+      "guidelines": {
+        "das_problem": "Bei der Umsetzung von Systemoperationen ist unklar, wie die Verantwortung auf die Klassen verteilt werden soll. Schlechte Zuordnung führt zu hoher Kopplung (Classes kennen zu viele andere Classes), geringer Kohäsion (eine Riesen-Klasse macht alles) und schlechter Wartbarkeit.",
+        "die_loesung": "Anwendung der GRASP-Prinzipien (General Responsibility Assignment Software Patterns) zur strukturierten Verantwortungszuweisung. Die dynamischen Abläufe werden mittels UML-Interaktionsdiagrammen (Sequenz- und Kommunikationsdiagrammen) modelliert, um den Nachrichtenfluss und die Objektlebenszeiten präzise zu planen."
+      },
+      "ai_instructions": [
+        "Erkläre die fünf grundlegenden GRASP-Muster: Information Expert, Creator, Low Coupling, High Cohesion und Controller/Management.",
+        "Stelle sicher, dass der Benutzer den Unterschied zwischen Sequenzdiagrammen (zeitlicher Fokus, Lifelines, Gates, Fragmente) und Kommunikationsdiagrammen (räumlicher Fokus, Objektdiagramm-Basis) versteht.",
+        "Erkläre die GRASP-Entwurfsmuster (Information Expert, Creator, Low Coupling, High Cohesion, Controller).",
+        "Stelle sicher, dass der Benutzer komplexe Sequenzdiagramm-Fragmente wie alt, loop, par und critical versteht und zeichnen kann."
+      ],
+      "concepts": [
+        {
+          "begriff": "GRASP",
+          "definition": "General Responsibility Assignment Software Patterns. Ein Satz von Entwurfsprinzipien zur strukturierten Verteilung von Verantwortlichkeiten (Wissen und Tun) auf Klassen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Information Expert",
+          "definition": "Das GRASP-Prinzip, das besagt, dass eine Verantwortung der Klasse zugewiesen wird, die über alle zur Erfüllung notwendigen Informationen verfügt.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Creator (Erzeuger)",
+          "definition": "Bestimmt, welche Klasse für die Instanziierung eines Objekts zuständig ist (z. B. wenn sie das Objekt besitzt, aggregiert oder die Initialisierungsdaten kennt).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Low Coupling (Lose Kopplung)",
+          "definition": "Ein Entwurfsziel, bei dem Abhängigkeiten zwischen Klassen minimiert werden, um Änderungen zu vereinfachen und Wiederverwendbarkeit zu erhöhen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "High Cohesion (Hohe Kohäsion)",
+          "definition": "Ein Entwurfsziel, bei dem die Verantwortlichkeiten einer Klasse eng fokussiert und thematisch einheitlich sind, um 'Gott-Objekte' zu vermeiden.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Controller (GRASP)",
+          "definition": "Das erste Objekt jenseits der UI-Schicht, das Systemoperationen empfängt und koordiniert (z. B. ein Use-Case-Controller).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Sequenzdiagramm (UML)",
+          "definition": "Ein Interaktionsdiagramm, das den zeitlichen Ablauf von Nachrichten zwischen Objekten entlang vertikaler Lebenslinien (Lifelines) und Aktivierungsbalken zeigt.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Kommunikationsdiagramm (UML)",
+          "definition": "Ein Interaktionsdiagramm, das den Schwerpunkt auf die Netzbeziehungen und die räumliche Anordnung der beteiligten Objekte legt.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "GRASP-Muster",
+          "definition": "General Responsibility Assignment Software Patterns. Ein Satz von Prinzipien zur Zuweisung von Verantwortlichkeiten an Klassen:\n- Information Expert: Weise die Verantwortlichkeit der Klasse zu, die die Informationen besitzt, um sie zu erfüllen.\n- Creator: Klasse A sollte B erzeugen, wenn A eine Aggregation/Komposition von B ist oder die Daten zur Initialisierung besitzt.\n- Controller: Erstes Objekt hinter der Systemgrenze, das Systemoperationen entgegennimmt.\n- Low Coupling & High Cohesion: Entwurfsziele zur Minimierung von Abhängigkeiten und Maximierung des funktionalen Fokus einer Klasse.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Sequenzdiagramm-Fragmente (UML)",
+          "definition": "Strukturelemente zur Steuerung des Ablaufs in Sequenzdiagrammen:\n- alt (Alternative): Wenn/Sonst-Bedingung (nur ein Zweig wird ausgeführt).\n- loop: Wiederholung eines Blocks, solange die Bedingung wahr ist.\n- par (Parallel): Parallele Ausführung von Lebenslinien.\n- critical (Kritischer Abschnitt): Atomare Ausführung ohne Unterbrechung durch andere Threads.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welches der folgenden Elemente stellt KEIN primäres Ziel eines UML-Sequenzdiagramms dar?\n\nA) Darstellung des zeitlichen Ablaufs von Interaktionen zwischen Objekten\nB) Visualisierung der Lebenszeit von Objekten während eines Use Cases\nC) Abbildung der statischen Struktur des Systems (z. B. Assoziationen, Vererbung)\nD) Identifikation der Verantwortlichkeiten für Operationen",
+          "loesung": "Richtige Antwort: C\n\nErklärung: Sequenzdiagramme sind Verhaltensdiagramme, die den Nachrichtenaustausch im Zeitverlauf darstellen. Die statische Struktur (Assoziationen, Attribute, Klassenstruktur) wird im Klassendiagramm modelliert.",
+          "stolpersteine": "Verwechslung von dynamischem Verhalten (Sequenzdiagramm) mit statischer Struktur (Klassendiagramm).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "uml",
+            "sequenzdiagramm"
+          ]
+        },
+        {
+          "aufgabenstellung": "Welches GRASP-Prinzip wird angewendet, wenn ein Objekt eine Berechnung an ein anderes Objekt übergibt, da dieses über alle dafür benötigten Attribute verfügt?\n\nA) Creator\nB) Information Expert\nC) Controller\nD) High Cohesion",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Der Information Expert besagt, dass die Verantwortung für ein Verhalten bei dem Objekt liegen sollte, das das dafür nötige Wissen (Informationen) besitzt.",
+          "stolpersteine": "Falsche Zuweisung an Creator (der Objekte baut) oder Controller (der Systemevents routet).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "grasp",
+            "information_expert"
+          ]
+        },
+        {
+          "aufgabenstellung": "Ein Knoten in einem Graphen besitzt eine Methode `pathExists(Node target, Set<Node> visited)`. Skizzieren Sie das Sequenzdiagramm für einen erfolgreichen rekursiven Aufruf, bei dem ein Nachbar besucht wird, der noch nicht in `visited` enthalten ist.",
+          "loesung": "1. Der Client ruft `n1:Node.pathExists(target, visited)` auf.\n2. `n1` fügt sich selbst der Menge `visited` hinzu: `visited.add(n1)`.\n3. `n1` prüft, ob `n1 == target` (hier false).\n4. `n1` holt seine Nachbarn und iteriert. Für einen unbesuchten Nachbarn `n2` ruft `n1` auf: `n2.pathExists(target, visited)` innerhalb eines `loop`- und `alt`-Fragments.\n5. `n2` führt dieselben Schritte aus und gibt schließlich `true` zurück.\n6. `n1` erhält `true` und reicht dieses Ergebnis an den Client weiter.",
+          "stolpersteine": "Vergessen der Rekursion im Sequenzdiagramm (Pfeil von `n1` auf eine andere Instanz `n2` desselben Typs `Node`). Das fehlerhafte Zeichnen der Parameterübergabe.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "sequenzdiagramm",
+            "recursion",
+            "grasp"
+          ]
+        }
+      ]
+    },
+    "14": {
+      "title": "Patterns – Erzeugungsmuster",
+      "guidelines": {
+        "das_problem": "Wenn Client-Code konkrete Produktklassen über 'new' instanziiert, wird er starr an diese gebunden. Dies verhindert den einfachen Austausch von Implementierungen (z. B. plattformspezifische UI-Komponenten) und verletzt das Open/Closed-Prinzip.",
+        "die_loesung": "Verstecken des Erzeugungsprozesses durch Erzeugungsmuster. Clients programmieren gegen Schnittstellen, und die Objekterzeugung wird an Fabrikmethoden (Unterklassen entscheiden) oder abstrakte Fabriken (erzeugen konsistente Produktfamilien) ausgelagert."
+      },
+      "ai_instructions": [
+        "Erkläre die Fabrikmethode (Factory Method): Schnittstelle zur Objekterzeugung, Delegierung an Unterklassen.",
+        "Erkläre die Abstrakte Fabrik (Abstract Factory): Schnittstelle zur Erzeugung von Familien verwandter/abhängiger Objekte ohne Angabe konkreter Klassen.",
+        "Stelle sicher, dass der Benutzer den Unterschied und die typischen Nachteile kennt (z. B. Abstrakte Fabrik erschwert das Hinzufügen neuer Produkttypen)."
+      ],
+      "concepts": [
+        {
+          "begriff": "Fabrikmethode (Factory Method)",
+          "definition": "Definiert eine Schnittstelle zur Erzeugung eines Objekts, lässt aber Unterklassen entscheiden, welche Klasse instanziiert wird. Delegiert die Erzeugung an Unterklassen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Abstrakte Fabrik (Abstract Factory)",
+          "definition": "Bietet eine Schnittstelle zur Erzeugung von Familien zusammenhängender oder voneinander abhängiger Objekte, ohne deren konkrete Klassen zu benennen. Garantiert das korrekte Zusammenspiel der Produkte (Produktfamilien).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Produktfamilie",
+          "definition": "Eine Menge von Produktklassen (z. B. GermanAL, GermanTL, GermanBL), die aufeinander abgestimmt sind und gemeinsam verwendet werden müssen, um Inkonsistenzen zu vermeiden.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Programmieren auf Schnittstellen",
+          "definition": "Entwurfsprinzip, bei dem Clients nur die abstrakten Schnittstellen (Interfaces) kennen, wodurch konkrete Implementierungen zur Laufzeit austauschbar bleiben.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Objektkomposition vs. Vererbung",
+          "definition": "Die Bevorzugung von Komposition/Aggregation (Schnittstellennutzung zur Laufzeit) gegenüber Vererbung (Kopplung an Implementierung zur Compilezeit). Erhöht Flexibilität.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Fabrikmethode-Varianten",
+          "definition": "Es gibt drei Hauptvarianten der Objekterzeugung bei Fabriken:\n- Variante I: Die konkreten Unterklassen einer abstrakten Fabrik implementieren die Erzeugungsmethoden direkt.\n- Variante II: Die abstrakte Fabrik delegiert die Erzeugung an registrierte Prototypen oder Fabrikmethoden in den Produkten selbst.\n- Variante III: Die Fabrik ist konkret und wird parametrisiert (z. B. über Klassen-Referenzen oder Enums) zur Laufzeit.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welches der folgenden Szenarien beschreibt einen typischen Anwendungsfall für die Abstrakte Fabrik (Abstract Factory)?\n\nA) Ein Texteditor soll zur Laufzeit zwischen verschiedenen Betriebssystem-Stilen (Windows/macOS/Linux) wechseln können.\nB) Ein Datenbank-Client soll automatisch zwischen MySQL und PostgreSQL umschalten, wenn eine Verbindung fehlschlägt.\nC) Ein Spiel soll zufällig Gegner-Charaktere mit unterschiedlichen Fähigkeiten generieren.\nD) Ein Compiler soll während der Kompilierung temporäre Dateien für die Zwischenspeicherung nutzen.",
+          "loesung": "Richtige Antwort: A\n\nErklärung: Die Abstrakte Fabrik wird eingesetzt, wenn Familien verwandter Objekte (hier: plattformspezifische UI-Komponenten wie Button, TextField für ein bestimmtes OS) konsistent erzeugt werden müssen und der Client unabhängig von konkreten Implementierungen arbeiten soll.",
+          "stolpersteine": "Verwechslung mit der einfachen Fabrikmethode (die einzelne Objekte erzeugt, nicht Familien) oder dem Strategie-Muster.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "entwurfsmuster",
+            "abstract_factory"
+          ]
+        },
+        {
+          "aufgabenstellung": "Welcher der folgenden Nachteile ist typisch für die Abstrakte Fabrik, aber nicht für die einfache Fabrikmethode?\n\nA) Erhöhte Komplexität durch zusätzliche Abstraktionsschichten.\nB) Starke Kopplung zwischen Client und konkreten Produkten.\nC) Unfähigkeit, neue Produkttypen zur Laufzeit hinzuzufügen.\nD) Die Notwendigkeit, bei der Einführung neuer Produkttypen die Schnittstelle der abstrakten Fabrik und alle konkreten Fabrikunterklassen zu ändern.",
+          "loesung": "Richtige Antwort: D\n\nErklärung: Da die Abstrakte Fabrik Schnittstellen für die Erzeugung einer festen Produktfamilie bereitstellt, muss bei Einführung eines neuen Produkts (z. B. VideoLabel) das Interface LabelFactory sowie jede konkrete Fabrikklasse (GermanLabelFactory, USLabelFactory) angepasst werden (Verletzung des Open/Closed-Prinzips).",
+          "stolpersteine": "Vergessen, dass die Produktpalette bei einer Abstrakten Fabrik fest vorgegeben ist, während neue Familien leicht durch neue Fabriken ergänzt werden können.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "entwurfsmuster",
+            "abstract_factory"
+          ]
+        }
+      ]
+    },
+    "15": {
+      "title": "Patterns – Strukturmuster",
+      "guidelines": {
+        "das_problem": "Nachträglich integrierte Bibliotheken oder Altsysteme haben oft inkompatible Schnittstellen zur Client-Anwendung. Zudem führt die direkte Vererbung von Abstraktionen an plattform- oder darstellungsabhängige Implementierungen zu starren, tiefen Klassenhierarchien.",
+        "die_loesung": "Einführung einer Indirektion durch Strukturmuster. Der Adapter übersetzt inkompatible Schnittstellen post-facto. Die Brücke (Bridge) trennt Abstraktion und Implementierung bereits im Entwurf (up-front), sodass beide unabhängig voneinander variieren können."
+      },
+      "ai_instructions": [
+        "Erkläre das Adapter-Muster (Adapter) in den Varianten Klassen-Adapter (Vererbung) und Objekt-Adapter (Komposition) sowie Zweiweg-Adapter.",
+        "Erkläre das Brücke-Muster (Bridge) zur Entkopplung von Abstraktion und Implementierung.",
+        "Stelle sicher, dass der Benutzer den Unterschied versteht: Adapter passt inkompatible Schnittstellen nachträglich an; Bridge entkoppelt diese von vornherein, um unabhängige Erweiterungen zu ermöglichen."
+      ],
+      "concepts": [
+        {
+          "begriff": "Adapter-Muster",
+          "definition": "Passt die Schnittstelle einer Klasse an eine andere an, die von den Clients erwartet wird. Ermöglicht die Zusammenarbeit unabhängig entworfener Klassen mit inkompatiblen Schnittstellen.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Klassen-Adapter",
+          "definition": "Realisiert den Adapter über Vererbung (Mehrfachvererbung in C++, in Java über Vererbung der Adaptee-Klasse und Implementierung des Target-Interfaces). Kann Teile des Adaptees überschreiben.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Objekt-Adapter",
+          "definition": "Realisiert den Adapter über Objektkomposition. Er hält eine Referenz auf den Adaptee und delegiert Aufrufe. Funktioniert auch mit Unterklassen des Adaptees.",
+          "beispiel_code": "public class Adapter implements Target {\n    private Adaptee adaptee;\n    public Adapter(Adaptee a) { this.adaptee = a; }\n    public void targetOp() { this.adaptee.existingOp(); }\n}"
+        },
+        {
+          "begriff": "Zweiweg-Adapter",
+          "definition": "Implementiert sowohl die Ziel-Schnittstelle als auch die Schnittstelle des Adaptees, um Transparenz für Clients auf beiden Seiten zu bieten.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Brücke-Muster (Bridge)",
+          "definition": "Entkoppelt eine Abstraktion von ihrer Implementierung, sodass beide unabhängig voneinander variieren können. Verhindert permanente Bindungen zwischen beiden.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Abstraktion vs. Implementierung (Bridge)",
+          "definition": "Die Abstraktion definiert die Schnittstelle für den Client, während die Implementierungsoberklasse (Implementor) primitive Operationen bereitstellt, die von der Abstraktion genutzt werden.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Bridge vs. Adapter",
+          "definition": "Vergleich zweier Strukturmuster:\n- Adapter (post-facto): Verbindet zwei existierende, inkompatible Schnittstellen im Nachhinein.\n- Bridge (up-front): Wird von vornherein geplant, um eine Abstraktionshierarchie von einer Implementierungshierarchie sauber zu trennen, damit beide unabhängig erweitert werden können.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Welcher der folgenden Punkte beschreibt einen wesentlichen konzeptionellen Unterschied zwischen dem Bridge-Muster und dem Adapter-Muster?\n\nA) Der Adapter wird zur Laufzeit eingesetzt, die Bridge nur zur Compilezeit.\nB) Der Adapter dient dem nachträglichen Auflösen von Schnittstelleninkompatibilitäten unabhängig entworfener Klassen (post-facto), während die Bridge von vornherein (up-front) entworfen wird, um Abstraktion und Implementierung unabhängig variieren zu lassen.\nC) Die Bridge ändert die Schnittstelle einer Klasse, während der Adapter nur die Implementierung anpasst.\nD) Das Adapter-Muster erfordert immer Mehrfachvererbung, während die Bridge dies verbietet.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Dies ist der entscheidende Unterschied. Der Adapter ist ein Wrapper für inkompatiblen Code (oft Legacy-Code oder Drittbibliotheken). Die Bridge hingegen ist ein Entwurfsstrukturmuster, das up-front geplant wird, um Abstraktion und Implementierung getrennt weiterzuentwickeln.",
+          "stolpersteine": "Beide Muster leiten Anfragen an ein anderes Objekt weiter und führen eine Indirektion ein, was oft zu Verwechslungen führt.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "entwurfsmuster",
+            "bridge",
+            "adapter"
+          ]
+        },
+        {
+          "aufgabenstellung": "Ein Entwickler möchte eine neue Verschlüsselungs-API in ein bestehendes System integrieren. Die neue API hat jedoch eine andere Schnittstelle als die vom System geforderte Schnittstelle 'Cipher'. Welches Muster sollte er verwenden?\n\nA) Bridge, um Abstraktion und Implementierung zu trennen.\nB) Adapter, da er die inkompatible Schnittstelle der API an das geforderte 'Cipher'-Interface anpasst.\nC) Singleton, um nur eine API-Instanz zu erlauben.\nD) Decorator, um das Verhalten der API zu erweitern.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: Das Adapter-Muster ist ideal, um bestehende Komponenten mit inkompatiblen Schnittstellen nutzbar zu machen. Der Adapter implementiert das System-Interface 'Cipher' und leitet die Aufrufe an die neue API weiter.",
+          "stolpersteine": "Sich von der Bridge ablenken lassen, die für das bewusste Aufteilen eigener Klassen gedacht ist, nicht für das Verpacken fremder APIs.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "entwurfsmuster",
+            "adapter"
+          ]
+        }
+      ]
+    },
+    "16": {
+      "title": "GUI-Anbindung und Persistenz",
+      "guidelines": {
+        "das_problem": "Benutzeroberflächen und Datenhaltungssysteme hängen stark vom Zustand der Anwendungslogik ab. Eine unkoordinierte GUI-Aktualisierung führt zu Inkonsistenzen, während unsynchronisierte, parallele Datenbankzugriffe Deadlocks und Datenverlust verursachen.",
+        "die_loesung": "Steuerung der Benutzeroberfläche über eine zustandsabhängige ViewFactory (mkView(state)). Datenhaltung über einen Object-Relational Mapper (ORM/JPA), der Tabellen auf Klassen abbildet. Die Thread-Sicherheit bei DB-Zugriffen wird durch Beschränkung auf einen dedizierten Thread gewährleistet."
+      },
+      "ai_instructions": [
+        "Erkläre die Organisation der GUI anhand des Zustandsmodells (Default-Views pro Zustand, State-gesteuerte View-Erstellung).",
+        "Vermittle die Grundlagen des Object-Relational Mapping (ORM/JPA) zur Kapselung der Persistenzschicht.",
+        "Verdeutliche das Concurrency-Prinzip in Persistenz-Frameworks: Vermeidung paralleler Thread-Zugriffe auf die DB-Session, um Sperrkonflikte (Locks) zu vermeiden."
+      ],
+      "concepts": [
+        {
+          "begriff": "ViewFactory",
+          "definition": "Ein Entwurfsmuster zur dynamischen Erzeugung und Zuordnung von GUI-Views basierend auf dem aktuellen Systemzustand des Protokoll-Automaten (z. B. mkView(state)).",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Object-Relational Mapping (ORM)",
+          "definition": "Technik zur Abbildung einer relationalen Datenbank (Tabellen, Fremdschlüssel) auf ein objektorientiertes Klassensystem (Klassen, Assoziationen). Beispiele: JPA, Hibernate.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Session-Kontext (Persistence Context)",
+          "definition": "Der vom OR-Mapper verwaltete Kontext, der geladene Objekte im Speicher trackt und Änderungen automatisch mit der Datenbank synchronisiert.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "Thread-Sicherheit in OR-Mappern",
+          "definition": "Die Anforderung, auf eine Datenbank-Session nicht aus unterschiedlichen Threads parallel zuzugreifen, um Locks, unvorhersehbare Transaktionszustände und Race Conditions zu verhindern.",
+          "beispiel_code": null
+        },
+        {
+          "begriff": "B+-Baum Key-Value-Store",
+          "definition": "Ein strukturiertes Persistenzkonzept, bei dem Daten in den Blättern (Blöcken) eines B+-Baums verwaltet werden. Ein Dictionary fungiert dabei oft als Abstraktionsebene, um dem System einen transparenten Key-Value-Zugriff anzubieten.",
+          "beispiel_code": null
+        }
+      ],
+      "exercises": [
+        {
+          "aufgabenstellung": "Warum sollte beim Einsatz von OR-Mappern wie Hibernate der Datenbankzugriff nicht aus mehreren parallelen Threads auf derselben Session durchgeführt werden?\n\nA) Weil relationale Datenbanken generell keine parallelen Anfragen unterstützen.\nB) Um Probleme mit Datenbank-Locks und inkonsistenten Zuständen (Race Conditions) innerhalb des Session-Kontextes zu vermeiden.\nC) Weil OR-Mapper keine Multi-Thread-Anwendungen erlauben.\nD) Um den Arbeitsspeicher des Client-Rechners zu schonen.",
+          "loesung": "Richtige Antwort: B\n\nErklärung: OR-Mapper verwalten geladene Objekte in einem Session-Kontext (First-Level Cache). Greifen mehrere Threads gleichzeitig auf diese Session zu, kommt es zu Race Conditions und Synchronisationskonflikten (Locks). Datenbankzugriffe müssen daher thread-safe koordiniert werden.",
+          "stolpersteine": "Die falsche Annahme, dass relationale Datenbanken an sich keine Nebenläufigkeit unterstützen (das tun sie auf Server-Ebene, aber nicht die clientseitige ORM-Session).",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "persistenz",
+            "concurrency",
+            "orm"
+          ]
+        },
+        {
+          "aufgabenstellung": "Skizzieren Sie ein Aktivitätsdiagramm für den Use Case 'Adresse bearbeiten'. Das System nutzt ein Dictionary, das die Daten in Blöcken eines B+-Baums verwaltet. Berücksichtigen Sie die Interaktion zwischen UI-Controller, Dictionary-Komponente und dem Key-Value-Store.",
+          "loesung": "Das Aktivitätsdiagramm enthält:\n1. Drei Swimlanes: `Controller`, `Dictionary` und `Store`.\n2. Der Fluss startet im `Controller` mit der Aktion 'Eingabedaten lesen'.\n3. Der Controller ruft `put(key, value)` auf dem `Dictionary` auf.\n4. In der `Dictionary`-Swimlane wird 'Pfad im B+-Baum suchen' und 'Passenden Block laden' ausgeführt.\n5. Das Dictionary ruft `readBlock(blockId)` auf dem `Store` auf.\n6. Der `Store` liest den Block und gibt ihn zurück. Die Dictionary-Swimlane führt 'Eintrag im Block aktualisieren' aus und ruft `writeBlock(blockId, blockData)` auf dem `Store` auf.\n7. Nach erfolgreichem Schreiben gibt das Dictionary `true` an den Controller zurück, der 'Erfolg anzeigen' ausführt.",
+          "stolpersteine": "Falsche Zuweisung der Aktionen zu den Swimlanes. Das Dictionary führt die logische Verwaltung des B+-Baums durch, der Store liest/schreibt nur rohe Blöcke.",
+          "klausurrelevant": true,
+          "klausur_tags": [
+            "klausur_vorbereitung",
+            "aktivitaetsdiagramm",
+            "persistenz",
+            "dictionary"
+          ]
+        }
+      ]
+    }
+  }
+}

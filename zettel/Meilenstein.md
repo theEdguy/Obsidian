@@ -1,17 +1,23 @@
 ---
-id: 5113054e-ec26-56e5-b032-4a9cb2c94398
-title: "Meilenstein"
-date: 2026-06-20
+id: fcad2c29-9f09-4fe3-a2d8-3ecf73e9d1a4
+title: "Meilensteine"
+date: 2026-06-24
 tags:
   - software_engineering
-  - kapitel_1
+  - projektmanagement
+  - prozessmodelle
   - draft
-source: "Kapitel 1: Die Notwendigkeit eines Prozesses"
+source: "SWE Slides – Kapitel 1: Die Notwendigkeit eines Prozesses"
 ---
 
-# [[Meilenstein]]
+# [[Meilensteine]]
 
-- **Kernkonzept:** Klar definierte Abschnitte oder Übergangspunkte in der Entwicklung einer Anwendung. Meilensteine helfen, den Fortschritt zu messen, und bilden die Grundlage für Steuermechanismen (z. B. Gegenmaßnahmen einleiten, Ressourcen anfordern, Projekt einstellen).
-- **Nutzen & Zweck:** Klar definierte Abschnitte oder Übergangspunkte in der Entwicklung einer Anwendung. Meilensteine helfen, den Fortschritt zu messen, und bilden die Grundlage für Steuermechanismen (z. B. Gegenmaßnahmen einleiten, Ressourcen anfordern, Projekt einstellen).
-- **Abgrenzung & Grenzen:** Siehe Definition.
-- **Beispiel / Code:** Kein Codebeispiel vorhanden.
+- **Kernkonzept:** Klare [[Übergänge]] zwischen [[Phasen]] eines [[Software-Projekts]], die [[Fortschritt]] messbar machen und [[Entscheidungsmöglichkeiten]] bieten.
+- **Nutzen & Zweck:** Ermöglicht [[Projektsteuerung]] durch [[Transparenz]] und [[Risikomanagement]]. Grundlage für [[Agile_Entwicklung]] und [[Wasserfallmodell]].
+- **Abgrenzung & Grenzen:** Kein Ersatz für [[Flexibilität]], sondern ein Rahmenwerk. Unterscheidet sich von [[Ad-hoc_Planung]] durch strukturierte [[Zielvorgaben]]. Nicht sinnvoll bei trivialen oder kurzfristigen Aufgaben.
+- **Beispiel / Code:** ```text
+// Beispiel für Meilenstein-Planung
+1. Meilenstein 1: [[Anforderungsanalyse]] abgeschlossen (Woche 4)
+2. Meilenstein 2: [[Architektur-Design]] freigegeben (Woche 8)
+3. Meilenstein 3: [[MVP]] bereitgestellt (Woche 12)
+```

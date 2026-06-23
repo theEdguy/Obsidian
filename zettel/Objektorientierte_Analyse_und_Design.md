@@ -1,7 +1,7 @@
 ---
-id: 7ca1b9b5-af42-48e3-8a8c-2978c57581d1
+id: 74bef872-b930-4b32-86a0-f5249d62a7a9
 title: "Objektorientierte_Analyse_und_Design"
-date: 2026-05-30
+date: 2026-06-23
 tags:
   - software_engineering
   - uml
@@ -9,83 +9,34 @@ tags:
   - softwarearchitektur
   - anforderungsanalyse
   - systemmodellierung
+  - oop
+  - grasp
+  - gof-entwurfsmuster
+  - analyse
+  - design
+  - objektorientierung
   - draft
-source: "Klausur_Referenz"
+source: "software_engineering_kapitel_13"
 ---
 
 # [[Objektorientierte_Analyse_und_Design]]
 
-- **Kernkonzept:** Objektorientierte_Analyse_und_Design (OOAD) ist ein methodischer Ansatz im [[Software_Engineering]], der die Prinzipien der [[Objektorientierung]] nutzt, um Software-Systeme zu modellieren und zu entwickeln. Die Analysephase konzentriert sich auf das **Verständnis und die Spezifikation der Anforderungen** aus fachlicher Sicht, während das Design die **technische Umsetzung** dieser Anforderungen in eine softwaretechnische Lösung fokussiert. Beide Phasen verwenden ähnliche [[UML]]-Diagramme (z. B. [[Klassendiagramm]], [[Aktivitätsdiagramm]], [[Sequenzdiagramm]]), unterscheiden sich jedoch in ihrer Zielsetzung und Detaillierungstiefe.
-- **Nutzen & Zweck:** OOAD dient der strukturierten Entwicklung von Software-Systemen durch:
-- **Analyse**: Identifikation von Fachklassen, Geschäftsprozessen und Systemanforderungen (z. B. durch [[Use_Case_Diagramme]]). Ziel ist es, ein **domänenspezifisches Modell** zu erstellen, das unabhängig von technischen Details ist.
-- **Design**: Transformation des Analysemodells in ein **technisches Modell**, das Implementierungsdetails wie [[Schnittstellen]], Datenbankanbindungen oder [[Entwurfsmuster]] (z. B. [[Singleton_Pattern]], [[Factory_Method]]) berücksichtigt.
+- **Kernkonzept:** [[Objektorientierte_Analyse_und_Design|OOAD]] ist ein methodischer [[Ansatz]] im [[Software_Engineering]], der die [[Prinzipien]] der [[Objektorientierung]] nutzt, um reale [[Softwareproblem|Probleme]] durch [[Abstraktion]], [[Kapselung]], [[Modularität]] und [[Polymorphie]] in Modelle aus kooperierenden [[Objekt|Objekten]] mit klar definierten [[Verantwortlichkeit|Verantwortlichkeiten]] zu überführen. Dabei wird zwischen der [[Anforderungsanalyse]] (fachliche Perspektive, **Was**) und dem [[Design]] (technische Perspektive, **Wie**) unterschieden, um [[Struktur]] und [[Verhalten]] des Systems systematisch zu modellieren und komplexe Systeme verständlich, wartbar sowie anpassungsfähig zu gestalten.
+- **Nutzen & Zweck:** [[Objektorientierte_Analyse_und_Design|OOAD]] dient der systematischen Zerlegung komplexer [[Softwareproblem|Softwareprobleme]] durch [[Abstraktion]], [[Kapselung]] und [[Modularität]], um die Entwicklung beherrschbar, wartbar und weniger fehleranfällig zu gestalten. Die klare Trennung zwischen [[Anforderungsanalyse]] (Problemdomäne) und [[Design]] (Lösung) ermöglicht eine strukturierte Erfassung von Anforderungen und deren technische Umsetzung. Durch die Verwendung von [[UML]]-Diagrammen wie [[Klassendiagramm|Klassendiagrammen]] oder [[Sequenzdiagramm|Sequenzdiagrammen]] und [[Entwurfsmuster|Mustern]] wie [[GRASP]] oder [[GoF-Entwurfsmuster|GoF-Mustern]] wird die Kommunikation im Team verbessert, die [[Wiederverwendbarkeit]] von Code gefördert und die [[Kohäsion]] sowie [[Lose_Kopplung|lose Kopplung]] im System gestärkt. Zudem unterstützt OOAD die [[Systemmodellierung]] durch visuelle Repräsentationen, die sowohl für [[Stakeholder]] als auch Entwickler verständlich sind. Die Anwendung von [[Prinzipien]] wie [[Vererbung]] und [[Information_Expert]] fördert die [[Agilität]] und [[Skalierbarkeit]] von Systemen und löst konkrete Probleme wie unstrukturierten Code, schlechte Erweiterbarkeit und mangelnde Nachvollziehbarkeit. OOAD bildet die Grundlage für iterative Entwicklungsprozesse wie den [[Unified_Process]] und erleichtert die Zusammenarbeit zwischen Entwicklern und [[Stakeholder|Stakeholdern]] durch die Abbildung realer [[Entität|Entitäten]] in [[Objekt|Objekten]].
+- **Abgrenzung & Grenzen:** {'zielsetzung_detaillierungsgrad': {'analyse': 'Beschreibt **was** das System leisten soll (fachliche Perspektive) und erstellt ein domänenspezifisches Modell, das unabhängig von technischen Details ist. Beispiel: Ein [[Klassendiagramm]] zeigt Fachklassen wie `[[Kunde]]` oder `[[Bestellung]]` ohne technische Attribute wie [[Datenbank|Datenbankanbindungen]]. Modelle sind abstrakt und implementierungsunabhängig.', 'design': 'Beschreibt **wie** das System umgesetzt wird (technische Perspektive) und transformiert das Analysemodell in ein konkretes, implementierungsnahes Modell. Beispiel: Ein [[Klassendiagramm]] enthält technische Details wie `[[Datenbankverbindung]]`, [[Schnittstelle|Schnittstellen]] oder Methoden zur Persistenz. Modelle berücksichtigen nicht-funktionale Anforderungen wie [[Performance]], [[Sicherheit]] oder [[Skalierbarkeit]].'}, 'einsatzgrenzen': '[[Objektorientierte_Analyse_und_Design|OOAD]] ist nicht universell einsetzbar und sollte vermieden werden, wenn:\n- das [[Softwareproblem]] trivial ist oder keine klare [[Objektstruktur]] aufweist (z. B. einfache Skripte oder datenintensive Transformationen ohne komplexe [[Logik]]).\n- strenge [[Echtzeitanforderung|Echtzeitanforderungen]] oder extreme [[Performance]]-Ziele vorliegen, die prozedurale oder [[Funktionale_Programmierung|funktionale Ansätze]] besser erfüllen.\n- das Team keine Erfahrung mit [[Modellierungstechnik|Modellierungstechniken]] oder [[Entwurfsmuster|Mustern]] hat, da der initiale Aufwand sonst den Nutzen übersteigt.\n- das Problem keine komplexen Beziehungen zwischen [[Entität|Entitäten]] erfordert (z. B. datenintensive Anwendungen ohne domänenspezifische [[Logik]]).\n- das Projekt klein oder kurzlebig ist, da der initiale Aufwand für Modellierung und [[Design]] unwirtschaftlich sein kann.\n- mathematische Algorithmen oder datenstromorientierte Systeme mit minimaler Zustandsverwaltung vorliegen, die besser durch [[Funktionale_Programmierung|funktionale Ansätze]] oder prozedurale Methoden gelöst werden können.', 'stolpersteine': {'phasenvermischung': 'Technische Entscheidungen (z. B. Wahl eines [[Frameworks]] oder [[Datenbank|Datenbanksystems]]) dürfen nicht in die [[Anforderungsanalyse]] einfließen, da dies zu vorzeitigen Festlegungen und inflexiblen Lösungen führt.', 'übermodellierung': 'Zu detaillierte Modelle in der [[Anforderungsanalyse]] verursachen unnötigen Aufwand und behindern die [[Agilität]] des Entwicklungsprozesses. Modelle sollten nur so detailliert sein wie nötig, um die Anforderungen zu verstehen.', 'unterschätzung_komplexität': 'Das [[Design]] muss oft Anpassungen an nicht-funktionale Anforderungen (z. B. [[Sicherheit]], [[Skalierbarkeit]]) vornehmen, die in der [[Anforderungsanalyse]] nicht offensichtlich sind. Zudem erfordert die Umsetzung von [[Entwurfsmuster|Mustern]] wie [[Singleton_Pattern]] oder [[Factory_Method]] praktische Erfahrung, um [[Anti-Pattern]] zu vermeiden. Die Integration von [[GRASP]]-Prinzipien wie [[Information_Expert]] oder [[Controller]] erfordert ein tiefes Verständnis der Domäne, um [[Verantwortlichkeit|Verantwortlichkeiten]] korrekt zu verteilen.', 'paradigmenkonflikte': '[[Objektorientierte_Analyse_und_Design|OOAD]] unterscheidet sich von prozeduralen Ansätzen durch den Fokus auf [[Daten]] und [[Verhalten]] statt auf Funktionen und von [[Funktionale_Programmierung|funktionaler Programmierung]] durch den Zustandserhalt von [[Objekt|Objekten]]. Bei hybriden Systemen (z. B. [[Event-gesteuertes_System|Event-gesteuerten Systemen]]) kann die Kombination mit anderen Paradigmen sinnvoll sein, erfordert jedoch klare Abgrenzungen der [[Verantwortlichkeit|Verantwortlichkeiten]]. Im Vergleich zu rein datengetriebenen Modellen (z. B. [[Entity-Relationship-Modell]]) liegt der Fokus weniger auf Datenflüssen, sondern auf der Kapselung von Zustand und Verhalten in [[Objekt|Objekten]].'}}
+- **Beispiel / Code:** {'analyse_klassendiagramm': '```mermaid\nclassDiagram\n    %% Analyse-Perspektive (fachlich)\n    class Kunde {\n        +String name\n        +String adresse\n        +bestellen(produkt: Produkt)\n    }\n    class Bestellung {\n        +Datum datum\n        +Status status\n        +berechneGesamtpreis()\n    }\n    class Produkt {\n        +String bezeichnung\n        +double preis\n    }\n    Kunde "1" -- "0..*" Bestellung\n    Bestellung "1" -- "1..*" Produkt\n```', 'design_klassendiagramm': '```mermaid\nclassDiagram\n    %% Design-Perspektive (technisch)\n    class Kunde {\n        +UUID id\n        +String name\n        +String adresse\n        +bestellen(produkte: List~Produkt~)\n    }\n    class Bestellung {\n        +UUID id\n        +Datum datum\n        +Status status\n        +berechneGesamtpreis()\n    }\n    class Produkt {\n        +UUID id\n        +String bezeichnung\n        +double preis\n    }\n    class KundeRepository {\n        +save(kunde: Kunde)\n        +findById(id: UUID)\n    }\n    class BestellService {\n        +createBestellung(kundeId: UUID, produkte: List~Produkt~)\n        +updateStatus(bestellId: UUID, status: Status)\n    }\n    class Ausuebung {\n        +Mitglied mitglied\n        +Disziplin disziplin\n        +int ranking\n        +LocalDate seit\n    }\n    KundeRepository --> Kunde : persistiert\n    BestellService --> Bestellung : verwaltet\n    BestellService --> KundeRepository : nutzt\n```', 'java_beispiel': '```java\n// Beispiel für objektorientiertes Design nach GRASP-Prinzipien und Expertenmuster\npublic abstract class Mitglied {\n    private final String name;\n    private String mitgliedsnummer;\n    private List<Disziplin> disziplinen;\n\n    public Mitglied(String name, String mitgliedsnummer) {\n        this.name = name;\n        this.mitgliedsnummer = mitgliedsnummer;\n        this.disziplinen = new ArrayList<>();\n    }\n\n    public void disziplinHinzufuegen(Disziplin disziplin) {\n        disziplinen.add(disziplin);\n    }\n\n    // Polymorphie: Verantwortlichkeit wird an Subklassen delegiert (Information Expert)\n    public abstract int leistungsprognose(java.util.Date datum);\n\n    public void aktualisiereMitgliedsdaten(String neuerName) {\n        this.name = neuerName;\n    }\n\n    public String getMitgliedsdaten() {\n        return "Mitglied: " + name + ", Nr.: " + mitgliedsnummer;\n    }\n    \n    // Experte: Die Klasse verwaltet ihre eigenen Daten und Verantwortlichkeiten\n    public boolean istAktiv() {\n        return java.time.LocalDate.now().minusYears(1).isBefore(beitrittsdatum);\n    }\n}\n\npublic class SeniorMitglied extends Mitglied {\n    private LocalDate beitrittsdatum;\n\n    public SeniorMitglied(String name, String mitgliedsnummer, LocalDate beitrittsdatum) {\n        super(name, mitgliedsnummer);\n        this.beitrittsdatum = beitrittsdatum;\n    }\n\n    @Override\n    public int leistungsprognose(java.util.Date datum) {\n        // Spezifische Berechnung für Senioren (Low Coupling, High Cohesion)\n        return (int)(getLeistung() * 0.9);\n    }\n    \n    private int getLeistung() {\n        // Beispielhafte Logik\n        return 80;\n    }\n}\n\npublic class Disziplin {\n    private String name;\n\n    public Disziplin(String name) {\n        this.name = name;\n    }\n}\n\n// Assoziationsklasse zur Modellierung der Beziehung mit zusätzlichen Attributen\npublic class Ausuebung {\n    private Mitglied mitglied;\n    private Disziplin disziplin;\n    private int ranking;\n    private LocalDate seit;\n\n    public Ausuebung(Mitglied mitglied, Disziplin disziplin, int ranking, LocalDate seit) {\n        this.mitglied = mitglied;\n        this.disziplin = disziplin;\n        this.ranking = ranking;\n        this.seit = seit;\n    }\n}\n\n// Beispiel für ein Repository (Separation of Concerns)\npublic interface MitgliedRepository {\n    void save(Mitglied mitglied);\n    Mitglied findById(UUID id);\n}\n\n// Fassade nach dem Managementprinzip (GRASP: Controller)\npublic interface MitgliedVerwaltung {\n    MitgliedVerwaltung INSTANCE = new MitgliedVerwaltungImpl();\n    void hinzufuegenMitglied(Mitglied mitglied);\n    List<Mitglied> alleAktivenMitglieder();\n}\n```', 'erläuterung': 'Das Java-Beispiel zeigt die Anwendung von [[GRASP]]-Prinzipien und [[Entwurfsmuster|Mustern]]:\n- **Information Expert**: Die Methode `leistungsprognose` ist in der Klasse `Mitglied` definiert, da diese die notwendigen Daten besitzt. Die Methode `istAktiv` nutzt das Expertenprinzip, indem sie die [[Verantwortlichkeit]] für die Aktivitätsprüfung bei der Klasse `Mitglied` belässt.\n- **Polymorphie**: Die konkrete Berechnung wird an Subklassen wie `SeniorMitglied` delegiert, um [[Lose_Kopplung]] und [[Kohäsion]] zu fördern.\n- **Separation of Concerns**: Die Persistenzlogik ist in ein separates `[[Repository]]` ausgelagert, um [[Verantwortlichkeit|Verantwortlichkeiten]] klar zu trennen.\n- **Assoziationsklasse**: `Ausuebung` modelliert eine Beziehung zwischen `Mitglied` und `Disziplin` mit zusätzlichen Attributen wie `ranking` und `seit`, um komplexe Domänenbeziehungen abzubilden.\n- **Kapselung**: Die Attribute `name` und `mitgliedsnummer` sind privat und werden über Methoden wie `aktualisiereMitgliedsdaten` und `getMitgliedsdaten` zugänglich gemacht, um die [[Datenintegrität]] zu wahren.\n- **Controller (GRASP)**: Die `MitgliedVerwaltung` dient als Fassade und koordiniert komplexe Abläufe, um die [[Kohäsion]] der Domänenklassen zu erhalten.'}
 
-Vorteile:
-- Klare Trennung von fachlichen und technischen Aspekten.
-- Wiederverwendbarkeit durch [[Modularität]] und [[Kapselung]].
-- Bessere Kommunikation zwischen Stakeholdern durch visuelle Modelle.
-- **Abgrenzung & Grenzen:** 1. **Zielsetzung**: 
-   - **Analyse**: Beschreibt **was** das System leisten soll (fachliche Perspektive). Beispiel: Ein [[Klassendiagramm]] zeigt Fachklassen wie `Kunde` oder `Bestellung` ohne technische Attribute.
-   - **Design**: Beschreibt **wie** das System umgesetzt wird (technische Perspektive). Beispiel: Ein [[Klassendiagramm]] enthält technische Details wie `Datenbankverbindung` oder Methoden zur Persistenz.
+---
 
-2. **Detaillierungsgrad**: 
-   - Analyse-Modelle sind **abstrakt** und implementierungsunabhängig.
-   - Design-Modelle sind **konkret** und enthalten z. B. Algorithmen, Datenstrukturen oder [[API]]-Spezifikationen.
-
-3. **Stolpersteine**: 
-   - **Vermischung der Phasen**: Technische Entscheidungen (z. B. Wahl eines [[Frameworks]]) dürfen nicht in die Analyse einfließen.
-   - **Übermodellierung**: Zu detaillierte Modelle in der Analyse führen zu unnötigem Aufwand.
-   - **Unterschätzung der Komplexität**: Design erfordert oft Anpassungen an nicht-funktionale Anforderungen (z. B. [[Performance]], [[Sicherheit]]).
-- **Beispiel / Code:** ```mermaid
-classDiagram
-    %% Analyse-Perspektive (fachlich)
-    class Kunde {
-        +String name
-        +String adresse
-        +bestellen(produkt: Produkt)
-    }
-    class Bestellung {
-        +Datum datum
-        +Status status
-        +berechneGesamtpreis()
-    }
-    Kunde "1" -- "0..*" Bestellung
-
-    %% Design-Perspektive (technisch)
-    class KundeRepository {
-        +save(kunde: Kunde)
-        +findById(id: UUID)
-    }
-    class BestellService {
-        +createBestellung(kundeId: UUID, produkte: List~Produkt~)
-        +updateStatus(bestellId: UUID, status: Status)
-    }
-    KundeRepository --> Kunde : persistiert
-    BestellService --> Bestellung : verwaltet
-```
-
-**Java-Code-Beispiel (Design-Phase)**:
-```java
-// Design: Technische Umsetzung mit Persistenz und Schnittstellen
-public interface KundeRepository {
-    void save(Kunde kunde);
-    Kunde findById(UUID id);
-}
-
-public class BestellService {
-    private final KundeRepository kundeRepository;
-    private final BestellRepository bestellRepository;
-
-    public BestellService(KundeRepository kundeRepository, BestellRepository bestellRepository) {
-        this.kundeRepository = kundeRepository;
-        this.bestellRepository = bestellRepository;
-    }
-
-    public Bestellung createBestellung(UUID kundeId, List<Produkt> produkte) {
-        Kunde kunde = kundeRepository.findById(kundeId);
-        Bestellung bestellung = new Bestellung(kunde, produkte);
-        bestellRepository.save(bestellung);
-        return bestellung;
-    }
-}
-```
+## 🔗 Stellordnung & Verbindungen
+- **Stellordnung ID:** 1a
+- **Vorgänger / Parent:** [[Software-Engineering]]
+- **Folgezettel / Unterzettel:**
+  - [[Informationsexperten-Prinzip]]
+  - [[Erzeuger-Prinzip]]
+  - [[Lose_Kopplung]]
+  - [[Hohe_Kohäsion]]
+  - [[Management-Prinzip]]
+- **Querverweise:**
+  - [[UML]]
+  - [[Entwurfsmuster]]

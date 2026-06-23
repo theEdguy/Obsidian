@@ -1,17 +1,23 @@
 ---
-id: dc699be7-a756-5e33-bd15-cb477e9fbff1
+id: ba4390a8-423f-4b61-bf57-00a96c7a1a80
 title: "Versionsmodell"
-date: 2026-06-20
+date: 2026-06-24
 tags:
   - software_engineering
-  - kapitel_1
+  - prozessmodelle
+  - versionierung
   - draft
-source: "Kapitel 1: Die Notwendigkeit eines Prozesses"
+source: "SWE Slides – Kapitel 1: Die Notwendigkeit eines Prozesses"
 ---
 
 # [[Versionsmodell]]
 
-- **Kernkonzept:** Iteratives Prozessmodell, bei dem das System inkrementell in aufeinander aufbauenden Versionen (Teilsystemen) entwickelt und bewertet wird. Ermöglicht die Integration neuer Nutzeranforderungen und den frühen Einsatz eines Kernsystems.
-- **Nutzen & Zweck:** Iteratives Prozessmodell, bei dem das System inkrementell in aufeinander aufbauenden Versionen (Teilsystemen) entwickelt und bewertet wird. Ermöglicht die Integration neuer Nutzeranforderungen und den frühen Einsatz eines Kernsystems.
-- **Abgrenzung & Grenzen:** Siehe Definition.
-- **Beispiel / Code:** Kein Codebeispiel vorhanden.
+- **Kernkonzept:** Ein [[iteratives_Prozessmodell]], bei dem ein [[Software-System]] in [[Versionen]] unterteilt wird, die schrittweise entwickelt und ausgeliefert werden.
+- **Nutzen & Zweck:** Ermöglicht frühe [[Nutzerfeedback]]-Integration und [[Risikostreuung]] durch schrittweise [[Auslieferung]]. Grundlage für [[Continuous_Delivery]].
+- **Abgrenzung & Grenzen:** Komplexer als [[Wasserfallmodell]], da [[Versionen]] koordiniert werden müssen. Unterscheidet sich von [[Spiralmodell]] durch Fokus auf [[Auslieferung]]. Nicht geeignet für [[Monolithische_Systeme]].
+- **Beispiel / Code:** ```text
+// Beispiel für Versionsplanung
+Version 1.0: Kernfunktionalität (MVP)
+Version 1.1: Erweiterte Features
+Version 2.0: Skalierbarkeit und Performance
+```

@@ -1,17 +1,24 @@
 ---
-id: dd772ba9-937f-5f8b-939a-1758255f2fd1
-title: "Kontrolliertes Experiment"
-date: 2026-06-20
+id: ad34236d-e7a4-4070-ac05-ccf7cf3ec569
+title: "Kontrollierte_Experimente"
+date: 2026-06-24
 tags:
   - software_engineering
-  - kapitel_1
+  - empirie
+  - forschung
   - draft
-source: "Kapitel 1: Die Notwendigkeit eines Prozesses"
+source: "SWE Slides – Kapitel 1: Die Notwendigkeit eines Prozesses"
 ---
 
-# [[Kontrolliertes Experiment]]
+# [[Kontrollierte_Experimente]]
 
-- **Kernkonzept:** Wissenschaftliche Untersuchung von Ursache-Wirkungs-Beziehungen unter kontrollierten Laborbedingungen. Es werden unabhängige Variablen (Faktoren, die verglichen werden) systematisch manipuliert, um deren Einfluss auf abhängige Variablen (Messwerte) reproduzierbar zu bestimmen. Vorteil: Klare kausale Beziehungen. Kontra: Künstliche Umgebung erschwert Übertragbarkeit.
-- **Nutzen & Zweck:** Wissenschaftliche Untersuchung von Ursache-Wirkungs-Beziehungen unter kontrollierten Laborbedingungen. Es werden unabhängige Variablen (Faktoren, die verglichen werden) systematisch manipuliert, um deren Einfluss auf abhängige Variablen (Messwerte) reproduzierbar zu bestimmen. Vorteil: Klare kausale Beziehungen. Kontra: Künstliche Umgebung erschwert Übertragbarkeit.
-- **Abgrenzung & Grenzen:** Siehe Definition.
-- **Beispiel / Code:** Kein Codebeispiel vorhanden.
+- **Kernkonzept:** Untersuchung von [[Ursache-Wirkungs-Beziehungen]] unter kontrollierten Bedingungen, um [[Hypothesen]] in der [[Software-Entwicklung]] zu validieren.
+- **Nutzen & Zweck:** Ermöglicht die [[Evaluation]] von [[Methoden]], [[Werkzeuge]] oder [[Algorithmen]] durch reproduzierbare [[Messungen]]. Grundlage für [[evidenzbasierte_Entwicklung]].
+- **Abgrenzung & Grenzen:** Aufgrund der künstlichen Umgebung schwer auf reale [[Projekte]] übertragbar. Unterscheidet sich von [[Fallstudien]] durch strikte Kontrolle der [[Variablen]]. Nicht geeignet für explorative [[Forschung]].
+- **Beispiel / Code:** ```text
+// Ablauf eines kontrollierten Experiments
+1. Hypothese: "Algorithmus A ist schneller als Algorithmus B."
+2. Unabhängige Variable: Algorithmus (A vs. B)
+3. Abhängige Variable: Ausführungszeit
+4. Kontrollierte Umgebung: Gleiche Hardware, gleiche Eingabedaten
+```

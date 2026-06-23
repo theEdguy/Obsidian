@@ -1,23 +1,53 @@
 ---
-id: a4955773-3911-5c7e-b98a-9dc4581a70cc
+id: 26e19520-3cef-45a7-b4b4-1676128a1664
 title: "Objekt-Adapter"
-date: 2026-06-20
+date: 2026-06-24
 tags:
   - software_engineering
-  - kapitel_15
+  - design_pattern
+  - adapter_variante
   - draft
-source: "Kapitel 15: Patterns – Strukturmuster"
+source: "software_engineering_kapitel_15"
 ---
 
 # [[Objekt-Adapter]]
 
-- **Kernkonzept:** Realisiert den Adapter über Objektkomposition. Er hält eine Referenz auf den Adaptee und delegiert Aufrufe. Funktioniert auch mit Unterklassen des Adaptees.
-- **Nutzen & Zweck:** Realisiert den Adapter über Objektkomposition. Er hält eine Referenz auf den Adaptee und delegiert Aufrufe. Funktioniert auch mit Unterklassen des Adaptees.
-- **Abgrenzung & Grenzen:** Siehe Definition.
+- **Kernkonzept:** Der Objekt-Adapter ist ein strukturelles Entwurfsmuster, das eine bestehende Klasse (Adaptee) mit einer inkompatiblen Schnittstelle durch eine zusätzliche Indirektionsschicht (Adapter) an eine gewünschte Zielschnittstelle anpasst, ohne die ursprüngliche Klasse zu verändern. Dabei hält der Adapter eine Referenz auf das Adaptee-Objekt und leitet Anfragen an dieses weiter.
+- **Nutzen & Zweck:** Das Muster existiert, um Inkompatibilitäten zwischen bestehenden Klassen und benötigten Schnittstellen zu überwinden, ohne die ursprünglichen Klassen modifizieren zu müssen. Es ermöglicht die Wiederverwendung von Klassen mit unbekannten oder unpassenden Schnittstellen und fördert die Zusammenarbeit zwischen unabhängig entwickelten Komponenten. Besonders nützlich ist es, wenn Bibliotheken oder Frameworks genutzt werden sollen, deren Schnittstellen nicht direkt zur eigenen Codebasis passen.
+- **Abgrenzung & Grenzen:** Der Objekt-Adapter sollte nicht genutzt werden, wenn die anzupassende Klasse bereits die gewünschte Schnittstelle implementiert oder wenn die Anpassung nur temporär benötigt wird. Im Vergleich zum Klassen-Adapter (der Mehrfachvererbung erfordert) ist der Objekt-Adapter flexibler, da er auch mit Unterklassen des Adaptees zusammenarbeitet, erfordert jedoch etwas mehr Aufwand bei der Implementierung. Bei einfachen Schnittstellenanpassungen kann ein direkter Wrapper oder eine einfache Delegation ausreichen. Zudem ist das Muster ungeeignet, wenn die anzupassende Klasse häufig geändert wird, da dies zu Anpassungen im Adapter führen kann.
 - **Beispiel / Code:** ```java
-public class Adapter implements Target {
+// Zielschnittstelle
+interface ZielSchnittstelle {
+    void operation();
+}
+
+// Bestehende Klasse mit inkompatibler Schnittstelle
+class Adaptee {
+    void spezifischeOperation() {
+        System.out.println("Spezifische Operation des Adaptee");
+    }
+}
+
+// Objekt-Adapter
+class Adapter implements ZielSchnittstelle {
     private Adaptee adaptee;
-    public Adapter(Adaptee a) { this.adaptee = a; }
-    public void targetOp() { this.adaptee.existingOp(); }
+    
+    public Adapter(Adaptee adaptee) {
+        this.adaptee = adaptee;
+    }
+    
+    @Override
+    public void operation() {
+        adaptee.spezifischeOperation();
+    }
+}
+
+// Nutzung
+public class Main {
+    public static void main(String[] args) {
+        Adaptee adaptee = new Adaptee();
+        ZielSchnittstelle adapter = new Adapter(adaptee);
+        adapter.operation(); // Ausgabe: "Spezifische Operation des Adaptee"
+    }
 }
 ```
